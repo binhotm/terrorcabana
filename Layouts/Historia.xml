@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2layout>
+    <name>Historia</name>
+    <sid>173684517486097</sid>
+    <event-sheet>Historia</event-sheet>
+    <size>
+        <width>1000</width>
+        <height>600</height>
+    </size>
+    <margins>
+        <horizontal>1</horizontal>
+        <vertical>1</vertical>
+    </margins>
+    <unbounded-scrolling>0</unbounded-scrolling>
+    <layers>
+        <layer name="BG" sid="744096982512020">
+            <initially-visible>1</initially-visible>
+            <background-color>0,0,0</background-color>
+            <transparent>0</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
+            <effects />
+        </layer>
+        <layer name="TEXT" sid="668769527802507">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="btn_skip" uid="64">
+                    <properties>
+                        <type>Button</type>
+                        <text>Pular</text>
+                        <tooltip>Pular introdução.</tooltip>
+                        <initial-visibility>Visible</initial-visibility>
+                        <enabled>Yes</enabled>
+                        <auto-font-size>Yes</auto-font-size>
+                        <id-optional></id-optional>
+                        <checked>No</checked>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>671</x>
+                        <y>563</y>
+                        <z>0</z>
+                        <width>72</width>
+                        <height>24</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                    </world>
+                </instance>
+                <instance type="dest_hist_1" uid="72">
+                    <properties>
+                        <character-width>45</character-width>
+                        <character-height>44</character-height>
+                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;%ÁáÂâÀàÅåÃãÄäÆæÉéÊêÈèËëÍíÎîÌìÏïÓóÔôÒòÕõÖöÚúÛûùÙÜüÇçÑñÝý¿</character-set>
+                        <text></text>
+                        <scale>0.5</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>0</character-spacing>
+                        <line-height>0</line-height>
+                        <char-width-json>{&quot;&quot;c2array&quot;&quot;:true,&quot;&quot;size&quot;&quot;:[2,12,1],&quot;&quot;data&quot;&quot;:[[[14],[5],[9],[10],[13],[15],[16],[19],[23],[25],[26],[43]],[[&quot;&quot; &quot;&quot;],[&quot;&quot;|&quot;&quot;],[&quot;&quot;.,;&apos;&quot;&quot;],[&quot;&quot;:&quot;&quot;],[&quot;&quot;()°&quot;&quot;],[&quot;&quot;`&quot;&quot;],[&quot;&quot;[]&quot;&quot;],[&quot;&quot;!-#\&quot;&quot;£€&lt;&gt;&quot;&quot;],[&quot;&quot;ITYity1~+%ÍíÎîÌìÏïÝý&quot;&quot;],[&quot;&quot;Ss\\/ó&quot;&quot;],[&quot;&quot;ABCDEFGHJKLMNOPQRUVWXZabcdefghjklmnopqruvwxz023456789?_&amp;@=*$ÁáÂâÀàÅåÃãÄäÉéÊêÈèËëÓÔôÒòÕõÖöÚúÛûùÙÜüÇçÑñ¿&quot;&quot;],[&quot;&quot;Ææ&quot;&quot;]]]}</char-width-json>
+                        <space-char-width>-1</space-char-width>
+                    </properties>
+                    <instance-variables>
+                        <startWrite>0</startWrite>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>250</x>
+                        <y>50</y>
+                        <z>0</z>
+                        <width>500</width>
+                        <height>485</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
+    </layers>
+    <nonworld-instances>
+        <instance type="game_msg" uid="63" />
+    </nonworld-instances>
+    <effects />
+</c2layout>

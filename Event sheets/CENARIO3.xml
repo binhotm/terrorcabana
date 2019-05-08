@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>CENARIO3</name>
+    <events>
+        <include>GameEngine</include>
+        <event-block sid="474426994888007">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="612938478827280" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="680688340372350" type="RIGHTARROW" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

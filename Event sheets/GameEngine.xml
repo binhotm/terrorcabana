@@ -1,0 +1,598 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GameEngine</name>
+    <events>
+        <variable constant="0" name="casacoStatus" sid="753199281403383" static="0" type="text"></variable>
+        <variable constant="0" name="bolsaStatus" sid="917286878156450" static="0" type="text"></variable>
+        <variable constant="0" name="hasInvetory" sid="377673001422886" static="0" type="number">1</variable>
+        <variable constant="0" name="typing" sid="664755304052463" static="0" type="number">0</variable>
+        <variable constant="0" name="hasFaca" sid="653916770209826" static="0" type="number">0</variable>
+        <variable constant="0" name="gameStart" sid="203651298173256" static="0" type="number">0</variable>
+        <variable constant="0" name="noFade" sid="160717133428511" static="0" type="number">0</variable>
+        <variable constant="0" name="playingMusic" sid="622616916738112" static="0" type="number">0</variable>
+        <variable comment="Se o personagem ja pegou a mochbila" constant="0" name="isFree" sid="490299496570784" static="0" type="number">0</variable>
+        <variable constant="0" name="debug" sid="781299479377664" static="0" type="number">1</variable>
+        <event-group description="" sid="560617196269730" title="Debug">
+            <sub-events>
+                <event-block sid="350984827149825">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="428229806924283" type="System">
+                            <param id="0" name="Variable">debug</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="615154392158791" type="DEBUG">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="548912128041581" type="System">
+                            <param id="0" name="Variable">noFade</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="434916652617820">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="244858511756230" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="933610488296464" type="DEBUG">
+                            <param id="0" name="Text">&quot;X: &quot; &amp; Mouse.X &amp; &quot;Y: &quot;&amp;Mouse.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="429358897934079" title="Preload">
+            <sub-events>
+                <event-block sid="846503529869683">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="968845253388918" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="989077410914497" type="DEBUG">
+                            <param id="0" name="Text">&quot;Tamanho da Tela: &quot; &amp;  WindowWidth &amp; &quot;Tamanho 2&quot; &amp;  WindowHeight</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="477058407177479">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="670087541461920" type="System">
+                                    <param id="0" name="Variable">gameStart</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="795366091228527" type="backgroundSound">
+                                    <param id="0" name="Audio file">backgroundGameSound</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">1</param>
+                                    <param id="1" name="Tag (optional)">&quot;SOMDEFUNDO&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="364687968047861">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="275696696193126" type="System">
+                                    <param id="0" name="Variable">hasInvetory</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="604248446210154" type="invetoryIcon">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="258096744145146">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="438128375029187" type="System">
+                            <param id="0" name="Variable">noFade</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="829376775418398" type="System">
+                            <param id="0" name="Layer">&quot;dark&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="960745492643543">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="727866230602365" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="303051025820913" type="dialog">
+                            <param id="0" name="Instance variable">show</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="171321035129491" type="personagem_1">
+                            <param id="0" name="Object">dialog</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="909905661668072" type="NewDialogText">
+                            <param id="0" name="Object">dialog</param>
+                            <param id="1" name="Image point (optional)">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block bookmark="1" sid="393380613731479">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="935059541017567" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="631453088626478">
+                            <conditions>
+                                <condition id="-14" inverted="1" name="Compare variable" sid="947229985593313" type="System">
+                                    <param id="0" name="Variable">bolsaStatus</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="731362958932019" type="obj_mochila">
+                                    <param id="0" name="X">int(tokenat(bolsaStatus, 0, &quot;|&quot;))</param>
+                                    <param id="1" name="Y">int(tokenat(bolsaStatus, 1, &quot;|&quot;))</param>
+                                </action>
+                                <action id="0" name="Set text" sid="242631046745405" type="DEBUG">
+                                    <param id="0" name="Text">int(tokenat(bolsaStatus, 1, &quot;|&quot;))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="486025900995752">
+                            <conditions>
+                                <condition id="-14" inverted="1" name="Compare variable" sid="193263689371621" type="System">
+                                    <param id="0" name="Variable">casacoStatus</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="108816227233058" type="casaco">
+                                    <param id="0" name="X">int(tokenat(casacoStatus, 0, &quot;|&quot;))</param>
+                                    <param id="1" name="Y">int(tokenat(casacoStatus, 1, &quot;|&quot;))</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="251670748550632" type="casaco">
+                                    <param id="0" name="Instance variable">canClick</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="574299287834689" type="backgroundSound">
+                                    <param id="0" name="Audio file">DoorSound</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">3</param>
+                                    <param id="1" name="Tag (optional)">&quot;doorSound&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-group description="" sid="639493707044309" title="MiscLooping" />
+                <event-group description="" sid="488147915589568" title="Functions">
+                    <sub-events>
+                        <event-block sid="908565870161742">
+                            <conditions>
+                                <condition id="0" name="On function" sid="440548357730188" type="Function">
+                                    <param id="0" name="Name">&quot;showDialog&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="430457926872077" type="dialog">
+                                    <param id="0" name="Instance variable">show</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="268366140785247" type="blackdrop">
+                                    <param id="0" name="Scale">50</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="863180862777828" type="blackdrop">
+                                    <param id="0" name="X">WindowWidth /2</param>
+                                    <param id="1" name="Y">WindowHeight /2</param>
+                                </action>
+                                <action behavior="LiteTween" id="10" name="Start" sid="575303135730510" type="dialog">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="104904893459449">
+                            <conditions>
+                                <condition id="0" name="On function" sid="644657277682586" type="Function">
+                                    <param id="0" name="Name">&quot;hideDialog&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="338192246805357" type="blackdrop">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="154677588097009" type="blackdrop">
+                                    <param id="0" name="X">-10</param>
+                                    <param id="1" name="Y">-10</param>
+                                </action>
+                                <action behavior="LiteTween" id="11" name="Reverse" sid="341271866404507" type="dialog">
+                                    <param id="0" name="Reverse mode">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="372567237054263" type="personagem_1">
+                                    <param id="0" name="X">-100</param>
+                                    <param id="1" name="Y">-100</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="345380549355193" type="NewDialogText">
+                                    <param id="0" name="X">-100</param>
+                                    <param id="1" name="Y">-100</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="791301789832209" type="dialog">
+                                    <param id="0" name="Instance variable">show</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="952296625561330">
+                            <conditions>
+                                <condition id="0" name="On function" sid="554236765880568" type="Function">
+                                    <param id="0" name="Name">&quot;readText&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="808016041194555" type="DEBUG">
+                                    <param id="0" name="Text">Function.Param(0)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="167464802547566" type="sourc_hist">
+                                    <param id="0" name="Text">Function.Param(0)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="766281775652485" type="System">
+                                    <param id="0" name="Variable">typing</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="101478695245704" type="NewDialogText">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="989365406541007">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="704140080224265" type="System">
+                                    <param id="0" name="Variable">typing</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="785038521019977">
+                                    <conditions>
+                                        <condition id="-6" name="Every X seconds" sid="626309903541175" type="System">
+                                            <param id="0" name="Interval (seconds)">0.05</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="887688818400250" type="NewDialogText">
+                                            <param id="0" name="Text">left(sourc_hist.Text,len(NewDialogText.Text)+1)</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="618933251408151">
+                                            <conditions>
+                                                <condition id="0" name="Compare text" sid="782169972357664" type="sourc_hist">
+                                                    <param id="0" name="Text to compare">NewDialogText.Text</param>
+                                                    <param id="1" name="Case sensitivity">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="769433364554681" type="System">
+                                                    <param id="0" name="Variable">typing</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="401379186957298">
+                            <conditions>
+                                <condition id="0" name="On function" sid="349410357334806" type="Function">
+                                    <param id="0" name="Name">&quot;inGameMessage&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="554879787872682" type="ObjectMessage">
+                                    <param id="0" name="Text">Function.Param(0)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="730923534168798" type="ObjectMessage">
+                                    <param id="0" name="X">Mouse.X</param>
+                                    <param id="1" name="Y">Mouse.Y</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="454794327433595" type="ObjectMessage" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="764748369845763" title="AmbienteEvent">
+            <sub-events>
+                <event-block sid="778763555361087">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="544567249752366" type="System">
+                            <param id="0" name="Interval (seconds)">5</param>
+                        </condition>
+                        <condition id="-14" inverted="1" name="Compare variable" sid="877568580962766" type="System">
+                            <param id="0" name="Variable">noFade</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="572075612140643" type="darklight_lampada">
+                            <param id="0" name="Instance variable">fullLight</param>
+                            <param id="1" name="Value">random(0,10)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="727249217147051">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="838167391040063" type="darklight_lampada">
+                            <param id="0" name="Instance variable">fullLight</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="291856908670968" type="darklight_lampada">
+                            <param id="0" name="Scale">2.5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="702139571641222">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="491303181138074" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="559982435175806" type="darklight_lampada">
+                            <param id="0" name="Instance variable">fullLight</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="330128562968393" type="darklight_lampada">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">2</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="528738194634576" type="lamp_light">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">2</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="359991824998312" type="darklight_lampada">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="108300068083063" type="darklight_lampada">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="696505435312956" title="Mouse and Keyboard">
+            <sub-events>
+                <event-group description="" sid="284190461194244" title="Misc">
+                    <sub-events>
+                        <event-block sid="466633599829545">
+                            <conditions>
+                                <condition id="7" name="Cursor is over object" sid="489039043264764" type="Mouse">
+                                    <param id="0" name="Object">LEFTARROW</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="598655015359196" type="LEFTARROW">
+                                    <param id="0" name="Opacity">50</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="546037924051446">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Cursor is over object" sid="936758973489959" type="Mouse">
+                                    <param id="0" name="Object">LEFTARROW</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="520591423750617" type="LEFTARROW">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="881681495925830">
+                            <conditions>
+                                <condition id="7" name="Cursor is over object" sid="121631520373619" type="Mouse">
+                                    <param id="0" name="Object">RIGHTARROW</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="331021866110828" type="RIGHTARROW">
+                                    <param id="0" name="Opacity">50</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="787739157095116">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Cursor is over object" sid="980818010271521" type="Mouse">
+                                    <param id="0" name="Object">RIGHTARROW</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="462256114895239" type="RIGHTARROW">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="272278598648956">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="638685129772997" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">LEFTARROW</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-43" name="Go to next/previous layout" sid="427367875990566" type="System">
+                                    <param id="0" name="Which">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="195227761393108">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="844603248575121" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">RIGHTARROW</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-43" name="Go to next/previous layout" sid="250468963833665" type="System">
+                                    <param id="0" name="Which">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="485102734666736">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="522034161513353" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">GameObjects</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="731551120961040" type="System">
+                                    <param id="0" name="Variable">isFree</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="405015888847972" type="GameObjects">
+                                    <param id="0" name="Instance variable">canClick</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="506892239327421" type="GameMessage">
+                                    <param id="0" name="Text">&quot;Estou presa Argh!!&quot;</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="665610217932476" type="GameMessage">
+                                    <param id="0" name="X">Mouse.X</param>
+                                    <param id="1" name="Y">Mouse.Y</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="762084596668200" type="GameMessage" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="100407059810709">
+                            <conditions>
+                                <condition id="7" name="Cursor is over object" sid="678431692576251" type="Mouse">
+                                    <param id="0" name="Object">invetoryIcon</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="912308869160171" type="System">
+                                    <param id="0" name="Variable">hasInvetory</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="549568403558185" type="invetoryIcon">
+                                    <param id="0" name="Animation">&quot;hover&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="748266758168846">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="739508205645104" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">invetoryIcon</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="328284701609229" type="System">
+                                    <param id="0" name="Variable">hasInvetory</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="799918857394480">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="776880508671203" type="invetoryIcon">
+                                            <param id="0" name="Instance variable">isOpen</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="LiteTween" id="3" name="Set target" sid="623330469456704" type="inventory">
+                                            <param id="0" name="Target is">5</param>
+                                            <param id="1" name="Relativity">0</param>
+                                            <param id="2" name="Value">200</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="10" name="Start" sid="261987097942387" type="inventory">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="955409024290623" type="invetoryIcon">
+                                            <param id="0" name="Instance variable">isOpen</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="212599548211865">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="435709738688547" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">1</param>
+                                    <param id="2" name="Object clicked">invetoryIcon</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="325689702632217" type="System">
+                                    <param id="0" name="Variable">hasInvetory</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="447516924288835">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="331813192382457" type="invetoryIcon">
+                                            <param id="0" name="Instance variable">isOpen</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="LiteTween" id="3" name="Set target" sid="959283942340784" type="inventory">
+                                            <param id="0" name="Target is">5</param>
+                                            <param id="1" name="Relativity">0</param>
+                                            <param id="2" name="Value">-200</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="10" name="Start" sid="274960153660537" type="inventory">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="376323895681424" type="invetoryIcon">
+                                            <param id="0" name="Instance variable">isOpen</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

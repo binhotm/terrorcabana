@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Historia</name>
+    <events>
+        <event-group description="" sid="376435119016681" title="StartEvent">
+            <sub-events>
+                <variable constant="0" name="startWriting" sid="295199027340038" static="0" type="number">0</variable>
+                <event-block sid="289439050491364">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="645749029681013" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="958633311898797" type="game_msg">
+                            <param id="0" name="Key">&quot;msg&quot;</param>
+                            <param id="1" name="Value">&quot;FICHA POLICIAL DE DESAPARECIMENTO:&#x0D;&#x0A;DADOS DO INDIVIDUO:&#x0D;&#x0A;Nome: Jeniffer Hills.&#x0D;&#x0A;Sexo: feminino.&#x0D;&#x0A;Idade: 22 anos.&#x0D;&#x0A;Altura: 1.63m&#x0D;&#x0A;&#x0D;&#x0A;DADOS DO LOCAL E HORARIOS DOS ACONTECIMENTOS:&#x0D;&#x0A;Ultima pessoa em contato com a vitima informou que ela iria caminhar proximo a regiao ao norte da Cidade proximos as colinas.&#x0D;&#x0A;&#x0D;&#x0A;Última vez vista: dia 24/10/1960 às 9:47 da manhã.&#x0D;&#x0A;Data do suposto desaparecimento: 25.10.1960, aproximadamente às 21:23 da noite.&#x0D;&#x0A;&#x0D;&#x0A;Andamento das buscas: aguardando as primeiras 48 horas para serem iniciadas.&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="362021256416410" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="413539789180905" type="dest_hist_1">
+                            <param id="0" name="Instance variable">startWrite</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="883949920980096" type="backgroundSound">
+                            <param id="0" name="Audio file">maquina_escrever</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">2</param>
+                            <param id="1" name="Tag (optional)">&quot;maquinaEscrever&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="939482945012300">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="798446366192677" type="System">
+                            <param id="0" name="Interval (seconds)">0.05</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="821242480381538" type="dest_hist_1">
+                            <param id="0" name="Instance variable">startWrite</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="483400499785336" type="dest_hist_1">
+                            <param id="0" name="Text">left(game_msg.Get(&quot;msg&quot;), len(dest_hist_1.Text) + 1)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="174988182811246">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="377167047292034" type="System">
+                                    <param id="0" name="First value">len(game_msg.Get(&quot;msg&quot;))</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">len(dest_hist_1.Text)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="966381695117961" type="System">
+                                    <param id="0" name="Variable">startWriting</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="6" name="Stop" sid="969727728951493" type="backgroundSound">
+                                    <param id="0" name="Tag">&quot;maquinaEscrever&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="455512458580909" title="Buttom">
+            <sub-events>
+                <event-block any="1" sid="997539145229109">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="953548391542860" type="btn_skip" />
+                        <condition id="2" name="Key is down" sid="891812468084305" type="Keyboard">
+                            <param id="0" name="Key">13 (Return)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="687008533420260" type="backgroundSound">
+                            <param id="0" name="Tag">&quot;maquinaEscrever&quot;</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="100861830859257" type="System">
+                            <param id="0" name="Layout">CENARIO1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

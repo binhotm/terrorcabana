@@ -1,0 +1,1071 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Terror na Cabana</name>
+    <description>Sobreviva em uma cabana desconhecida ao meio de uma floresta</description>
+    <version>0.0.1.ALPHA</version>
+    <author>Kronus FATEC Group</author>
+    <author-email></author-email>
+    <author-website>http://fatec.edu.br/</author-website>
+    <app-id>com.kronus.fatec.edu</app-id>
+    <unique-id>2r1pmflzjczo8</unique-id>
+    <saved-with-version>24400</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Chris Kent" id="SpriteFontPlus" version="1">SpriteFont+</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="lunarray" id="lunarray_LiteTween" version="1.700000048">LiteTween</behavior>
+    </used-behaviors>
+    <used-effects>
+        <effect author="Scirra" id="multiply">Multiply</effect>
+        <effect author="Brad Larson" id="swirl">Swirl</effect>
+    </used-effects>
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1000</width>
+        <height>600</height>
+    </window-size>
+    <pixel-rounding>1</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>SplashScreen</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar only</prop>
+        <prop name="Orientations">Portrait</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">NW.js</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="CENARIOS">
+            <object-type name="armariofechado" sid="480185626628162">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="373269864845415" speed="5">
+                        <frame duration="1" hotspotX="0.501416" hotspotY="0.5" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\itens\CENARIO1\armariofechado.png">
+                            <collision-poly>
+                                <point x="0.202958" y="0.148663" />
+                                <point x="0.791854" y="0.151322" />
+                                <point x="0.806018" y="0.891848" />
+                                <point x="0.203085" y="0.894465" />
+                                <point x="0.203068" y="0.534961" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="1" name="open" pingpong="0" repeatcount="1" repeatto="0" sid="915973780492517" speed="5">
+                        <frame duration="1" hotspotX="0.501416" hotspotY="0.5" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\itens\CENARIO1\armarioaberto.png">
+                            <image-point name="baucinza" x="0.405099" y="0.540323" />
+                            <image-point name="bauroxo" x="0.407932" y="0.739247" />
+                            <collision-poly>
+                                <point x="0.0286536" y="0.14054" />
+                                <point x="0.12894" y="0.135135" />
+                                <point x="0.277936" y="0.137838" />
+                                <point x="0.283667" y="0.556756" />
+                                <point x="0.280803" y="0.88919" />
+                                <point x="0.0229226" y="0.881081" />
+                                <point x="0.0259503" y="0.589189" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="banquinho" sid="224846993296021">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="841398952301963" speed="5">
+                        <frame duration="1" hotspotX="0.507463" hotspotY="0.507463" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\itens\CENARIO1\banquinho.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bau" sid="488356128937258">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="437036881473058" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504132" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\itens\CENARIO2\bau.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="0.920635" y="0.991736" />
+                                <point x="0.0515873" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bau_cinza" sid="984220117167339">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="936501075848504" speed="5">
+                        <frame duration="1" hotspotX="0.507692" hotspotY="0.512821" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\itens\CENARIO1\armario\bau_cinza.png">
+                            <collision-poly>
+                                <point x="0.0615385" y="0.102564" />
+                                <point x="0.492308" y="0" />
+                                <point x="0.923077" y="0.128205" />
+                                <point x="1" y="0.487179" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.487179" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bau_roxo" sid="719066631970999">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="407499069728967" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\itens\CENARIO1\armario\bau_marrom.png">
+                            <collision-poly>
+                                <point x="0.0675676" y="0.1" />
+                                <point x="0.5" y="0.1" />
+                                <point x="0.878378" y="0.18" />
+                                <point x="0.945946" y="0.5" />
+                                <point x="0.945946" y="0.92" />
+                                <point x="0.5" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="busto" sid="985710679024559">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="309186070337959" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502924" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\itens\CENARIO1\busto..png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.5" y="0.269006" />
+                                <point x="0.967949" y="0.0292398" />
+                                <point x="0.711538" y="0.497076" />
+                                <point x="0.711538" y="0.736842" />
+                                <point x="0.5" y="1" />
+                                <point x="0.0897436" y="0.918129" />
+                                <point x="0.275641" y="0.497076" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="casaco" sid="206942034300261">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="897307130582545" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\itens\CENARIO1\casaco.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.5" y="0" />
+                                <point x="0.695652" y="0.116667" />
+                                <point x="1" y="0.5" />
+                                <point x="0.782609" y="0.916667" />
+                                <point x="0.5" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="darklight_camdelabro" sid="781506209282280">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable comment="Luz completa" name="fullLight" sid="107925658584066" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Sine" sid="698651876542907">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="843687679545450" speed="5">
+                        <frame duration="1" hotspotX="0.483333" hotspotY="0.566667" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\misc\light.png">
+                            <collision-poly>
+                                <point x="0.0457659" y="0.273527" />
+                                <point x="0.475205" y="0" />
+                                <point x="0.937144" y="0.236052" />
+                                <point x="0.988212" y="0.538734" />
+                                <point x="0.920895" y="0.821236" />
+                                <point x="0.475205" y="1" />
+                                <point x="0.0596936" y="0.786644" />
+                                <point x="0.00630383" y="0.538734" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="janela" sid="684266896906157">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="571819237792248" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501873" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\itens\CENARIO2\janela.png">
+                            <collision-poly>
+                                <point x="0.285714" y="0.307116" />
+                                <point x="0.444444" y="0.269663" />
+                                <point x="0.638889" y="0.269663" />
+                                <point x="0.642857" y="0.498127" />
+                                <point x="0.559524" y="0.558052" />
+                                <point x="0.444444" y="0.561798" />
+                                <point x="0.325397" y="0.531835" />
+                                <point x="0.277778" y="0.464419" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="mancebo" sid="505217181622175">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="961477037825778" speed="5">
+                        <frame duration="1" hotspotX="0.502924" hotspotY="0.5" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\itens\CENARIO1\mancebo.png">
+                            <collision-poly>
+                                <point x="0.315789" y="0" />
+                                <point x="0.415205" y="0.0031056" />
+                                <point x="0.415205" y="0.310559" />
+                                <point x="0.415205" y="0.689441" />
+                                <point x="0.497076" y="1" />
+                                <point x="0.245614" y="1" />
+                                <point x="0.345029" y="0.863354" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="velas" sid="908064660914864">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="182396900601361" speed="5">
+                        <frame duration="1" hotspotX="0.509804" hotspotY="0.5" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\itens\CENARIO3\velas.png">
+                            <collision-poly>
+                                <point x="0.0196078" y="0.160256" />
+                                <point x="0.980392" y="0.160256" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="papel2" sid="634988842044663">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="756868422084892" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\itens\CENARIO2\papel2.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="obj_mochila" sid="932139457822862">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="179714398086203" speed="5">
+                        <frame duration="1" hotspotX="0.507692" hotspotY="0.5" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\itens\CENARIO1\mochila2.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.5" y="0.0416667" />
+                                <point x="0.718182" y="0.322917" />
+                                <point x="0.836364" y="0.5" />
+                                <point x="0.945455" y="0.9375" />
+                                <point x="0.5" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0.0454545" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="panp" sid="313363960053145">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="130046872861681" speed="5">
+                        <frame duration="1" hotspotX="0.510638" hotspotY="0.507463" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\itens\CENARIO3\panp.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.492537" />
+                                <point x="0.765957" y="0.835821" />
+                                <point x="0.489362" y="0.910448" />
+                                <point x="0" y="1" />
+                                <point x="0.234043" y="0.492537" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="papel" sid="557568585946257">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="177257450818229" speed="5">
+                        <frame duration="1" hotspotX="0.516129" hotspotY="0.5" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\itens\CENARIO2\papel1.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="plantas" sid="562492790700688">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="879502999787386" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\itens\CENARIO3\plantas.png">
+                            <collision-poly>
+                                <point x="0.142276" y="0.406977" />
+                                <point x="0.5" y="0.406977" />
+                                <point x="0.873984" y="0.360465" />
+                                <point x="0.894309" y="0.5" />
+                                <point x="1" y="1" />
+                                <point x="0.5" y="1" />
+                                <point x="0.0243902" y="0.930233" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="lixo" sid="951991608518490">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="903619158428727" speed="5">
+                        <frame duration="1" hotspotX="0.508772" hotspotY="0.5" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\itens\CENARIO3\lixo.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="prateleira" sid="368873649312781">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="827559096822040" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\itens\CENARIO2\prateleira.png">
+                            <collision-poly>
+                                <point x="0.116959" y="0.357143" />
+                                <point x="0.918129" y="0.357143" />
+                                <point x="0.98538" y="0.8125" />
+                                <point x="0.0146199" y="0.830357" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="sangue" sid="267964814817057">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="637411832783616" speed="5">
+                        <frame duration="1" hotspotX="0.50101" hotspotY="0.5" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\itens\CENARIO2\sangue.png">
+                            <collision-poly>
+                                <point x="0.159596" y="0.243827" />
+                                <point x="0.49899" y="0.132716" />
+                                <point x="0.858586" y="0.216049" />
+                                <point x="0.684848" y="0.5" />
+                                <point x="0.69495" y="0.533951" />
+                                <point x="0.49899" y="0.82716" />
+                                <point x="0.371717" y="0.432099" />
+                                <point x="0.123232" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="obj_agua" sid="258316685891360">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="573916937063976" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506494" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\itens\CENARIO1\agua.png">
+                            <collision-poly>
+                                <point x="0.1875" y="0.0779221" />
+                                <point x="0.5" y="0.272727" />
+                                <point x="0.5" y="0.207792" />
+                                <point x="1" y="0.493506" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.493506" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="porta" sid="649033968230858">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="656894053193076" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\itens\CENARIO3\porta.png">
+                            <collision-poly>
+                                <point x="0.0683761" y="0.037037" />
+                                <point x="0.5" y="0.025463" />
+                                <point x="0.931624" y="0.037037" />
+                                <point x="0.923077" y="0.958333" />
+                                <point x="0.5" y="1" />
+                                <point x="0.042735" y="0.976852" />
+                                <point x="0.0683761" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="mesa" sid="200973008317372">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="605997592895905" speed="5">
+                        <frame duration="1" hotspotX="0.501362" hotspotY="0.502674" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\itens\CENARIO3\mesa.png">
+                            <collision-poly>
+                                <point x="0.0953678" y="0.122995" />
+                                <point x="0.923706" y="0.128342" />
+                                <point x="0.959128" y="1" />
+                                <point x="0.0299728" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="madeirasolta" sid="942724453144008">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="211248338166871" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\itens\CENARIO1\madeirasolta.png">
+                            <collision-poly>
+                                <point x="0.197368" y="0.0506757" />
+                                <point x="0.5" y="0.0168919" />
+                                <point x="0.802632" y="0.0506757" />
+                                <point x="0.921053" y="0.5" />
+                                <point x="0.921053" y="0.97973" />
+                                <point x="0.131579" y="0.966216" />
+                                <point x="0.0526316" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="lampada_default" sid="707373539222478">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="116778904334755" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502674" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\cenario\lampada.png">
+                            <collision-poly>
+                                <point x="0.211538" y="0.0320856" />
+                                <point x="0.557692" y="0.00534759" />
+                                <point x="0.596154" y="0.117647" />
+                                <point x="0.596154" y="0.513369" />
+                                <point x="0.692308" y="0.941176" />
+                                <point x="0.557692" y="0.994652" />
+                                <point x="0.307692" y="0.973262" />
+                                <point x="0.403846" y="0.513369" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="MISC">
+            <object-type name="curso" sid="504532936095316">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="518896062231118" speed="5">
+                        <frame duration="1" hotspotX="0.171429" hotspotY="0.185185" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\misc\seta_mouse.png">
+                            <collision-poly>
+                                <point x="0.0690293" y="0" />
+                                <point x="0.475393" y="0.116622" />
+                                <point x="0.872548" y="0.311566" />
+                                <point x="0.63116" y="0.609178" />
+                                <point x="0.431896" y="0.862593" />
+                                <point x="0.446001" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="darklight" sid="865080959158468">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="943430056754896">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="990504012545727" speed="5">
+                        <frame duration="1" hotspotX="0.500654" hotspotY="0.5" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\misc\light.png">
+                            <collision-poly>
+                                <point x="0.257516" y="0.34083" />
+                                <point x="0.499346" y="0.119377" />
+                                <point x="0.759477" y="0.318339" />
+                                <point x="0.788235" y="0.5" />
+                                <point x="0.750327" y="0.66955" />
+                                <point x="0.499346" y="0.851211" />
+                                <point x="0.265359" y="0.648789" />
+                                <point x="0.235294" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="darklight_lampada" sid="313814894724713">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable comment="Luz completa" name="fullLight" sid="453514272800561" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Flash" sid="658191260146094">
+                        <behavior id="Flash" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="129370074957383" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\misc\light.png">
+                            <collision-poly>
+                                <point x="0.15585" y="0.267596" />
+                                <point x="0.492244" y="0" />
+                                <point x="0.854096" y="0.238241" />
+                                <point x="0.894099" y="0.475342" />
+                                <point x="0.841368" y="0.696635" />
+                                <point x="0.492244" y="0.933736" />
+                                <point x="0.16676" y="0.669538" />
+                                <point x="0.124938" y="0.475342" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="DEBUG" sid="575616737975535">
+                <plugin id="Text" />
+            </object-type>
+            <object-type global="1" name="inventory" sid="843954805418129">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="LiteTween" sid="355099026829333">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="123521856171299" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502024" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\misc\dialog_itens.png">
+                            <collision-poly>
+                                <point x="0.0129446" y="0.502024" />
+                                <point x="0.0129446" y="0.0769231" />
+                                <point x="0.361302" y="0.00404859" />
+                                <point x="0.987055" y="0.502024" />
+                                <point x="0.354851" y="0.995951" />
+                                <point x="0.0129446" y="0.510121" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GameMessage" sid="344237411506945">
+                <plugin id="Spritefont2" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="471915029300800">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\fonts\yellowfont.png" />
+            </object-type>
+            <object-type name="LEFTARROW" sid="797709492700185">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="1" name="on" pingpong="0" repeatcount="1" repeatto="0" sid="181355070379488" speed="5">
+                        <frame duration="1" hotspotX="0.507937" hotspotY="0.507937" original-source="C:\Users\fabri_000\Desktop\Survive Horro\setadireita-1.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="RIGHTARROW" sid="392851289249804">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="1" name="on" pingpong="0" repeatcount="1" repeatto="0" sid="124909087250931" speed="5">
+                        <frame duration="1" hotspotX="0.507937" hotspotY="0.507937" original-source="C:\Users\fabri_000\Desktop\Survive Horro\setadireita-1.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="dialogMsg" sid="407629516975198">
+                <plugin id="Spritefont2" />
+                <instance-variables>
+                    <instance-variable name="writing" sid="212328939270456" type="number" />
+                </instance-variables>
+                <texture original-source="C:\Users\fabri_000\Google Drive\Game Development\Survival Horror PC Source\Assets\fonts\SpriteFont_white_22x22.png" />
+            </object-type>
+            <object-type name="dialog" sid="385073210884277">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="show" sid="506048231237251" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Sine" sid="856123215265592">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                    <behavior-type name="LiteTween" sid="559596472380309">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="168912248346442" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.459016" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\misc\dialog_itens.png">
+                            <image-point name="personagem" x="0.0633423" y="0.565574" />
+                            <image-point name="text" x="0.188679" y="0.163934" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="lamp_light" sid="472567068666387">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Flash" sid="122047758519250">
+                        <behavior id="Flash" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="227557563943905" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.45" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Particles" sid="374123786384203">
+                <plugin id="Particles" />
+                <texture />
+            </object-type>
+            <object-type name="blackdrop" sid="181648242599163">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="670030723053123" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type global="1" name="ObjectMessage" sid="131332410544474">
+                <plugin id="Spritefont2" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="503456781236936">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\fonts\cordepelefont.png" />
+            </object-type>
+        </object-folder>
+        <object-folder name="CHARACTER">
+            <object-type name="personagem_1" sid="299184003384386">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="stoped" pingpong="0" repeatcount="1" repeatto="0" sid="657314944390063" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="3" loop="1" name="animation" pingpong="0" repeatcount="1" repeatto="0" sid="841694682592666" speed="2">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="HISTORY">
+            <object-type name="sourc_hist" sid="858640469947989">
+                <plugin id="Spritefont2" />
+                <texture />
+            </object-type>
+            <object-type name="dest_hist" sid="894392189291728">
+                <plugin id="Spritefont2" />
+                <instance-variables>
+                    <instance-variable name="startWrite" sid="563042815877228" type="number" />
+                </instance-variables>
+                <texture />
+            </object-type>
+            <object-type name="bg_ground_hist" sid="920446174230367">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="531994397485227">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="187486265004688" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btn_skip" sid="375327827474306">
+                <plugin id="Button" />
+            </object-type>
+        </object-folder>
+        <object-folder name="StartScreen">
+            <object-type name="bg_one" sid="965928057773111">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="938224012252024" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\backgrounds\forestwoman-pixel.jpg" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="cenario_1" sid="418920439285662">
+                <plugin id="TiledBg" />
+                <texture original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\cenario\background parede 1.png" />
+            </object-type>
+            <object-type name="background1pixelcroped" sid="145186402751374">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="992966955969382" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\backgrounds\background1-pixel-croped.jpg" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="background_one" sid="973294955589265">
+                <plugin id="TiledBg" />
+                <texture original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\cenario\background-default.png" />
+            </object-type>
+            <object-type name="start_text" sid="878313039469736">
+                <plugin id="Spritefont2" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="819832519052619">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="C:\Users\fabri_000\Desktop\Survive Horro\GameDev\Logos\whitefont.png" />
+            </object-type>
+        </object-folder>
+        <object-type name="FatecJogos" sid="989127056042745">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="433365722924101">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="817812177016887" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\webserver\htdocs\lisbelagame\assets\img\novoBanner.png">
+                        <collision-poly>
+                            <point x="0.0177778" y="0.0824742" />
+                            <point x="0.5" y="0.329897" />
+                            <point x="0.917778" y="0.381443" />
+                            <point x="0.995556" y="0.5" />
+                            <point x="0.977778" y="0.896907" />
+                            <point x="0.5" y="0.64433" />
+                            <point x="0.0766667" y="0.64433" />
+                            <point x="0.0222222" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FatecLogo" sid="209744302619860">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="362093768477575">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="314146588239290" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\webserver\htdocs\lisbelagame\assets\img\logofatec30anos.png">
+                        <collision-poly>
+                            <point x="0.045" y="0.09" />
+                            <point x="0.5" y="0.24" />
+                            <point x="0.905" y="0.19" />
+                            <point x="0.99" y="0.5" />
+                            <point x="0.785" y="0.57" />
+                            <point x="0.5" y="0.46" />
+                            <point x="0.055" y="0.89" />
+                            <point x="0.205" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteFont" sid="273620694651143">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="Keyboard" sid="421553748579698">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Mouse" sid="265426154427671">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="backgroundSound" sid="883719073963103">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="SpriteFont2" sid="344993466339042">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\fonts\whitefont.png" />
+        </object-type>
+        <object-type name="Function" sid="120744539989031">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="lerpSprite" sid="972324918445758">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="126974583439447" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text" sid="944121341111230">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="dest_hist_1" sid="154570904267730">
+            <plugin id="SpriteFontPlus" />
+            <instance-variables>
+                <instance-variable name="startWrite" sid="727760871237319" type="number" />
+            </instance-variables>
+            <texture original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\fonts\SpriteFont_Joystix_Regular_(36)_[1,1,1,1]_45x44_WHITE.png" />
+        </object-type>
+        <object-type name="NewDialogText" sid="230496398526705">
+            <plugin id="SpriteFontPlus" />
+            <instance-variables>
+                <instance-variable name="writing" sid="447958912525855" type="number" />
+            </instance-variables>
+            <texture original-source="C:\Users\fabri_000\Google Drive\Game Development\Survival Horror PC Source\Assets\fonts\SpriteFont_white_22x22.png" />
+        </object-type>
+        <object-type global="1" name="game_msg" sid="989508493115078">
+            <plugin id="Dictionary" />
+        </object-type>
+        <object-type name="bloco_nomes" sid="508966042071879">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="isShow" sid="261926963613124" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Sine" sid="703338584401760">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="820814297654002" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\itens\CENARIO2\papel_na_parede.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0.991304" y="0.863281" />
+                            <point x="0.756522" y="0.863281" />
+                            <point x="0.756521" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="bloco_flores" sid="421826534174961">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="isShow" sid="584937825234082" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Sine" sid="192022037028798">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="227555398321593" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\itens\CENARIO2\papel_na_parede_2.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0.995652" y="0.867188" />
+                            <point x="0.743479" y="0.867188" />
+                            <point x="0.734782" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="fundo_janela" sid="773585795096133">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="624286796831270" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="fundo_janela_flash" sid="866613453572848">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Flash" sid="328451001226533">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="417975581033198" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="fundo_janela_flash_all" sid="686179332092321">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Flash" sid="538505973489004">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="448003006938696" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="fundo_janela_flash_white" sid="187592746422289">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="274929435320711" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="object_save" sid="722612861226025">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type global="1" name="invetoryIcon" sid="776290959466186">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="isOpen" sid="901434588584812" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="default" pingpong="0" repeatcount="1" repeatto="0" sid="454934841549505" speed="5">
+                    <frame duration="1" hotspotX="0.504" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0.08" />
+                            <point x="0.984" y="0.11" />
+                            <point x="1" y="0.9" />
+                            <point x="0" y="0.85" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="hover" pingpong="0" repeatcount="1" repeatto="0" sid="429449331976472" speed="10">
+                    <frame duration="1" hotspotX="0.504" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.008" y="0.08" />
+                            <point x="0.984" y="0.11" />
+                            <point x="1" y="0.88" />
+                            <point x="0" y="0.88" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.504" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.008" y="0.06" />
+                            <point x="1" y="0.08" />
+                            <point x="0.992" y="0.86" />
+                            <point x="0.008" y="0.86" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families>
+        <family name="GameObjects" plugin-id="Sprite" sid="611563804002963">
+            <members>
+                <member>armariofechado</member>
+                <member>banquinho</member>
+                <member>bau</member>
+                <member>bau_cinza</member>
+                <member>bau_roxo</member>
+                <member>busto</member>
+                <member>casaco</member>
+                <member>janela</member>
+                <member>lixo</member>
+                <member>madeirasolta</member>
+                <member>mancebo</member>
+                <member>mesa</member>
+                <member>obj_agua</member>
+                <member>obj_mochila</member>
+                <member>panp</member>
+                <member>papel</member>
+                <member>papel2</member>
+                <member>plantas</member>
+                <member>porta</member>
+                <member>prateleira</member>
+                <member>sangue</member>
+                <member>velas</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="name" sid="753736659096910" type="string" />
+                <instance-variable name="onStorage" sid="899842655879582" type="boolean" />
+                <instance-variable name="isDragable" sid="315770274518463" type="number" />
+                <instance-variable name="isVisible" sid="724990532994192" type="number" />
+                <instance-variable name="canClick" sid="124346165801396" type="number" />
+            </instance-variables>
+        </family>
+        <family name="backgroundStart" plugin-id="Sprite" sid="112679083455974">
+            <members>
+                <member>background1pixelcroped</member>
+                <member>bg_one</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="id" sid="879748679915136" type="number" />
+            </instance-variables>
+        </family>
+    </families>
+    <layout-folder>
+        <layout-folder name="GAME">
+            <layout>CENARIO1.xml</layout>
+            <layout>CENARIO2.xml</layout>
+            <layout>CENARIO3.xml</layout>
+        </layout-folder>
+        <layout>SplashScreen.xml</layout>
+        <layout>StartScreen.xml</layout>
+        <layout>Historia.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-folder name="CENARIOS">
+            <event-sheet>CENARIO1.xml</event-sheet>
+            <event-sheet>CENARIO3.xml</event-sheet>
+            <event-sheet>CENARIO2.xml</event-sheet>
+        </event-folder>
+        <event-sheet>SplashScreen.xml</event-sheet>
+        <event-sheet>StartScreenEvent.xml</event-sheet>
+        <event-sheet>GameEngine.xml</event-sheet>
+        <event-sheet>TesteScreen.xml</event-sheet>
+        <event-sheet>Historia.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="9" />
+        <global-instance type="Mouse" uid="10" />
+        <global-instance type="backgroundSound" uid="13">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>Sounds only</saveload>
+                <play-in-background>Yes</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="Function" uid="68" />
+    </global-instances>
+    <sounds-folder>
+        <file name="StartScreeSound.ogg" />
+        <file name="porta do armario.ogg" />
+        <file name="Musica_de_fondo_P09.ogg" />
+        <file name="backgroundGameSound.ogg" />
+        <file name="tempestade.ogg" />
+        <file name="maquina_escrever.ogg" />
+        <file name="trovoes.ogg" />
+        <file name="trovoes_closed.ogg" />
+        <file name="DoorSound.ogg" />
+    </sounds-folder>
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

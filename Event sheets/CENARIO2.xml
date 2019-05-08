@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>CENARIO2</name>
+    <events>
+        <variable constant="0" name="thunderAction" sid="966848856196118" static="0" type="number">0</variable>
+        <include>GameEngine</include>
+        <event-group description="" sid="769881516197526" title="ObjectosInteracao">
+            <sub-events>
+                <event-block sid="280731796208213">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="864802404522813" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">papel2</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="834543068165198" type="System">
+                            <param id="0" name="Variable">isFree</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="105399491568235">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="910548580223516" type="bloco_nomes">
+                                    <param id="0" name="Instance variable">isShow</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="331204577086988" type="blackdrop">
+                                    <param id="0" name="Scale">50</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="103759257340137" type="blackdrop">
+                                    <param id="0" name="X">WindowWidth /2</param>
+                                    <param id="1" name="Y">WindowHeight /2</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="433540553677966" type="bloco_nomes">
+                                    <param id="0" name="Object">papel2</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Sine" id="0" name="Set active" sid="864363691587770" type="bloco_nomes">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="723303837637215" type="bloco_nomes">
+                                    <param id="0" name="Instance variable">isShow</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="827288760284566">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="837408363662464" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">1</param>
+                            <param id="2" name="Object clicked">bloco_nomes</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="848888589882470">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="391672040455216" type="bloco_nomes">
+                                    <param id="0" name="Instance variable">isShow</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="699662079194844" type="blackdrop">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="503127862443719" type="blackdrop">
+                                    <param id="0" name="X">-10</param>
+                                    <param id="1" name="Y">-10</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="778485700739324" type="bloco_nomes">
+                                    <param id="0" name="X">-147</param>
+                                    <param id="1" name="Y">298</param>
+                                </action>
+                                <action behavior="Sine" id="0" name="Set active" sid="299679091178534" type="bloco_nomes">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="137542892045685" type="bloco_nomes">
+                                    <param id="0" name="Instance variable">isShow</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="973954578617407">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="615651259505094" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">papel</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="864837304835968" type="System">
+                            <param id="0" name="Variable">isFree</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="944550112922585">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="113215546856021" type="bloco_flores">
+                                    <param id="0" name="Instance variable">isShow</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="108268514918423" type="blackdrop">
+                                    <param id="0" name="Scale">50</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="263434816162897" type="blackdrop">
+                                    <param id="0" name="X">WindowWidth /2</param>
+                                    <param id="1" name="Y">WindowHeight /2</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="298186946363932" type="bloco_flores">
+                                    <param id="0" name="Object">papel</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Sine" id="0" name="Set active" sid="709800185471973" type="bloco_flores">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="184613106772247" type="bloco_flores">
+                                    <param id="0" name="Instance variable">isShow</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="289557207976953">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="713057486915256" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">1</param>
+                            <param id="2" name="Object clicked">bloco_flores</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="961886689476876">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="113184332969006" type="bloco_flores">
+                                    <param id="0" name="Instance variable">isShow</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="285450439536912" type="blackdrop">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="402369547876059" type="blackdrop">
+                                    <param id="0" name="X">-10</param>
+                                    <param id="1" name="Y">-10</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="903268806275066" type="bloco_flores">
+                                    <param id="0" name="X">-147</param>
+                                    <param id="1" name="Y">298</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="172246727375265" type="bloco_flores">
+                                    <param id="0" name="Instance variable">isShow</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action behavior="Sine" id="0" name="Set active" sid="758740914663560" type="bloco_flores">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="118493437315671">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="624119269536172" type="Mouse">
+                            <param id="0" name="Object">janela</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="517225389152107" type="System" />
+                        <condition id="-14" name="Compare variable" sid="828594625379994" type="System">
+                            <param id="0" name="Variable">thunderAction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="247942378205417" type="backgroundSound">
+                            <param id="0" name="Audio file">trovoes_closed</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">5</param>
+                            <param id="1" name="Tag (optional)">&quot;soundTrovao&quot;</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="588168859243279" type="fundo_janela_flash">
+                            <param id="0" name="&apos;On&apos; time">0.2</param>
+                            <param id="1" name="&apos;Off&apos; time">0.2</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="538482186628023" type="fundo_janela_flash_all">
+                            <param id="0" name="Scale">50</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="597288974094759" type="fundo_janela_flash_all">
+                            <param id="0" name="Object">lampada_default</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="379496922903641" type="fundo_janela_flash_white">
+                            <param id="0" name="Scale">50</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="561851745420350" type="fundo_janela_flash_white">
+                            <param id="0" name="Object">lampada_default</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="484383328279655" type="fundo_janela_flash_all">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="367182998027855">
+                    <conditions>
+                        <condition behavior="Flash" id="1" name="On flash ended" sid="409372781959195" type="fundo_janela_flash_all" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="400146998382806" type="fundo_janela_flash_white" />
+                        <action id="-9" name="Destroy" sid="277138324680477" type="fundo_janela_flash_all" />
+                        <action id="-9" name="Set value" sid="797212696896832" type="System">
+                            <param id="0" name="Variable">thunderAction</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="214404976232998" type="System">
+                            <param id="0" name="Variable">bolsaStatus</param>
+                            <param id="1" name="Value">&quot;295|510&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="223271317864683" type="System">
+                            <param id="0" name="Variable">casacoStatus</param>
+                            <param id="1" name="Value">&quot;350|600|1&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="900649020701515" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="0" name="Call function" sid="345851006623960" type="Function">
+                            <param id="0" name="Name">&quot;showDialog&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="830237878675461" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="0" name="Call function" sid="315623778262152" type="Function">
+                            <param id="0" name="Name">&quot;readText&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Ohh meu deus, que susto!!!&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="745770586857334" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="0" name="Call function" sid="276217010018725" type="Function">
+                            <param id="0" name="Name">&quot;readText&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Parece que algo caiu.&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="473697307919539" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="0" name="Call function" sid="844386366287146" type="Function">
+                            <param id="0" name="Name">&quot;hideDialog&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

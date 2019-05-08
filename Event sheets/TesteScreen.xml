@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TesteScreen</name>
+    <events>
+        <event-block sid="703636613080601">
+            <conditions>
+                <condition id="-25" name="On loader layout complete" sid="518678482316034" type="System" />
+            </conditions>
+            <actions />
+        </event-block>
+    </events>
+</c2eventsheet>

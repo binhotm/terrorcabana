@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="1">CENARIO1</layout>
+        <layout order="4">Historia</layout>
+        <layout order="6">SplashScreen</layout>
+        <layout active="1" order="7">CENARIO3</layout>
+        <layout order="8">StartScreen</layout>
+        <layout order="10">CENARIO2</layout>
+        <event-sheet order="0">GameEngine</event-sheet>
+        <event-sheet order="2">CENARIO1</event-sheet>
+        <event-sheet order="3">Historia</event-sheet>
+        <event-sheet order="5">CENARIO2</event-sheet>
+        <event-sheet order="9">CENARIO3</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="1" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1">
+        <family expanded="0" name="GameObjects" />
+        <family expanded="0" name="backgroundStart" />
+    </families-expanded>
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/CENARIOS/" />
+        <folder expanded="1" path="object-folder/MISC/" />
+        <folder expanded="0" path="object-folder/CHARACTER/" />
+        <folder expanded="1" path="object-folder/HISTORY/" />
+        <folder expanded="1" path="object-folder/StartScreen/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="layout-folder/GAME/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="1" path="event-folder/CENARIOS/" />
+        <folder expanded="0" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/armariofechado/" />
+        <folder expanded="1" path="animation-folder/banquinho/" />
+        <folder expanded="1" path="animation-folder/bau/" />
+        <folder expanded="1" path="animation-folder/bau_cinza/" />
+        <folder expanded="1" path="animation-folder/bau_roxo/" />
+        <folder expanded="1" path="animation-folder/busto/" />
+        <folder expanded="1" path="animation-folder/casaco/" />
+        <folder expanded="1" path="animation-folder/darklight_camdelabro/" />
+        <folder expanded="1" path="animation-folder/janela/" />
+        <folder expanded="1" path="animation-folder/mancebo/" />
+        <folder expanded="1" path="animation-folder/velas/" />
+        <folder expanded="1" path="animation-folder/papel2/" />
+        <folder expanded="1" path="animation-folder/obj_mochila/" />
+        <folder expanded="1" path="animation-folder/panp/" />
+        <folder expanded="1" path="animation-folder/papel/" />
+        <folder expanded="1" path="animation-folder/plantas/" />
+        <folder expanded="1" path="animation-folder/lixo/" />
+        <folder expanded="1" path="animation-folder/prateleira/" />
+        <folder expanded="1" path="animation-folder/sangue/" />
+        <folder expanded="1" path="animation-folder/obj_agua/" />
+        <folder expanded="1" path="animation-folder/porta/" />
+        <folder expanded="1" path="animation-folder/mesa/" />
+        <folder expanded="1" path="animation-folder/madeirasolta/" />
+        <folder expanded="1" path="animation-folder/lampada_default/" />
+        <folder expanded="1" path="animation-folder/curso/" />
+        <folder expanded="1" path="animation-folder/darklight/" />
+        <folder expanded="1" path="animation-folder/darklight_lampada/" />
+        <folder expanded="1" path="animation-folder/inventory/" />
+        <folder expanded="1" path="animation-folder/LEFTARROW/" />
+        <folder expanded="1" path="animation-folder/RIGHTARROW/" />
+        <folder expanded="1" path="animation-folder/dialog/" />
+        <folder expanded="1" path="animation-folder/lamp_light/" />
+        <folder expanded="1" path="animation-folder/blackdrop/" />
+        <folder expanded="1" path="animation-folder/personagem_1/" />
+        <folder expanded="1" path="animation-folder/bg_ground_hist/" />
+        <folder expanded="1" path="animation-folder/bg_one/" />
+        <folder expanded="1" path="animation-folder/background1pixelcroped/" />
+        <folder expanded="1" path="animation-folder/FatecJogos/" />
+        <folder expanded="1" path="animation-folder/FatecLogo/" />
+        <folder expanded="1" path="animation-folder/lerpSprite/" />
+        <folder expanded="1" path="animation-folder/bloco_nomes/" />
+        <folder expanded="1" path="animation-folder/bloco_flores/" />
+        <folder expanded="1" path="animation-folder/fundo_janela/" />
+        <folder expanded="1" path="animation-folder/fundo_janela_flash/" />
+        <folder expanded="1" path="animation-folder/fundo_janela_flash_all/" />
+        <folder expanded="1" path="animation-folder/fundo_janela_flash_white/" />
+        <folder expanded="1" path="animation-folder/invetoryIcon/" />
+    </folders-expanded>
+</c2uistate>

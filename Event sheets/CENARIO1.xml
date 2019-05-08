@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>CENARIO1</name>
+    <events>
+        <include>GameEngine</include>
+        <event-group description="" sid="405119796744063" title="StartGame">
+            <sub-events>
+                <event-block sid="479724455588154">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="568666128028241" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="714658282984098" type="LEFTARROW" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="679070262409850">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="315276640064080" type="System">
+                                    <param id="0" name="Variable">gameStart</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" inverted="1" name="Compare variable" sid="955514908811238" type="System">
+                                    <param id="0" name="Variable">debug</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="809898501619248" type="Function">
+                                    <param id="0" name="Name">&quot;showDialog&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-9" name="Set value" sid="342074663229702" type="System">
+                                    <param id="0" name="Variable">gameStart</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="647160110116107" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="0" name="Call function" sid="157034238750609" type="Function">
+                                    <param id="0" name="Name">&quot;readText&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Auch!&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="725943477278512" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="0" name="Call function" sid="165240234472307" type="Function">
+                                    <param id="0" name="Name">&quot;readText&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;O que aconteceu? Onde estou?&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="591570179671316" type="System">
+                                    <param id="0" name="Seconds">5</param>
+                                </action>
+                                <action id="0" name="Call function" sid="147473437959250" type="Function">
+                                    <param id="0" name="Name">&quot;readText&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Isso são cordas?! Por que estou presa?!&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="751445600536147" type="System">
+                                    <param id="0" name="Seconds">5</param>
+                                </action>
+                                <action id="0" name="Call function" sid="695275002071915" type="Function">
+                                    <param id="0" name="Name">&quot;readText&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Alguém fez isso comigo? POR QUE?!&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="556893940422875" type="System">
+                                    <param id="0" name="Seconds">5</param>
+                                </action>
+                                <action id="0" name="Call function" sid="810031874872705" type="Function">
+                                    <param id="0" name="Name">&quot;readText&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Tenho que sair daqui. T_T&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="303974239590993" type="System">
+                                    <param id="0" name="Seconds">5</param>
+                                </action>
+                                <action id="0" name="Call function" sid="127786778870678" type="Function">
+                                    <param id="0" name="Name">&quot;hideDialog&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="293237069383214">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="416386300153239" type="System">
+                                    <param id="0" name="Variable">hasInvetory</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="477657242996328" type="invetoryIcon">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="222881492556159" title="ItensClick">
+            <sub-events>
+                <event-group description="" sid="487383937345169" title="mochila">
+                    <sub-events>
+                        <event-block sid="742651033729808">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="926402439342382" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">obj_mochila</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="931076719676172" type="System">
+                                    <param id="0" name="Variable">isFree</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="413977476546066" type="Function">
+                                    <param id="0" name="Name">&quot;inGameMessage&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Encontrei uma mochila&quot;</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="129528596793308" type="obj_mochila">
+                                    <param id="0" name="X">-50</param>
+                                    <param id="1" name="Y">-50</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="927099318391682" type="System">
+                                    <param id="0" name="Variable">bolsaStatus</param>
+                                    <param id="1" name="Value">&quot;-50|-50&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="627403310956905" type="System">
+                                    <param id="0" name="Variable">hasInvetory</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="272799163403235" type="invetoryIcon">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="822820919172840" title="Casaco">
+                    <sub-events>
+                        <event-block sid="871062675168558">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="567912210161365" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">casaco</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="726962018264965" type="casaco">
+                                    <param id="0" name="Instance variable">canClick</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="218213417685863" type="System">
+                                    <param id="0" name="Variable">hasFaca</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="809624627837216" type="System">
+                                    <param id="0" name="Variable">hasFaca</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="874434478176245" type="System">
+                                    <param id="0" name="Variable">isFree</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="726170078150125" type="Function">
+                                    <param id="0" name="Name">&quot;showDialog&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-16" name="Wait" sid="450594478127392" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="0" name="Call function" sid="647263117681580" type="Function">
+                                    <param id="0" name="Name">&quot;readText&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Consegui alcançar este casaco!!&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="494309008461636" type="System">
+                                    <param id="0" name="Seconds">4</param>
+                                </action>
+                                <action id="0" name="Call function" sid="506589563884057" type="Function">
+                                    <param id="0" name="Name">&quot;readText&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Encontrei este canivete, preciso usa-lo agora..&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="384445649941034" type="System">
+                                    <param id="0" name="Seconds">4</param>
+                                </action>
+                                <action id="0" name="Call function" sid="215955267523392" type="Function">
+                                    <param id="0" name="Name">&quot;readText&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Argh! &quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="226319205826916" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="0" name="Call function" sid="187631203624664" type="Function">
+                                    <param id="0" name="Name">&quot;readText&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;UFAAAA consengui me soltar, preciso sair daqui!!&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="614313323664629" type="System">
+                                    <param id="0" name="Seconds">3</param>
+                                </action>
+                                <action id="0" name="Call function" sid="983268938057350" type="Function">
+                                    <param id="0" name="Name">&quot;hideDialog&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="940465944101027" title="armario">
+                    <sub-events>
+                        <event-block sid="514926961100341">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="856989236539702" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">armariofechado</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Is playing" sid="358376581660473" type="armariofechado">
+                                    <param id="0" name="Animation">&quot;open&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="142098403096158" type="System">
+                                    <param id="0" name="Variable">isFree</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="25" name="Play at object" sid="793719859242493" type="backgroundSound">
+                                    <param id="0" name="Audio file">porta do armario</param>
+                                    <param id="1" name="Loop">0</param>
+                                    <param id="2" name="Volume">5</param>
+                                    <param id="3" name="Object">armariofechado</param>
+                                    <param id="4" name="Inner angle">360</param>
+                                    <param id="5" name="Outer angle">360</param>
+                                    <param id="6" name="Outer gain">0</param>
+                                    <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="588953648299114" type="armariofechado">
+                                    <param id="0" name="Animation">&quot;open&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="611724012805843" type="bau_cinza">
+                                    <param id="0" name="Object">armariofechado</param>
+                                    <param id="1" name="Image point (optional)">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="105083100019974" type="bau_roxo">
+                                    <param id="0" name="Object">armariofechado</param>
+                                    <param id="1" name="Image point (optional)">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="924559139845782">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="960066632124398" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">armariofechado</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Is playing" sid="784977435335618" type="armariofechado">
+                                    <param id="0" name="Animation">&quot;default&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="294103599890106" type="armariofechado">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="948930863095921" type="bau_cinza">
+                                    <param id="0" name="X">-10</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="447347900065457" type="bau_cinza">
+                                    <param id="0" name="Y">-10</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="272931133020261" type="bau_roxo">
+                                    <param id="0" name="X">-10</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="242854729566997" type="bau_roxo">
+                                    <param id="0" name="Y">-10</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
