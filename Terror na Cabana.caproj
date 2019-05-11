@@ -10,6 +10,7 @@
     <unique-id>2r1pmflzjczo8</unique-id>
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
@@ -22,6 +23,7 @@
         <plugin author="Chris Kent" id="SpriteFontPlus" version="1">SpriteFont+</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
@@ -960,6 +962,36 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="login" sid="875455865331685">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Text2" sid="413739481592283">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="password" sid="281478767229765">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="btn_entrar" sid="171240926110159">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="btn_cancelar" sid="401108486464994">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="bg_login" sid="191257931705292">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\DigiageBigdata\Desktop\fatec\Terror na Cabana SRC\Animations\bg_one\Default\000.png" />
+        </object-type>
+        <object-type name="AJAX" sid="840703567136688">
+            <plugin id="AJAX" />
+        </object-type>
+        <object-type name="SpriteFont3" sid="594181432711143">
+            <plugin id="SpriteFontPlus" />
+            <texture />
+        </object-type>
+        <object-type name="TiledBackground" sid="812969641540744">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\DigiageBigdata\Desktop\fatec\Terror na Cabana SRC\Animations\bg_one\Default\000.png" />
+        </object-type>
     </object-folder>
     <families>
         <family name="GameObjects" plugin-id="Sprite" sid="611563804002963">
@@ -1014,6 +1046,7 @@
         <layout>SplashScreen.xml</layout>
         <layout>StartScreen.xml</layout>
         <layout>Historia.xml</layout>
+        <layout>Login.xml</layout>
     </layout-folder>
     <event-folder>
         <event-folder name="CENARIOS">
@@ -1026,6 +1059,7 @@
         <event-sheet>GameEngine.xml</event-sheet>
         <event-sheet>TesteScreen.xml</event-sheet>
         <event-sheet>Historia.xml</event-sheet>
+        <event-sheet>Login.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="9" />
@@ -1045,6 +1079,7 @@
             </properties>
         </global-instance>
         <global-instance type="Function" uid="68" />
+        <global-instance type="AJAX" uid="89" />
     </global-instances>
     <sounds-folder>
         <file name="StartScreeSound.ogg" />

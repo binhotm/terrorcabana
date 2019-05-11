@@ -10,17 +10,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="1">CENARIO1</layout>
-        <layout order="4">Historia</layout>
-        <layout order="6">SplashScreen</layout>
-        <layout active="1" order="7">CENARIO3</layout>
-        <layout order="8">StartScreen</layout>
-        <layout order="10">CENARIO2</layout>
-        <event-sheet order="0">GameEngine</event-sheet>
-        <event-sheet order="2">CENARIO1</event-sheet>
-        <event-sheet order="3">Historia</event-sheet>
-        <event-sheet order="5">CENARIO2</event-sheet>
-        <event-sheet order="9">CENARIO3</event-sheet>
+        <layout order="0">Login</layout>
+        <layout order="2">Historia</layout>
+        <layout order="4">CENARIO1</layout>
+        <layout order="5">SplashScreen</layout>
+        <event-sheet order="1">Login</event-sheet>
+        <event-sheet active="1" order="3">Historia</event-sheet>
+        <event-sheet order="6">SplashScreen</event-sheet>
+        <event-sheet order="7">StartScreenEvent</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -28,12 +25,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="1">
+    <families-expanded root="0">
         <family expanded="0" name="GameObjects" />
         <family expanded="0" name="backgroundStart" />
     </families-expanded>
     <folders-expanded>
-        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/" />
         <folder expanded="0" path="object-folder/CENARIOS/" />
         <folder expanded="1" path="object-folder/MISC/" />
         <folder expanded="0" path="object-folder/CHARACTER/" />
@@ -42,11 +39,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="layout-folder/GAME/" />
         <folder expanded="1" path="event-folder/" />
-        <folder expanded="1" path="event-folder/CENARIOS/" />
+        <folder expanded="0" path="event-folder/CENARIOS/" />
         <folder expanded="0" path="file-folder/" />
-        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="0" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
-        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/armariofechado/" />
         <folder expanded="1" path="animation-folder/banquinho/" />
         <folder expanded="1" path="animation-folder/bau/" />

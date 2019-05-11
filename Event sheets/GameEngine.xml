@@ -12,7 +12,7 @@
         <variable constant="0" name="noFade" sid="160717133428511" static="0" type="number">0</variable>
         <variable constant="0" name="playingMusic" sid="622616916738112" static="0" type="number">0</variable>
         <variable comment="Se o personagem ja pegou a mochbila" constant="0" name="isFree" sid="490299496570784" static="0" type="number">0</variable>
-        <variable constant="0" name="debug" sid="781299479377664" static="0" type="number">1</variable>
+        <variable constant="0" name="debug" sid="781299479377664" static="0" type="number">0</variable>
         <event-group description="" sid="560617196269730" title="Debug">
             <sub-events>
                 <event-block sid="350984827149825">

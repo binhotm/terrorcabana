@@ -74,9 +74,7 @@
                 <event-block any="1" sid="997539145229109">
                     <conditions>
                         <condition id="0" name="On clicked" sid="953548391542860" type="btn_skip" />
-                        <condition id="2" name="Key is down" sid="891812468084305" type="Keyboard">
-                            <param id="0" name="Key">13 (Return)</param>
-                        </condition>
+                        <condition id="1" name="On any key pressed" sid="891812468084305" type="Keyboard" />
                     </conditions>
                     <actions>
                         <action id="6" name="Stop" sid="687008533420260" type="backgroundSound">

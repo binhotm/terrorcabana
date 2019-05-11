@@ -81,9 +81,10 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="868135249335471">
+                <event-block any="1" sid="868135249335471">
                     <conditions>
                         <condition id="1" name="On any key pressed" sid="872690384579405" type="Keyboard" />
+                        <condition id="1" name="On any click" sid="279525583063056" type="Mouse" />
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="453402856775795" type="start_text" />
@@ -100,5 +101,9 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="490525187101061">
+            <conditions />
+            <actions />
+        </event-block>
     </events>
 </c2eventsheet>

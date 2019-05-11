@@ -28,7 +28,28 @@
             <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances />
+            <instances>
+                <instance type="TiledBackground" uid="90">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-1</x>
+                        <y>-1</y>
+                        <z>0</z>
+                        <width>1008</width>
+                        <height>607</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
             <effects />
         </layer>
         <layer name="Splash" sid="801903783451567">
@@ -52,7 +73,7 @@
                         <character-width>16</character-width>
                         <character-height>16</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
-                        <text>Powered by: Contruct 2</text>
+                        <text>Powered by: Construct 2</text>
                         <scale>1</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Center</horizontal-alignment>
@@ -77,7 +98,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>500</x>
-                        <y>96</y>
+                        <y>124</y>
                         <z>0</z>
                         <width>416</width>
                         <height>32</height>
@@ -129,7 +150,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>500</x>
-                        <y>337</y>
+                        <y>365</y>
                         <z>0</z>
                         <width>320</width>
                         <height>70</height>
@@ -162,7 +183,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>500</x>
-                        <y>221</y>
+                        <y>249</y>
                         <z>0</z>
                         <width>200</width>
                         <height>100</height>
@@ -178,7 +199,7 @@
                         <character-width>16</character-width>
                         <character-height>16</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
-                        <text>Grupo: Kronus Fatec 2017</text>
+                        <text>Grupo: Kronus Fatec 2019</text>
                         <scale>1</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Center</horizontal-alignment>
@@ -203,7 +224,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>500</x>
-                        <y>448</y>
+                        <y>476</y>
                         <z>0</z>
                         <width>385</width>
                         <height>32</height>

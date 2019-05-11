@@ -4,23 +4,6 @@
     <name>SplashScreen</name>
     <events>
         <variable constant="0" name="finishSplash" sid="566542293774674" static="0" type="number">0</variable>
-        <event-group description="" sid="937432860094283" title="StartPressets">
-            <sub-events>
-                <event-block sid="364157038908697">
-                    <conditions>
-                        <condition id="-2" name="On start of layout" sid="495344046196615" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-1" name="Set X" sid="219846282438502" type="FatecJogos">
-                            <param id="0" name="X">(WindowWidth / 2) </param>
-                        </action>
-                        <action id="-1" name="Set X" sid="204922269957851" type="FatecLogo">
-                            <param id="0" name="X">(WindowWidth / 2)</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
         <event-group description="" sid="358235503348033" title="SplashScreen">
             <sub-events>
                 <event-block sid="245303948623177">
