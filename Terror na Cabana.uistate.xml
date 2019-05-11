@@ -11,13 +11,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">Login</layout>
-        <layout order="2">Historia</layout>
-        <layout order="4">CENARIO1</layout>
-        <layout order="5">SplashScreen</layout>
-        <event-sheet order="1">Login</event-sheet>
-        <event-sheet active="1" order="3">Historia</event-sheet>
-        <event-sheet order="6">SplashScreen</event-sheet>
-        <event-sheet order="7">StartScreenEvent</event-sheet>
+        <layout order="4">SplashScreen</layout>
+        <event-sheet active="1" order="1">Login</event-sheet>
+        <event-sheet order="2">SplashScreen</event-sheet>
+        <event-sheet order="3">StartScreenEvent</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -30,15 +27,15 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="0" name="backgroundStart" />
     </families-expanded>
     <folders-expanded>
-        <folder expanded="0" path="object-folder/" />
+        <folder expanded="1" path="object-folder/" />
         <folder expanded="0" path="object-folder/CENARIOS/" />
-        <folder expanded="1" path="object-folder/MISC/" />
+        <folder expanded="0" path="object-folder/MISC/" />
         <folder expanded="0" path="object-folder/CHARACTER/" />
-        <folder expanded="1" path="object-folder/HISTORY/" />
-        <folder expanded="1" path="object-folder/StartScreen/" />
+        <folder expanded="0" path="object-folder/HISTORY/" />
+        <folder expanded="0" path="object-folder/StartScreen/" />
         <folder expanded="1" path="layout-folder/" />
-        <folder expanded="1" path="layout-folder/GAME/" />
-        <folder expanded="1" path="event-folder/" />
+        <folder expanded="0" path="layout-folder/GAME/" />
+        <folder expanded="0" path="event-folder/" />
         <folder expanded="0" path="event-folder/CENARIOS/" />
         <folder expanded="0" path="file-folder/" />
         <folder expanded="0" path="sound-folder/" />
@@ -91,5 +88,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/fundo_janela_flash_all/" />
         <folder expanded="1" path="animation-folder/fundo_janela_flash_white/" />
         <folder expanded="1" path="animation-folder/invetoryIcon/" />
+        <folder expanded="1" path="animation-folder/fadeSprite/" />
+        <folder expanded="1" path="animation-folder/loginBOx/" />
     </folders-expanded>
 </c2uistate>

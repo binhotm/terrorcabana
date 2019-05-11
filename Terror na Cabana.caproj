@@ -4,7 +4,7 @@
     <description>Sobreviva em uma cabana desconhecida ao meio de uma floresta</description>
     <version>0.0.1.ALPHA</version>
     <author>Kronus FATEC Group</author>
-    <author-email></author-email>
+    <author-email>fabriciojuniorsilva@gmail.com</author-email>
     <author-website>http://fatec.edu.br/</author-website>
     <app-id>com.kronus.fatec.edu</app-id>
     <unique-id>2r1pmflzjczo8</unique-id>
@@ -33,8 +33,11 @@
         <behavior author="lunarray" id="lunarray_LiteTween" version="1.700000048">LiteTween</behavior>
     </used-behaviors>
     <used-effects>
+        <effect author="Scirra" id="blacknwhite">Black &amp; White</effect>
         <effect author="Scirra" id="multiply">Multiply</effect>
+        <effect author="Scirra" id="radialblur">Radial blur</effect>
         <effect author="Brad Larson" id="swirl">Swirl</effect>
+        <effect author="Viktor Korsun" id="water">Water</effect>
     </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -990,6 +993,56 @@
         </object-type>
         <object-type name="TiledBackground" sid="812969641540744">
             <plugin id="TiledBg" />
+            <effects>
+                <effect-type name="RadialBlur">
+                    <effect id="radialblur" />
+                </effect-type>
+                <effect-type name="Water">
+                    <effect id="water" />
+                </effect-type>
+            </effects>
+            <texture original-source="C:\Users\DigiageBigdata\Desktop\fatec\Terror na Cabana SRC\Animations\bg_one\Default\000.png" />
+        </object-type>
+        <object-type name="TiledBackground2" sid="562089005874281">
+            <plugin id="TiledBg" />
+            <effects>
+                <effect-type name="RadialBlur">
+                    <effect id="radialblur" />
+                </effect-type>
+                <effect-type name="Water">
+                    <effect id="water" />
+                </effect-type>
+            </effects>
+            <texture original-source="C:\Users\DigiageBigdata\Desktop\fatec\Terror na Cabana SRC\Animations\bg_one\Default\000.png" />
+        </object-type>
+        <object-type name="fadeSprite" sid="343894330314433">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="416948757261256">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="936462615635322" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="loginBOx" sid="192710272574634">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="564316566262370" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground3" sid="222877436575856">
+            <plugin id="TiledBg" />
+            <effects>
+                <effect-type name="BlackWhite">
+                    <effect id="blacknwhite" />
+                </effect-type>
+            </effects>
             <texture original-source="C:\Users\DigiageBigdata\Desktop\fatec\Terror na Cabana SRC\Animations\bg_one\Default\000.png" />
         </object-type>
     </object-folder>

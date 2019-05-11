@@ -6,33 +6,9 @@
         <variable constant="0" name="finishSplash" sid="566542293774674" static="0" type="number">0</variable>
         <event-group description="" sid="358235503348033" title="SplashScreen">
             <sub-events>
-                <event-block sid="245303948623177">
-                    <conditions>
-                        <condition id="-25" name="On loader layout complete" sid="735004659478825" type="System" />
-                    </conditions>
-                    <actions>
-                        <action behavior="Fade" id="1" name="Start fade" sid="230042924848229" type="FatecJogos" />
-                        <action behavior="Fade" id="1" name="Start fade" sid="720711625830281" type="FatecLogo" />
-                    </actions>
-                </event-block>
                 <event-block sid="646350177036476">
                     <conditions>
                         <condition behavior="Fade" id="0" name="On fade-out finished" sid="653736154673901" type="FatecLogo" />
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Add to" sid="159731210869389" type="System">
-                            <param id="0" name="Variable">finishSplash</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="579503862434614">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="358086302724245" type="System">
-                            <param id="0" name="Variable">finishSplash</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
                     </conditions>
                     <actions>
                         <action id="-2" name="Go to layout" sid="412414303121052" type="System">

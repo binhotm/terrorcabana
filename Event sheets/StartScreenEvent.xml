@@ -95,7 +95,7 @@
                             <param id="0" name="Audio file">StartScreeSound</param>
                         </action>
                         <action id="-2" name="Go to layout" sid="514980178712042" type="System">
-                            <param id="0" name="Layout">Historia</param>
+                            <param id="0" name="Layout">Login</param>
                         </action>
                     </actions>
                 </event-block>

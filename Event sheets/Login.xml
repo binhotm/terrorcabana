@@ -12,6 +12,10 @@
                     <param id="0" name="Property name">&quot;font-size&quot;</param>
                     <param id="1" name="Value">&quot;15px&quot;</param>
                 </action>
+                <action id="7" name="Set CSS style" sid="811067110107122" type="password">
+                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                    <param id="1" name="Value">&quot;15px&quot;</param>
+                </action>
             </actions>
         </event-block>
     </events>

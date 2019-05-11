@@ -32,19 +32,114 @@
                 <instance type="TiledBackground" uid="90">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
+                        <hotspot>Top</hotspot>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="RadialBlur">
+                            <parameters>
+                                <intensity>1</intensity>
+                                <radius>0.2</radius>
+                            </parameters>
+                        </effect-instance>
+                        <effect-instance type="Water">
+                            <parameters>
+                                <angle>4</angle>
+                                <delta>20</delta>
+                                <emboss>0.3</emboss>
+                                <frequency>3</frequency>
+                                <intensity>1</intensity>
+                                <reflectivity>500</reflectivity>
+                                <speed>0.02</speed>
+                                <x-speed>0.2</x-speed>
+                                <y-speed>0.2</y-speed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-1</x>
-                        <y>-1</y>
+                        <x>252</x>
+                        <y>-3</y>
                         <z>0</z>
-                        <width>1008</width>
-                        <height>607</height>
+                        <width>500</width>
+                        <height>600</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TiledBackground2" uid="91">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <effect-instances>
+                        <effect-instance type="RadialBlur">
+                            <parameters>
+                                <intensity>1</intensity>
+                                <radius>0.2</radius>
+                            </parameters>
+                        </effect-instance>
+                        <effect-instance type="Water">
+                            <parameters>
+                                <angle>4</angle>
+                                <delta>20</delta>
+                                <emboss>0.3</emboss>
+                                <frequency>3</frequency>
+                                <intensity>1</intensity>
+                                <reflectivity>500</reflectivity>
+                                <speed>0.02</speed>
+                                <x-speed>0.2</x-speed>
+                                <y-speed>0.2</y-speed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>501</x>
+                        <y>-2</y>
+                        <z>0</z>
+                        <width>500</width>
+                        <height>600</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="fadeSprite" uid="92">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>Yes</active-at-start>
+                                <fade-in-time>2</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>3</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>510.5</x>
+                        <y>304.5</y>
+                        <z>0</z>
+                        <width>1021</width>
+                        <height>609</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -86,9 +181,9 @@
                     <behavior-instances>
                         <behavior-instance type="Fade">
                             <properties>
-                                <active-at-start>No</active-at-start>
+                                <active-at-start>Yes</active-at-start>
                                 <fade-in-time>2</fade-in-time>
-                                <wait-time>2</wait-time>
+                                <wait-time>0</wait-time>
                                 <fade-out-time>2</fade-out-time>
                                 <destroy>After fade out</destroy>
                             </properties>
@@ -138,10 +233,10 @@
                     <behavior-instances>
                         <behavior-instance type="Fade">
                             <properties>
-                                <active-at-start>No</active-at-start>
+                                <active-at-start>Yes</active-at-start>
                                 <fade-in-time>2</fade-in-time>
-                                <wait-time>1</wait-time>
-                                <fade-out-time>1</fade-out-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>2</fade-out-time>
                                 <destroy>After fade out</destroy>
                             </properties>
                         </behavior-instance>
@@ -171,10 +266,10 @@
                     <behavior-instances>
                         <behavior-instance type="Fade">
                             <properties>
-                                <active-at-start>No</active-at-start>
+                                <active-at-start>Yes</active-at-start>
                                 <fade-in-time>2</fade-in-time>
-                                <wait-time>1</wait-time>
-                                <fade-out-time>1</fade-out-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>2</fade-out-time>
                                 <destroy>After fade out</destroy>
                             </properties>
                         </behavior-instance>
@@ -212,9 +307,9 @@
                     <behavior-instances>
                         <behavior-instance type="Fade">
                             <properties>
-                                <active-at-start>No</active-at-start>
+                                <active-at-start>Yes</active-at-start>
                                 <fade-in-time>2</fade-in-time>
-                                <wait-time>2</wait-time>
+                                <wait-time>0</wait-time>
                                 <fade-out-time>2</fade-out-time>
                                 <destroy>After fade out</destroy>
                             </properties>

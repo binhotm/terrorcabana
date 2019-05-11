@@ -11,7 +11,7 @@
         <horizontal>500</horizontal>
         <vertical>500</vertical>
     </margins>
-    <unbounded-scrolling>1</unbounded-scrolling>
+    <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
         <layer name="seila" sid="435115808770144">
             <initially-visible>1</initially-visible>
@@ -47,22 +47,51 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="bg_login" uid="88">
+                <instance type="TiledBackground3" uid="93">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="BlackWhite">
+                            <parameters>
+                                <threshold>0.5</threshold>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
+                    <effect-fallback>11</effect-fallback>
                     <world>
-                        <x>0</x>
-                        <y>0</y>
+                        <x>-34</x>
+                        <y>-14</y>
                         <z>0</z>
-                        <width>1000</width>
-                        <height>600</height>
+                        <width>1054</width>
+                        <height>625</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="loginBOx" uid="88">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>495.5</x>
+                        <y>289.5</y>
+                        <z>0</z>
+                        <width>351</width>
+                        <height>319</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
