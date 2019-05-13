@@ -984,7 +984,7 @@
             <plugin id="TiledBg" />
             <texture original-source="C:\Users\DigiageBigdata\Desktop\fatec\Terror na Cabana SRC\Animations\bg_one\Default\000.png" />
         </object-type>
-        <object-type name="AJAX" sid="840703567136688">
+        <object-type name="ajax_login" sid="840703567136688">
             <plugin id="AJAX" />
         </object-type>
         <object-type name="SpriteFont3" sid="594181432711143">
@@ -1028,14 +1028,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="loginBOx" sid="192710272574634">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="564316566262370" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="TiledBackground3" sid="222877436575856">
             <plugin id="TiledBg" />
             <effects>
@@ -1044,6 +1036,9 @@
                 </effect-type>
             </effects>
             <texture original-source="C:\Users\DigiageBigdata\Desktop\fatec\Terror na Cabana SRC\Animations\bg_one\Default\000.png" />
+        </object-type>
+        <object-type name="Text3" sid="822800103493624">
+            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families>
@@ -1132,7 +1127,7 @@
             </properties>
         </global-instance>
         <global-instance type="Function" uid="68" />
-        <global-instance type="AJAX" uid="89" />
+        <global-instance type="ajax_login" uid="89" />
     </global-instances>
     <sounds-folder>
         <file name="StartScreeSound.ogg" />

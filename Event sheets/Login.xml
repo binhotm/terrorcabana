@@ -18,5 +18,30 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="435453705115151">
+            <conditions>
+                <condition id="0" name="On clicked" sid="754786082414699" type="btn_entrar" />
+            </conditions>
+            <actions>
+                <action id="2" name="Post to URL" sid="607193823254864" type="ajax_login">
+                    <param id="0" name="Tag">&quot;ajax_login&quot;</param>
+                    <param id="1" name="URL">&quot;http://localhost/codeigniter/index.php/login/dologin/&quot;</param>
+                    <param id="2" name="Data">&quot;login=&quot; &amp;  login.Text &amp; &quot; &amp;password=&quot; &amp; password.Text</param>
+                    <param id="3" name="Method">&quot;POST&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="303558907959394">
+            <conditions>
+                <condition id="0" name="On completed" sid="141571331303860" type="ajax_login">
+                    <param id="0" name="Tag">&quot;ajax_login&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="514524885052902" type="Text3">
+                    <param id="0" name="Text">ajax_login.LastData</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
