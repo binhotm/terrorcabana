@@ -11,6 +11,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">Login</layout>
+        <layout order="2">SplashScreen</layout>
+        <layout order="3">Historia</layout>
+        <layout order="4">StartScreen</layout>
         <event-sheet active="1" order="1">Login</event-sheet>
     </open-tabs>
     <properties>

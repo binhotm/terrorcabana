@@ -43,5 +43,15 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="596077550878028">
+            <conditions>
+                <condition id="4" name="On any error" sid="360932997181747" type="ajax_login" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="466087251996453" type="Text3">
+                    <param id="0" name="Text">ajax_login.LastData</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
