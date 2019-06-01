@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Login</name>
     <events>
+        <variable constant="0" name="statusLogin" sid="550127698156013" static="0" type="number">0</variable>
         <event-block sid="950268663422467">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="285296736291377" type="System" />
@@ -18,38 +19,131 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="435453705115151">
+        <event-block sid="936364192378063">
             <conditions>
-                <condition id="0" name="On clicked" sid="754786082414699" type="btn_entrar" />
-            </conditions>
-            <actions>
-                <action id="2" name="Post to URL" sid="607193823254864" type="ajax_login">
-                    <param id="0" name="Tag">&quot;ajax_login&quot;</param>
-                    <param id="1" name="URL">&quot;http://localhost/codeigniter/index.php/login/dologin/&quot;</param>
-                    <param id="2" name="Data">&quot;login=&quot; &amp;  login.Text &amp; &quot; &amp;password=&quot; &amp; password.Text</param>
-                    <param id="3" name="Method">&quot;POST&quot;</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="303558907959394">
-            <conditions>
-                <condition id="0" name="On completed" sid="141571331303860" type="ajax_login">
-                    <param id="0" name="Tag">&quot;ajax_login&quot;</param>
+                <condition id="7" name="Cursor is over object" sid="777450105692207" type="Mouse">
+                    <param id="0" name="Object">womanSprite</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="514524885052902" type="Text3">
-                    <param id="0" name="Text">ajax_login.LastData</param>
+                <action id="-16" name="Set opacity" sid="959359670476690" type="womanSprite">
+                    <param id="0" name="Opacity">50</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="596077550878028">
+        <event-block sid="802018265029817">
             <conditions>
-                <condition id="4" name="On any error" sid="360932997181747" type="ajax_login" />
+                <condition id="7" inverted="1" name="Cursor is over object" sid="122195447747033" type="Mouse">
+                    <param id="0" name="Object">womanSprite</param>
+                </condition>
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="466087251996453" type="Text3">
-                    <param id="0" name="Text">ajax_login.LastData</param>
+                <action id="-16" name="Set opacity" sid="729786638725173" type="womanSprite">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="727145219307435" title="AjaxEvents">
+            <sub-events>
+                <event-block sid="303558907959394">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="141571331303860" type="ajax_login">
+                            <param id="0" name="Tag">&quot;ajax_login&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="514524885052902" type="Text3">
+                            <param id="0" name="Text">ajax_login.LastData</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="908500104428467" type="System">
+                            <param id="0" name="Variable">statusLogin</param>
+                            <param id="1" name="Value">int(ajax_login.LastData)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="596077550878028">
+                    <conditions>
+                        <condition id="4" name="On any error" sid="360932997181747" type="ajax_login" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="466087251996453" type="Text3">
+                            <param id="0" name="Text">ajax_login.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="888294242453697" title="Buttons Controller">
+            <sub-events>
+                <event-block sid="489425046688264">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="759100496182134" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">btnCadastrar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="565800597961766" type="btnCadastrar">
+                            <param id="0" name="Animation">&quot;a1&quot;</param>
+                            <param id="1" name="From">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="271544274096974" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="348442718740694" type="btnCadastrar">
+                            <param id="0" name="Animation">&quot;a0&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="990389185288068">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="987594170415388" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">btnLogar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Post to URL" sid="607193823254864" type="ajax_login">
+                            <param id="0" name="Tag">&quot;ajax_login&quot;</param>
+                            <param id="1" name="URL">&quot;http://api.terrornacabana.com.br/index.php/login/logon&quot;</param>
+                            <param id="2" name="Data">&quot;user=&quot;&amp;login.Text&amp;&quot;&amp;password=&quot;&amp;password.Text</param>
+                            <param id="3" name="Method">&quot;POST&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="916746960802185" type="btnLogar">
+                            <param id="0" name="Animation">&quot;a1&quot;</param>
+                            <param id="1" name="From">0</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="318296304333489" type="btnLogar">
+                            <param id="0" name="Opacity">90</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="224247010461674" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="587055721856969" type="btnLogar">
+                            <param id="0" name="Animation">&quot;a0&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="895076366338992" type="btnLogar">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block breakpoint="1" sid="786527192754439">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="632995469909144" type="System">
+                    <param id="0" name="Variable">statusLogin</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-43" name="Go to next/previous layout" sid="174981488711773" type="System">
+                    <param id="0" name="Which">0</param>
                 </action>
             </actions>
         </event-block>

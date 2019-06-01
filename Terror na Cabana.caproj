@@ -27,6 +27,7 @@
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
@@ -100,6 +101,11 @@
             </object-type>
             <object-type name="banquinho" sid="224846993296021">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DragDrop" sid="229205188726860">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="841398952301963" speed="5">
                         <frame duration="1" hotspotX="0.507463" hotspotY="0.507463" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\itens\CENARIO1\banquinho.png" />
@@ -1039,6 +1045,77 @@
         </object-type>
         <object-type name="Text3" sid="822800103493624">
             <plugin id="Text" />
+        </object-type>
+        <object-type name="SpriteFont4" sid="512105557902081">
+            <plugin id="SpriteFontPlus" />
+            <texture />
+        </object-type>
+        <object-type name="backgroundLogin" sid="930537326457251">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Fabricio-\Desktop\git\finais\Login.jpg" />
+        </object-type>
+        <object-type name="textBoxLogin" sid="730649265826349">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="819717134155967" speed="5">
+                    <frame duration="1" hotspotX="0.500952" hotspotY="0.501188" original-source="C:\Users\Fabricio-\Desktop\git\finais\box.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="womanSprite" sid="101683567949651">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="899272276861160" speed="5">
+                    <frame duration="1" hotspotX="0.50303" hotspotY="0.502242" original-source="C:\Users\Fabricio-\Desktop\git\finais\womanblood.png">
+                        <collision-poly>
+                            <point x="0.175758" y="0.130045" />
+                            <point x="0.49697" y="0" />
+                            <point x="0.745455" y="0.188341" />
+                            <point x="0.878788" y="0.497758" />
+                            <point x="0.842424" y="0.883408" />
+                            <point x="0.49697" y="0.986547" />
+                            <point x="0.0969697" y="0.928251" />
+                            <point x="0.0606061" y="0.497758" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btnLogar" sid="322683684723579">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="a0" pingpong="0" repeatcount="1" repeatto="0" sid="636671657769038" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\buttons.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="a1" pingpong="0" repeatcount="1" repeatto="0" sid="588202275859541" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\buttons.png">
+                        <collision-poly>
+                            <point x="0.0194805" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.934783" />
+                            <point x="0.0194805" y="0.934783" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btnCadastrar" sid="942583016970200">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="a0" pingpong="0" repeatcount="1" repeatto="0" sid="219055575692404" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\buttons.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="a1" pingpong="0" repeatcount="1" repeatto="0" sid="996359984434799" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\buttons.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.980519" y="0" />
+                            <point x="0.980519" y="0.934783" />
+                            <point x="0" y="0.934783" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>

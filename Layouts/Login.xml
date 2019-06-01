@@ -31,10 +31,10 @@
             <instances />
             <effects />
         </layer>
-        <layer name="form" sid="304696562683326">
+        <layer name="bacground" sid="407257569557416">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
-            <transparent>0</transparent>
+            <transparent>1</transparent>
             <parallax>
                 <x>1</x>
                 <y>1</y>
@@ -47,26 +47,19 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="TiledBackground3" uid="93">
+                <instance type="backgroundLogin" uid="93">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
                     </properties>
-                    <effect-instances>
-                        <effect-instance type="BlackWhite">
-                            <parameters>
-                                <threshold>0.5</threshold>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
-                    <effect-fallback>11</effect-fallback>
+                    <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-34</x>
-                        <y>-14</y>
+                        <x>1</x>
+                        <y>-2</y>
                         <z>0</z>
-                        <width>1054</width>
-                        <height>625</height>
+                        <width>1003</width>
+                        <height>598</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -74,6 +67,47 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="textBoxLogin" uid="86">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>500.417572021</x>
+                        <y>289</y>
+                        <z>0</z>
+                        <width>438.425964355</width>
+                        <height>351.575866699</height>
+                        <depth>0</depth>
+                        <hotspotX>0.500952363</hotspotX>
+                        <hotspotY>0.501187623</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
+        <layer name="form" sid="304696562683326">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
                 <instance type="login" uid="84">
                     <properties>
                         <text></text>
@@ -90,10 +124,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>352</x>
-                        <y>192</y>
-                        <z>0.000003815</z>
-                        <width>288</width>
+                        <x>321</x>
+                        <y>158</y>
+                        <z>0</z>
+                        <width>350.200256348</width>
                         <height>64</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -116,62 +150,99 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>352</x>
-                        <y>288</y>
-                        <z>0.000003815</z>
-                        <width>288</width>
+                        <x>321</x>
+                        <y>257</y>
+                        <z>0</z>
+                        <width>349</width>
                         <height>64</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="btn_entrar" uid="86">
+                <instance type="womanSprite" uid="87">
                     <properties>
-                        <type>Button</type>
-                        <text>Entrar</text>
-                        <tooltip></tooltip>
                         <initial-visibility>Visible</initial-visibility>
-                        <enabled>Yes</enabled>
-                        <auto-font-size>Yes</auto-font-size>
-                        <id-optional></id-optional>
-                        <checked>No</checked>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>352</x>
-                        <y>384</y>
-                        <z>0.000003815</z>
-                        <width>192</width>
-                        <height>32</height>
+                        <x>131</x>
+                        <y>240</y>
+                        <z>0</z>
+                        <width>165</width>
+                        <height>223</height>
                         <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
+                        <hotspotX>0.5030303</hotspotX>
+                        <hotspotY>0.502242148</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="btn_cancelar" uid="87">
+            </instances>
+            <effects />
+        </layer>
+        <layer name="butn" sid="206016180604193">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="btnLogar" uid="94">
                     <properties>
-                        <type>Button</type>
-                        <text>Fugir</text>
-                        <tooltip></tooltip>
                         <initial-visibility>Visible</initial-visibility>
-                        <enabled>Yes</enabled>
-                        <auto-font-size>Yes</auto-font-size>
-                        <id-optional></id-optional>
-                        <checked>No</checked>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>544</x>
-                        <y>384</y>
-                        <z>0.000003815</z>
-                        <width>96</width>
-                        <height>32</height>
+                        <x>397.19833374</x>
+                        <y>375.110626221</y>
+                        <z>0</z>
+                        <width>154</width>
+                        <height>46</height>
                         <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="btnCadastrar" uid="95">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>595.599609375</x>
+                        <y>374.310333252</y>
+                        <z>0</z>
+                        <width>154</width>
+                        <height>46</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
                     </world>
                 </instance>
             </instances>
@@ -208,8 +279,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>32</x>
-                        <y>12</y>
+                        <x>28</x>
+                        <y>477</y>
                         <z>0</z>
                         <width>956</width>
                         <height>111</height>
