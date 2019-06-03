@@ -10,15 +10,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Login</layout>
-        <layout order="2">SplashScreen</layout>
-        <layout order="3">Historia</layout>
-        <layout order="4">StartScreen</layout>
-        <layout order="5">CENARIO3</layout>
-        <layout order="6">CENARIO1</layout>
-        <layout order="7">CENARIO2</layout>
-        <event-sheet active="1" order="1">Login</event-sheet>
-        <event-sheet order="8">GameEngine</event-sheet>
+        <layout active="1" order="0">Historia</layout>
+        <layout order="2">CENARIO1</layout>
+        <event-sheet order="1">Historia</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -42,7 +36,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="event-folder/" />
         <folder expanded="0" path="event-folder/CENARIOS/" />
         <folder expanded="0" path="file-folder/" />
-        <folder expanded="0" path="sound-folder/" />
+        <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="1" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/armariofechado/" />
@@ -78,6 +72,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/dialog/" />
         <folder expanded="1" path="animation-folder/lamp_light/" />
         <folder expanded="1" path="animation-folder/blackdrop/" />
+        <folder expanded="1" path="animation-folder/maquina_escrever/" />
         <folder expanded="1" path="animation-folder/personagem_1/" />
         <folder expanded="1" path="animation-folder/bg_ground_hist/" />
         <folder expanded="1" path="animation-folder/bg_one/" />
@@ -97,5 +92,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/womanSprite/" />
         <folder expanded="1" path="animation-folder/btnLogar/" />
         <folder expanded="1" path="animation-folder/btnCadastrar/" />
+        <folder expanded="1" path="animation-folder/papelTexto/" />
+        <folder expanded="1" path="animation-folder/btn_continue/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
     </folders-expanded>
 </c2uistate>
