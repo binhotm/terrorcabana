@@ -10,8 +10,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">Historia</layout>
+        <layout order="0">Historia</layout>
         <layout order="2">CENARIO1</layout>
+        <layout order="3">CENARIO2</layout>
+        <layout order="4">CENARIO3</layout>
+        <layout order="5">Login</layout>
+        <layout active="1" order="6">Teste</layout>
         <event-sheet order="1">Historia</event-sheet>
     </open-tabs>
     <properties>
@@ -95,5 +99,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/papelTexto/" />
         <folder expanded="1" path="animation-folder/btn_continue/" />
         <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/sprLogo/" />
     </folders-expanded>
 </c2uistate>

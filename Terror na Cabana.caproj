@@ -1081,13 +1081,13 @@
         </object-type>
         <object-type name="backgroundLogin" sid="930537326457251">
             <plugin id="TiledBg" />
-            <texture original-source="C:\Users\Fabricio-\Desktop\git\finais\Login.jpg" />
+            <texture original-source="C:\Users\Fabricio-\Desktop\git\finais\login_tela_sprite_0006_sangue.png" />
         </object-type>
         <object-type name="textBoxLogin" sid="730649265826349">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="819717134155967" speed="5">
-                    <frame duration="1" hotspotX="0.500952" hotspotY="0.501188" original-source="C:\Users\Fabricio-\Desktop\git\finais\box.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501424" original-source="C:\Users\Fabricio-\Desktop\git\finais\login_tela_sprite_0005_retangulo.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -1192,6 +1192,26 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="sprLogo" sid="892864375163426">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="859964390250102" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\login_tela_sprite_0000_terror-na-cabana.png">
+                        <collision-poly>
+                            <point x="0.00899281" y="0.0609756" />
+                            <point x="0.5" y="0.378049" />
+                            <point x="0.985611" y="0.097561" />
+                            <point x="0.359712" y="0.719512" />
+                            <point x="0.5" y="0.621951" />
+                            <point x="0.663669" y="0.560976" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextBox" sid="233949848607523">
+            <plugin id="TextBox" />
+        </object-type>
     </object-folder>
     <families>
         <family name="GameObjects" plugin-id="Sprite" sid="611563804002963">
@@ -1242,6 +1262,7 @@
             <layout>CENARIO1.xml</layout>
             <layout>CENARIO2.xml</layout>
             <layout>CENARIO3.xml</layout>
+            <layout>Teste.xml</layout>
         </layout-folder>
         <layout>SplashScreen.xml</layout>
         <layout>StartScreen.xml</layout>

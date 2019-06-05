@@ -10,7 +10,6 @@
         <variable constant="0" name="hasFaca" sid="653916770209826" static="0" type="number">0</variable>
         <variable constant="0" name="gameStart" sid="203651298173256" static="0" type="number">0</variable>
         <variable constant="0" name="noFade" sid="160717133428511" static="0" type="number">0</variable>
-        <variable constant="0" name="playingMusic" sid="622616916738112" static="0" type="number">0</variable>
         <variable comment="Se o personagem ja pegou a mochbila" constant="0" name="isFree" sid="490299496570784" static="0" type="number">0</variable>
         <variable constant="0" name="debug" sid="781299479377664" static="0" type="number">1</variable>
         <event-group description="" sid="560617196269730" title="Debug">
@@ -50,29 +49,31 @@
                 <event-block sid="846503529869683">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="968845253388918" type="System" />
+                        <condition id="-14" name="Compare variable" sid="670087541461920" type="System">
+                            <param id="0" name="Variable">gameStart</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="989077410914497" type="DEBUG">
                             <param id="0" name="Text">&quot;Tamanho da Tela: &quot; &amp;  WindowWidth &amp; &quot;Tamanho 2&quot; &amp;  WindowHeight</param>
                         </action>
+                        <action id="0" name="Play" sid="795366091228527" type="backgroundSound">
+                            <param id="0" name="Audio file">backgroundGameSound</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">1</param>
+                            <param id="1" name="Tag (optional)">&quot;SOMDEFUNDO&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="541797242812581" type="System">
+                            <param id="0" name="Variable">gameStart</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="477058407177479">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="670087541461920" type="System">
-                                    <param id="0" name="Variable">gameStart</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Play" sid="795366091228527" type="backgroundSound">
-                                    <param id="0" name="Audio file">backgroundGameSound</param>
-                                    <param id="2" name="Loop">1</param>
-                                    <param id="3" name="Volume">1</param>
-                                    <param id="1" name="Tag (optional)">&quot;SOMDEFUNDO&quot;</param>
-                                </action>
-                            </actions>
+                            <conditions />
+                            <actions />
                         </event-block>
                         <event-block sid="364687968047861">
                             <conditions>
@@ -507,88 +508,6 @@
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
-                        </event-block>
-                        <event-block sid="748266758168846">
-                            <conditions>
-                                <condition id="6" name="On object clicked" sid="739508205645104" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
-                                    <param id="1" name="Click type">0</param>
-                                    <param id="2" name="Object clicked">invetoryIcon</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="328284701609229" type="System">
-                                    <param id="0" name="Variable">hasInvetory</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="799918857394480">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="776880508671203" type="invetoryIcon">
-                                            <param id="0" name="Instance variable">isOpen</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="LiteTween" id="3" name="Set target" sid="623330469456704" type="inventory">
-                                            <param id="0" name="Target is">5</param>
-                                            <param id="1" name="Relativity">0</param>
-                                            <param id="2" name="Value">200</param>
-                                        </action>
-                                        <action behavior="LiteTween" id="10" name="Start" sid="261987097942387" type="inventory">
-                                            <param id="0" name="Start Mode">0</param>
-                                            <param id="1" name="Force use current">0</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="955409024290623" type="invetoryIcon">
-                                            <param id="0" name="Instance variable">isOpen</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="212599548211865">
-                            <conditions>
-                                <condition id="6" name="On object clicked" sid="435709738688547" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
-                                    <param id="1" name="Click type">1</param>
-                                    <param id="2" name="Object clicked">invetoryIcon</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="325689702632217" type="System">
-                                    <param id="0" name="Variable">hasInvetory</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="447516924288835">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="331813192382457" type="invetoryIcon">
-                                            <param id="0" name="Instance variable">isOpen</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="LiteTween" id="3" name="Set target" sid="959283942340784" type="inventory">
-                                            <param id="0" name="Target is">5</param>
-                                            <param id="1" name="Relativity">0</param>
-                                            <param id="2" name="Value">-200</param>
-                                        </action>
-                                        <action behavior="LiteTween" id="10" name="Start" sid="274960153660537" type="inventory">
-                                            <param id="0" name="Start Mode">0</param>
-                                            <param id="1" name="Force use current">0</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="376323895681424" type="invetoryIcon">
-                                            <param id="0" name="Instance variable">isOpen</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>
