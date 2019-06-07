@@ -20,7 +20,7 @@ class User_model extends CI_Model {
     */
     public function doLogin(String $user, String $password){
 
-        $this->db->select("count(*) as user");
+        $this->db->select("login,password");
         $this->db->where("login", $user);
         $this->db->where("password",$password);
         $this->db->from("player");

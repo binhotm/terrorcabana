@@ -7,11 +7,18 @@ class Login extends CI_Controller {
         parente::__contruct();
 
     }
-    
-    public function logon(){
 
-        $user = $this->input->post('user');
-        $password = $this->input->post('password');
+    public function index(){
+        echo "Hello Worlds";
+    }
+    
+    public function logon($user, $password){
+
+        if($user == "" || $password == ""){
+            $user = $this->input->post('user');
+            $password = $this->input->post('password');
+        }
+
 
         $this->load->model('user_model');
         $this->user_model->doLogin($user, $password);        
