@@ -25,11 +25,13 @@
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="shadowlight" version="1">Shadow Light</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="lunarray" id="lunarray_LiteTween" version="1.700000048">LiteTween</behavior>
     </used-behaviors>
@@ -481,6 +483,10 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="maquina_bg" sid="916021136186840">
+                <plugin id="TiledBg" />
+                <texture original-source="C:\Users\Fabricio-\Desktop\git\finais\maquina_sprite_0002_fundo.png" />
+            </object-type>
         </object-folder>
         <object-folder name="MISC">
             <object-type name="curso" sid="504532936095316">
@@ -664,6 +670,24 @@
                 </behaviors>
                 <texture original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\fonts\cordepelefont.png" />
             </object-type>
+            <object-type name="maquina_escrever" sid="180156798012738">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="850020865157794" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502242" original-source="C:\Users\Fabricio-\Desktop\git\finais\maquina_sprite_0000_maquina+mesa.png">
+                            <collision-poly>
+                                <point x="0.141" y="0.632287" />
+                                <point x="0.5" y="0.0313901" />
+                                <point x="0.859" y="0.632287" />
+                                <point x="0.723" y="0.497758" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0.248" y="0.497758" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="CHARACTER">
             <object-type name="personagem_1" sid="299184003384386">
@@ -823,12 +847,17 @@
         <object-type name="Text" sid="944121341111230">
             <plugin id="Text" />
         </object-type>
-        <object-type name="dest_hist_1" sid="154570904267730">
+        <object-type name="digitacao" sid="154570904267730">
             <plugin id="SpriteFontPlus" />
             <instance-variables>
                 <instance-variable name="startWrite" sid="727760871237319" type="number" />
             </instance-variables>
-            <texture original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\fonts\SpriteFont_Joystix_Regular_(36)_[1,1,1,1]_45x44_WHITE.png" />
+            <behaviors>
+                <behavior-type name="Pin" sid="300588738224122">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\Fabricio-\Desktop\git\finais\texto.png" />
         </object-type>
         <object-type name="NewDialogText" sid="230496398526705">
             <plugin id="SpriteFontPlus" />
@@ -1117,6 +1146,52 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="papelTexto" sid="371158393987028">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="491634861654538" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\maquina_sprite_0001_papel.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btn_continue" sid="667225753306204">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="980637561658897" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\maquina_button_sprite_0000s_0000_Continuar.png">
+                        <collision-poly>
+                            <point x="0.028169" y="0.0869565" />
+                            <point x="0.5" y="0" />
+                            <point x="0.971831" y="0.0869565" />
+                            <point x="0.985915" y="0.5" />
+                            <point x="0.971831" y="0.913043" />
+                            <point x="0.5" y="0.956522" />
+                            <point x="0.0140845" y="0.956522" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="debugSprit" sid="474447720095230">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="ShadowLight" sid="353458533349053">
+            <plugin id="shadowlight" />
+        </object-type>
+        <object-type name="Sprite" sid="961596812585758">
+            <plugin id="Sprite" />
+            <effects>
+                <effect-type name="Multiply">
+                    <effect id="multiply" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="796111610382314" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\maquina_shadow_sprite_0000s_0002_Layer-2.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="GameObjects" plugin-id="Sprite" sid="611563804002963">
@@ -1216,6 +1291,7 @@
         <file name="trovoes.ogg" />
         <file name="trovoes_closed.ogg" />
         <file name="DoorSound.ogg" />
+        <file name="clickOffLight.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>
