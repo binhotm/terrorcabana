@@ -10,9 +10,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">Historia</layout>
-        <layout order="2">CENARIO1</layout>
+        <layout order="0">Historia</layout>
+        <layout order="2">Teste</layout>
         <event-sheet order="1">Historia</event-sheet>
+        <event-sheet active="1" order="3">TesteScreen</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -35,10 +36,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="layout-folder/GAME/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="0" path="event-folder/CENARIOS/" />
-        <folder expanded="0" path="file-folder/" />
-        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="file-folder/" />
+        <folder expanded="0" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
-        <folder expanded="1" path="file-folder/Icons/" />
+        <folder expanded="0" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/armariofechado/" />
         <folder expanded="1" path="animation-folder/banquinho/" />
         <folder expanded="1" path="animation-folder/bau/" />
@@ -89,11 +90,15 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/invetoryIcon/" />
         <folder expanded="1" path="animation-folder/fadeSprite/" />
         <folder expanded="1" path="animation-folder/textBoxLogin/" />
-        <folder expanded="1" path="animation-folder/womanSprite/" />
         <folder expanded="1" path="animation-folder/btnLogar/" />
         <folder expanded="1" path="animation-folder/btnCadastrar/" />
         <folder expanded="1" path="animation-folder/papelTexto/" />
         <folder expanded="1" path="animation-folder/btn_continue/" />
         <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/gameLogoSpr/" />
+        <folder expanded="1" path="animation-folder/mochila/" />
+        <folder expanded="1" path="animation-folder/iventory_bar/" />
+        <folder expanded="1" path="animation-folder/ib_nextPage/" />
+        <folder expanded="1" path="animation-folder/ib_previusPage/" />
     </folders-expanded>
 </c2uistate>

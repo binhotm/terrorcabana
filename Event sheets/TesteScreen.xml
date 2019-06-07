@@ -3,11 +3,36 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>TesteScreen</name>
     <events>
+        <variable constant="0" name="iventoryItensTotal" sid="193833711933177" static="0" type="number">0</variable>
+        <variable constant="0" name="iventoryRows" sid="556536850100424" static="0" type="number">1</variable>
+        <variable constant="0" name="iventoryMaxPerRow" sid="223844564426546" static="0" type="number">6</variable>
         <event-block sid="703636613080601">
             <conditions>
                 <condition id="-25" name="On loader layout complete" sid="518678482316034" type="System" />
             </conditions>
-            <actions />
+            <actions>
+                <action id="-16" name="Set opacity" sid="777254569138362" type="ib_previusPage">
+                    <param id="0" name="Opacity">50</param>
+                </action>
+            </actions>
         </event-block>
+        <event-group description="" sid="327072165958137" title="IventoryActions">
+            <sub-events>
+                <event-block sid="470432671773652">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="210804193614085" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">ib_nextPage</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="930772340325779" type="ib_previusPage">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

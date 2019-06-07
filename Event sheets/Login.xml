@@ -9,37 +9,8 @@
                 <condition id="-2" name="On start of layout" sid="285296736291377" type="System" />
             </conditions>
             <actions>
-                <action id="7" name="Set CSS style" sid="715940466532976" type="login">
-                    <param id="0" name="Property name">&quot;font-size&quot;</param>
-                    <param id="1" name="Value">&quot;15px&quot;</param>
-                </action>
-                <action id="7" name="Set CSS style" sid="811067110107122" type="password">
-                    <param id="0" name="Property name">&quot;font-size&quot;</param>
-                    <param id="1" name="Value">&quot;15px&quot;</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="936364192378063">
-            <conditions>
-                <condition id="7" name="Cursor is over object" sid="777450105692207" type="Mouse">
-                    <param id="0" name="Object">womanSprite</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-16" name="Set opacity" sid="959359670476690" type="womanSprite">
-                    <param id="0" name="Opacity">50</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="802018265029817">
-            <conditions>
-                <condition id="7" inverted="1" name="Cursor is over object" sid="122195447747033" type="Mouse">
-                    <param id="0" name="Object">womanSprite</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-16" name="Set opacity" sid="729786638725173" type="womanSprite">
-                    <param id="0" name="Opacity">100</param>
+                <action id="0" name="Import file" sid="509694921690344" type="Import">
+                    <param id="0" name="Import file">&quot;editbox.css&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -52,21 +23,31 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="514524885052902" type="Text3">
+                        <action id="0" name="Set text" sid="514524885052902" type="DebugLogin">
                             <param id="0" name="Text">ajax_login.LastData</param>
                         </action>
-                        <action id="-9" name="Set value" sid="908500104428467" type="System">
-                            <param id="0" name="Variable">statusLogin</param>
-                            <param id="1" name="Value">int(ajax_login.LastData)</param>
+                    </actions>
+                </event-block>
+                <event-block sid="469790750816955">
+                    <conditions>
+                        <condition id="2" name="On progress" sid="567626607348746" type="ajax_login">
+                            <param id="0" name="Tag">&quot;ajax_login&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="977275612226726" type="debugProgress">
+                            <param id="0" name="Text">ajax_login.Progress</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="596077550878028">
                     <conditions>
-                        <condition id="4" name="On any error" sid="360932997181747" type="ajax_login" />
+                        <condition id="1" name="On error" sid="360932997181747" type="ajax_login">
+                            <param id="0" name="Tag">&quot;ajax_login&quot;</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="466087251996453" type="Text3">
+                        <action id="0" name="Set text" sid="466087251996453" type="DebugLogin">
                             <param id="0" name="Text">ajax_login.LastData</param>
                         </action>
                     </actions>
@@ -108,9 +89,9 @@
                     <actions>
                         <action id="2" name="Post to URL" sid="607193823254864" type="ajax_login">
                             <param id="0" name="Tag">&quot;ajax_login&quot;</param>
-                            <param id="1" name="URL">&quot;http://api.terrornacabana.com.br/index.php/login/logon&quot;</param>
-                            <param id="2" name="Data">&quot;user=&quot;&amp;login.Text&amp;&quot;&amp;password=&quot;&amp;password.Text</param>
-                            <param id="3" name="Method">&quot;POST&quot;</param>
+                            <param id="1" name="URL">&quot;http://ec2-18-231-171-246.sa-east-1.compute.amazonaws.com/api/index.php/login/logon&quot;&amp;login.Text&amp;&quot;/&quot;&amp;password.Text</param>
+                            <param id="2" name="Data">&quot;&quot;</param>
+                            <param id="3" name="Method">&quot;GET&quot;</param>
                         </action>
                         <action id="4" name="Set animation" sid="916746960802185" type="btnLogar">
                             <param id="0" name="Animation">&quot;a1&quot;</param>
@@ -133,7 +114,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block breakpoint="1" sid="786527192754439">
+        <event-block sid="786527192754439">
             <conditions>
                 <condition id="-14" name="Compare variable" sid="632995469909144" type="System">
                     <param id="0" name="Variable">statusLogin</param>

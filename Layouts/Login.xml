@@ -28,7 +28,28 @@
             <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances />
+            <instances>
+                <instance type="backgroundLogin" uid="87">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0.000003815</z>
+                        <width>1000</width>
+                        <height>600</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
             <effects />
         </layer>
         <layer name="bacground" sid="407257569557416">
@@ -47,26 +68,6 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="backgroundLogin" uid="93">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1</x>
-                        <y>-2</y>
-                        <z>0</z>
-                        <width>1003</width>
-                        <height>598</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="textBoxLogin" uid="86">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -77,11 +78,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>500.417572021</x>
-                        <y>289</y>
+                        <x>492.722229004</x>
+                        <y>333.192352295</y>
                         <z>0</z>
-                        <width>438.425964355</width>
-                        <height>351.575866699</height>
+                        <width>421.7862854</width>
+                        <height>345.17590332</height>
                         <depth>0</depth>
                         <hotspotX>0.500952363</hotspotX>
                         <hotspotY>0.501187623</hotspotY>
@@ -112,20 +113,20 @@
                     <properties>
                         <text></text>
                         <placeholder>login</placeholder>
-                        <tooltip></tooltip>
+                        <tooltip>Preencha com o login</tooltip>
                         <initial-visibility>Visible</initial-visibility>
                         <enabled>Yes</enabled>
                         <read-only>No</read-only>
                         <spell-check>No</spell-check>
                         <type>Text</type>
-                        <auto-font-size>Yes</auto-font-size>
+                        <auto-font-size>No</auto-font-size>
                         <id-optional>loginid</id-optional>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>321</x>
-                        <y>158</y>
+                        <y>199</y>
                         <z>0</z>
                         <width>350.200256348</width>
                         <height>64</height>
@@ -138,20 +139,20 @@
                     <properties>
                         <text></text>
                         <placeholder>senha</placeholder>
-                        <tooltip></tooltip>
+                        <tooltip>Preencha com a Senha</tooltip>
                         <initial-visibility>Visible</initial-visibility>
                         <enabled>Yes</enabled>
                         <read-only>No</read-only>
                         <spell-check>No</spell-check>
                         <type>Password</type>
-                        <auto-font-size>Yes</auto-font-size>
+                        <auto-font-size>No</auto-font-size>
                         <id-optional>passid</id-optional>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>321</x>
-                        <y>257</y>
+                        <y>298</y>
                         <z>0</z>
                         <width>349</width>
                         <height>64</height>
@@ -160,24 +161,29 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="womanSprite" uid="87">
+                <instance type="debugProgress" uid="101">
                     <properties>
+                        <text>DEBUG POR</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <font>Arial,-16</font>
+                        <color>255,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>131</x>
-                        <y>240</y>
-                        <z>0</z>
-                        <width>165</width>
-                        <height>223</height>
+                        <x>289.75958252</x>
+                        <y>120.479110718</y>
+                        <z>0.000003815</z>
+                        <width>387.519470215</width>
+                        <height>30</height>
                         <depth>0</depth>
-                        <hotspotX>0.5030303</hotspotX>
-                        <hotspotY>0.502242148</hotspotY>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -212,7 +218,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>397.19833374</x>
-                        <y>375.110626221</y>
+                        <y>432.110626221</y>
                         <z>0</z>
                         <width>154</width>
                         <height>46</height>
@@ -234,7 +240,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>595.599609375</x>
-                        <y>374.310333252</y>
+                        <y>431.310333252</y>
                         <z>0</z>
                         <width>154</width>
                         <height>46</height>
@@ -264,7 +270,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Text3" uid="88">
+                <instance type="DebugLogin" uid="88">
                     <properties>
                         <text>DEBUG MODE</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -279,14 +285,36 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>28</x>
-                        <y>477</y>
-                        <z>0</z>
-                        <width>956</width>
-                        <height>111</height>
+                        <x>4.319091797</x>
+                        <y>452.040466309</y>
+                        <z>0.000003815</z>
+                        <width>986.079956055</width>
+                        <height>145.559997559</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="gameLogoSpr" uid="93">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>500</x>
+                        <y>82.399841309</y>
+                        <z>0.000003815</z>
+                        <width>556</width>
+                        <height>75</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.50666666</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -295,6 +323,13 @@
             <effects />
         </layer>
     </layers>
-    <nonworld-instances />
+    <nonworld-instances>
+        <instance type="Import" uid="99">
+            <properties>
+                <auto-import></auto-import>
+            </properties>
+        </instance>
+        <instance type="dtc_login" uid="102" />
+    </nonworld-instances>
     <effects />
 </c2layout>
