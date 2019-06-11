@@ -5,17 +5,32 @@ class Login extends CI_Controller {
 
     public function __contruct(){
         parente::__contruct();
+       
+    }
 
+    public function index(){
+        echo "Hello Worlds";
     }
     
-    public function logon(){
+    public function logon($user= "", $password=""){
+        
+        echo "Ola mundo"; exit;
 
-        $user = $this->input->post('user');
-        $password = $this->input->post('password');
-
+        
+        $this->load->library('Api');
         $this->load->model('user_model');
-        $this->user_model->doLogin($user, $password);        
 
+        if($user == "" && $password == ""){
+            $user = $this->input->post('user');
+            $password = $this->input->post('password');
+        }
+
+        if(is_null($user) || is_null($password)){
+            $this->api->error();
+        }
+
+        $arr = $this->user_model->doLogin($user, $password);        
+        $this->api->expose($arr);
     }
 
 }

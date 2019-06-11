@@ -25,6 +25,7 @@
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="McKack" id="mck_import" version="1.100000024">Import</plugin>
         <plugin author="Scirra" id="shadowlight" version="1">Shadow Light</plugin>
     </used-plugins>
     <used-behaviors>
@@ -64,7 +65,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">NW.js</prop>
+        <prop name="Preview browser">Chrome</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -1072,7 +1073,7 @@
             </effects>
             <texture original-source="C:\Users\DigiageBigdata\Desktop\fatec\Terror na Cabana SRC\Animations\bg_one\Default\000.png" />
         </object-type>
-        <object-type name="Text3" sid="822800103493624">
+        <object-type name="DebugLogin" sid="822800103493624">
             <plugin id="Text" />
         </object-type>
         <object-type name="SpriteFont4" sid="512105557902081">
@@ -1081,32 +1082,13 @@
         </object-type>
         <object-type name="backgroundLogin" sid="930537326457251">
             <plugin id="TiledBg" />
-            <texture original-source="C:\Users\Fabricio-\Desktop\git\finais\login_tela_sprite_0006_sangue.png" />
+            <texture original-source="C:\Users\Fabricio-\Desktop\git\finais\fundo.png" />
         </object-type>
         <object-type name="textBoxLogin" sid="730649265826349">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="819717134155967" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.501424" original-source="C:\Users\Fabricio-\Desktop\git\finais\login_tela_sprite_0005_retangulo.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="womanSprite" sid="101683567949651">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="899272276861160" speed="5">
-                    <frame duration="1" hotspotX="0.50303" hotspotY="0.502242" original-source="C:\Users\Fabricio-\Desktop\git\finais\womanblood.png">
-                        <collision-poly>
-                            <point x="0.175758" y="0.130045" />
-                            <point x="0.49697" y="0" />
-                            <point x="0.745455" y="0.188341" />
-                            <point x="0.878788" y="0.497758" />
-                            <point x="0.842424" y="0.883408" />
-                            <point x="0.49697" y="0.986547" />
-                            <point x="0.0969697" y="0.928251" />
-                            <point x="0.0606061" y="0.497758" />
-                        </collision-poly>
-                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -1192,25 +1174,112 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="sprLogo" sid="892864375163426">
+        <object-type name="gameLogoSpr" sid="902355498261429">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="859964390250102" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\login_tela_sprite_0000_terror-na-cabana.png">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="946107318171922" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\Users\DigiageBigdata\Downloads\GAME SOURCE\drive-download-20190607T140944Z-001\terror na cabana.png">
                         <collision-poly>
-                            <point x="0.00899281" y="0.0609756" />
-                            <point x="0.5" y="0.378049" />
-                            <point x="0.985611" y="0.097561" />
-                            <point x="0.359712" y="0.719512" />
-                            <point x="0.5" y="0.621951" />
-                            <point x="0.663669" y="0.560976" />
+                            <point x="0.00899281" y="0.0666667" />
+                            <point x="0.5" y="0.413333" />
+                            <point x="0.985611" y="0.106667" />
+                            <point x="0.991007" y="0.933333" />
+                            <point x="0.5" y="0.68" />
+                            <point x="0.0143885" y="0.893333" />
                         </collision-poly>
                     </frame>
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="TextBox" sid="233949848607523">
-            <plugin id="TextBox" />
+        <object-type global="1" name="Import" sid="266383431289604">
+            <plugin id="mck_import" />
+        </object-type>
+        <object-type name="debugProgress" sid="289582918737695">
+            <plugin id="Text" />
+        </object-type>
+        <object-type global="1" name="dtc_login" sid="224543210043330">
+            <plugin id="Dictionary" />
+        </object-type>
+        <object-type name="mochila" sid="670807262450083">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DragDrop" sid="729260991770053">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="864708195078072" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506024" original-source="C:\Users\DigiageBigdata\Downloads\GAME SOURCE\drive-download-20190607T184253Z-001\mochila.png">
+                        <collision-poly>
+                            <point x="0.196429" y="0.13253" />
+                            <point x="0.5" y="0" />
+                            <point x="0.982143" y="0.0120482" />
+                            <point x="1" y="0.493976" />
+                            <point x="0.857143" y="0.903614" />
+                            <point x="0.5" y="1" />
+                            <point x="0.125" y="0.915663" />
+                            <point x="0" y="0.493976" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="iventory_bar" sid="708699262859102">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="214689556180051" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505263" original-source="C:\Users\DigiageBigdata\Downloads\GAME SOURCE\drive-download-20190607T184253Z-001\retangulo.png">
+                        <collision-poly>
+                            <point x="0.0169811" y="0.0947368" />
+                            <point x="0.5" y="0" />
+                            <point x="0.981132" y="0.105263" />
+                            <point x="0.990566" y="0.494737" />
+                            <point x="0.977359" y="0.873684" />
+                            <point x="0.5" y="0.947368" />
+                            <point x="0.0169811" y="0.905263" />
+                            <point x="0.00188679" y="0.494737" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ib_nextPage" sid="800722870155996">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="457315190864905" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.510638" original-source="C:\Users\DigiageBigdata\Downloads\GAME SOURCE\drive-download-20190607T184253Z-001\seta direita.png">
+                        <collision-poly>
+                            <point x="0.196429" y="0.234043" />
+                            <point x="0.5" y="0" />
+                            <point x="0.767857" y="0.276596" />
+                            <point x="0.875" y="0.489362" />
+                            <point x="0.732143" y="0.680851" />
+                            <point x="0.5" y="0.87234" />
+                            <point x="0.303571" y="0.638298" />
+                            <point x="0.0178571" y="0.489362" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ib_previusPage" sid="900685003804602">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="712523858280933" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.510638" original-source="C:\Users\DigiageBigdata\Downloads\GAME SOURCE\drive-download-20190607T184253Z-001\seta esquerda.png">
+                        <collision-poly>
+                            <point x="0.232143" y="0.276596" />
+                            <point x="0.5" y="0" />
+                            <point x="0.803571" y="0.234043" />
+                            <point x="0.982143" y="0.489362" />
+                            <point x="0.696429" y="0.638298" />
+                            <point x="0.5" y="0.87234" />
+                            <point x="0.267857" y="0.680851" />
+                            <point x="0.125" y="0.489362" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>
@@ -1324,5 +1393,6 @@
             <file name="icon-256.png" />
             <file name="loading-logo.png" />
         </file-folder>
+        <file name="editbox.css" />
     </files-folder>
 </c2project>
