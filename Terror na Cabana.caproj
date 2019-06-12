@@ -1226,6 +1226,11 @@
         </object-type>
         <object-type name="iventory_bar" sid="708699262859102">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="LiteTween" sid="423454968926933">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="214689556180051" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.505263" original-source="C:\Users\DigiageBigdata\Downloads\GAME SOURCE\drive-download-20190607T184253Z-001\retangulo.png">
@@ -1245,6 +1250,11 @@
         </object-type>
         <object-type name="ib_nextPage" sid="800722870155996">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="419719667425673">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="457315190864905" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.510638" original-source="C:\Users\DigiageBigdata\Downloads\GAME SOURCE\drive-download-20190607T184253Z-001\seta direita.png">
@@ -1264,6 +1274,11 @@
         </object-type>
         <object-type name="ib_previusPage" sid="900685003804602">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="417299850238840">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="712523858280933" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.510638" original-source="C:\Users\DigiageBigdata\Downloads\GAME SOURCE\drive-download-20190607T184253Z-001\seta esquerda.png">
@@ -1283,11 +1298,19 @@
         </object-type>
         <object-type name="slote" sid="398793426996316">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="182797066858299">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="178189235530906" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="dbText" sid="367600858658828">
+            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families>

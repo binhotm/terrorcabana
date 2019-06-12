@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>TesteScreen</name>
     <events>
+        <variable constant="0" name="iActive" sid="821647544868521" static="0" type="number">0</variable>
         <variable constant="0" name="currentRow" sid="767888247840522" static="0" type="number">0</variable>
         <variable constant="0" name="iventoryItensTotal" sid="193833711933177" static="0" type="number">12</variable>
         <variable constant="0" name="iventoryRows" sid="556536850100424" static="0" type="number">1</variable>
@@ -14,6 +15,18 @@
             <actions>
                 <action id="-16" name="Set opacity" sid="777254569138362" type="ib_previusPage">
                     <param id="0" name="Opacity">30</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="498321423180413" type="ib_nextPage">
+                    <param id="0" name="Pin to">iventory_bar</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="206794818830806" type="ib_previusPage">
+                    <param id="0" name="Pin to">iventory_bar</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="155824251461829" type="slote">
+                    <param id="0" name="Pin to">iventory_bar</param>
+                    <param id="1" name="Mode">0</param>
                 </action>
             </actions>
         </event-block>
@@ -50,6 +63,102 @@
                         </action>
                     </actions>
                 </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="715404767934569" title="ISystem">
+            <sub-events>
+                <event-group description="" sid="885397791124035" title="createSystem">
+                    <sub-events>
+                        <event-block sid="855720158347252">
+                            <conditions>
+                                <condition id="0" name="On function" sid="483263678344103" type="Function">
+                                    <param id="0" name="Name">&quot;createSlot&quot;</param>
+                                </condition>
+                                <condition id="1" name="Compare parameter" sid="890509444892526" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;abrir&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="409874329063277" title="Open/Close">
+                    <sub-events>
+                        <event-block sid="337286995745991">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="773514645102799" type="Keyboard">
+                                    <param id="0" name="Key">73 (I)</param>
+                                </condition>
+                                <condition behavior="LiteTween" id="1" name="Compare progress" sid="303255135819658" type="iventory_bar">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="956089258508477" type="System">
+                                    <param id="0" name="Variable">iActive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="LiteTween" id="10" name="Start" sid="995085354463623" type="iventory_bar">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="701793585155333">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="699209243400036" type="Keyboard">
+                                    <param id="0" name="Key">73 (I)</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="749661841888880" type="System">
+                                    <param id="0" name="Variable">iActive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="LiteTween" id="11" name="Reverse" sid="924655230675136" type="iventory_bar">
+                                    <param id="0" name="Reverse mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="138623050038373">
+                            <conditions>
+                                <condition behavior="LiteTween" id="4" name="On tween end" sid="606377833478824" type="iventory_bar" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="629122687670938" type="System">
+                                    <param id="0" name="Variable">iActive</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="562241633048903">
+                            <conditions>
+                                <condition behavior="LiteTween" id="6" name="On tween reverse end" sid="949572898210803" type="iventory_bar" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="717543631178523" type="System">
+                                    <param id="0" name="Variable">iActive</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="460299222099482">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="741614921780317" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="113701684686648" type="dbText">
+                                    <param id="0" name="Text">iventory_bar.LiteTween.Progress</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
     </events>
