@@ -23,10 +23,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Margins" />
         <property expanded="1" name="Effects" />
     </properties>
-    <active-layer name="IVENTARIO" />
+    <active-layer name="Itens" />
     <layers>
         <layer locked="1" name="BACKGROUND" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="OBJETOS" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="IVENTARIO" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="IventorySlote" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Itens" parallax-in-editor="0" visible="1" />
     </layers>
 </c2uistate>

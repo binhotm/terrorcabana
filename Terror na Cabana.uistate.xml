@@ -19,12 +19,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="0">
+    <families-expanded root="1">
         <family expanded="0" name="GameObjects" />
         <family expanded="0" name="backgroundStart" />
+        <family expanded="0" name="IventoryObj" />
     </families-expanded>
     <folders-expanded>
-        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/" />
         <folder expanded="0" path="object-folder/CENARIOS/" />
         <folder expanded="0" path="object-folder/MISC/" />
         <folder expanded="0" path="object-folder/CHARACTER/" />
@@ -98,5 +99,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/iventory_bar/" />
         <folder expanded="1" path="animation-folder/ib_nextPage/" />
         <folder expanded="1" path="animation-folder/ib_previusPage/" />
+        <folder expanded="1" path="animation-folder/slote/" />
     </folders-expanded>
 </c2uistate>

@@ -1281,6 +1281,14 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="slote" sid="398793426996316">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="178189235530906" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="GameObjects" plugin-id="Sprite" sid="611563804002963">
@@ -1324,6 +1332,11 @@
             <instance-variables>
                 <instance-variable name="id" sid="879748679915136" type="number" />
             </instance-variables>
+        </family>
+        <family name="IventoryObj" plugin-id="Sprite" sid="203536548740652">
+            <members>
+                <member>mochila</member>
+            </members>
         </family>
     </families>
     <layout-folder>
