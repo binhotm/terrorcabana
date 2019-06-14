@@ -1305,12 +1305,102 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="178189235530906" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.507042" hotspotY="0.507042" />
                 </animation>
             </animation-folder>
         </object-type>
         <object-type name="dbText" sid="367600858658828">
             <plugin id="Text" />
+        </object-type>
+        <object-type name="chave" sid="121430623444685">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="241130401573070" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens\chave.png">
+                        <collision-poly>
+                            <point x="0.2" y="0.3" />
+                            <point x="0.5" y="0.4" />
+                            <point x="0.733333" y="0.4" />
+                            <point x="0.9" y="0.5" />
+                            <point x="0.8" y="0.7" />
+                            <point x="0.5" y="0.6" />
+                            <point x="0.2" y="0.7" />
+                            <point x="0.133333" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens\chave2.png">
+                        <collision-poly>
+                            <point x="0.166667" y="0.25" />
+                            <point x="0.5" y="0.45" />
+                            <point x="0.7" y="0.45" />
+                            <point x="0.99" y="0.5" />
+                            <point x="0.803333" y="0.705" />
+                            <point x="0.5" y="0.57" />
+                            <point x="0.153333" y="0.77" />
+                            <point x="0.03" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506494" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens\garrafa.png">
+                        <collision-poly>
+                            <point x="0.1875" y="0.0779221" />
+                            <point x="0.5" y="0.272727" />
+                            <point x="0.5" y="0.207792" />
+                            <point x="1" y="0.493506" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.493506" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens\papel.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.5" />
+                            <point x="0.856522" y="0.871094" />
+                            <point x="0.5" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="itensGame" sid="478014316811586">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="0" name="padrao" pingpong="0" repeatcount="1" repeatto="0" sid="798781052477970" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\carragaAcido.png">
+                        <collision-poly>
+                            <point x="0.314286" y="0.314286" />
+                            <point x="0.457143" y="0.0285715" />
+                            <point x="0.657143" y="0.5" />
+                            <point x="0.714286" y="0.642857" />
+                            <point x="0.7" y="0.914286" />
+                            <point x="0.3" y="0.885715" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\chave.png">
+                        <collision-poly>
+                            <point x="0.442857" y="0.442857" />
+                            <point x="0.557143" y="0.442857" />
+                            <point x="0.9" y="0.5" />
+                            <point x="0.885715" y="0.742857" />
+                            <point x="0.5" y="0.585714" />
+                            <point x="0.357143" y="0.642857" />
+                            <point x="0.128571" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\chave2.png">
+                        <collision-poly>
+                            <point x="0.185714" y="0.257143" />
+                            <point x="0.742857" y="0.4" />
+                            <point x="0.985714" y="0.5" />
+                            <point x="0.985714" y="0.714286" />
+                            <point x="0.0857143" y="0.7" />
+                            <point x="0.0285714" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>

@@ -24,6 +24,10 @@
                     <param id="0" name="Pin to">iventory_bar</param>
                     <param id="1" name="Mode">0</param>
                 </action>
+                <action id="0" name="Call function" sid="173057649881315" type="Function">
+                    <param id="0" name="Name">&quot;createSlot&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;create&quot;</param>
+                </action>
                 <action behavior="Pin" id="0" name="Pin to object" sid="155824251461829" type="slote">
                     <param id="0" name="Pin to">iventory_bar</param>
                     <param id="1" name="Mode">0</param>
@@ -67,20 +71,68 @@
         </event-group>
         <event-group description="" sid="715404767934569" title="ISystem">
             <sub-events>
+                <event-group description="" sid="806220228780129" title="bancoItens" />
                 <event-group description="" sid="885397791124035" title="createSystem">
                     <sub-events>
+                        <variable constant="0" name="localXSlote" sid="763363559503979" static="0" type="number">0</variable>
+                        <variable constant="0" name="slotQtde" sid="340816199698980" static="0" type="number">0</variable>
                         <event-block sid="855720158347252">
                             <conditions>
                                 <condition id="0" name="On function" sid="483263678344103" type="Function">
                                     <param id="0" name="Name">&quot;createSlot&quot;</param>
                                 </condition>
-                                <condition id="1" name="Compare parameter" sid="890509444892526" type="Function">
-                                    <param id="0" name="Index">0</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;abrir&quot;</param>
-                                </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="368082959061319" type="System">
+                                    <param id="0" name="Variable">localXSlote</param>
+                                    <param id="1" name="Value">(iventory_bar.X / 2 )+ 50</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="615089884584216">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="322900877064429" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;create&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="691796154788518">
+                                            <conditions>
+                                                <condition id="-12" name="Repeat" sid="885695604274569" type="System">
+                                                    <param id="0" name="Count">6</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Destroy" sid="358989067399961" type="slote" />
+                                                <action disabled="1" id="-9" name="Destroy" sid="243749697831671" type="mochila" />
+                                                <action id="-3" name="Create object" sid="310285018672662" type="System">
+                                                    <param id="0" name="Object to create">slote</param>
+                                                    <param id="1" name="Layer">3</param>
+                                                    <param id="2" name="X">localXSlote</param>
+                                                    <param id="3" name="Y">iventory_bar.Y - 5</param>
+                                                </action>
+                                                <action behavior="Pin" id="0" name="Pin to object" sid="242980906772627" type="slote">
+                                                    <param id="0" name="Pin to">iventory_bar</param>
+                                                    <param id="1" name="Mode">1</param>
+                                                </action>
+                                                <action disabled="1" id="-3" name="Create object" sid="887376204442938" type="System">
+                                                    <param id="0" name="Object to create">mochila</param>
+                                                    <param id="1" name="Layer">3</param>
+                                                    <param id="2" name="X">localXSlote</param>
+                                                    <param id="3" name="Y">iventory_bar.Y</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="339861030760605" type="System">
+                                                    <param id="0" name="Variable">localXSlote</param>
+                                                    <param id="1" name="Value">localXSlote + 85</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>
@@ -144,16 +196,6 @@
                                 <action id="-9" name="Set value" sid="717543631178523" type="System">
                                     <param id="0" name="Variable">iActive</param>
                                     <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="460299222099482">
-                            <conditions>
-                                <condition id="-1" name="Every tick" sid="741614921780317" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Set text" sid="113701684686648" type="dbText">
-                                    <param id="0" name="Text">iventory_bar.LiteTween.Progress</param>
                                 </action>
                             </actions>
                         </event-block>
