@@ -1373,7 +1373,7 @@
             <animation-folder>
                 <animation framecount="3" loop="1" name="padrao" pingpong="0" repeatcount="1" repeatto="0" sid="798781052477970" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\chave.png">
-                        <image-point name="Name" x="0.471429" y="0" />
+                        <image-point name="Name" x="0.485714" y="-0.114286" />
                         <collision-poly>
                             <point x="0.442857" y="0.442857" />
                             <point x="0.557143" y="0.442857" />
@@ -1385,7 +1385,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\chave2.png">
-                        <image-point name="Name" x="0.471429" y="0" />
+                        <image-point name="Name" x="0.485714" y="-0.114286" />
                         <collision-poly>
                             <point x="0.185714" y="0.257143" />
                             <point x="0.742857" y="0.4" />
@@ -1396,7 +1396,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\carragaAcido.png">
-                        <image-point name="Name" x="0.471429" y="0" />
+                        <image-point name="Name" x="0.485714" y="-0.114286" />
                         <collision-poly>
                             <point x="0.314286" y="0.314286" />
                             <point x="0.457143" y="0.0285715" />

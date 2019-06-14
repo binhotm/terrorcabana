@@ -76,6 +76,31 @@
         </event-group>
         <event-group description="" sid="715404767934569" title="ISystem">
             <sub-events>
+                <variable constant="0" name="itemId" sid="125622085138344" static="0" type="number">-1</variable>
+                <event-group description="" sid="920919786454365" title="Iventario">
+                    <sub-events>
+                        <event-block sid="312835556518753">
+                            <conditions>
+                                <condition id="0" name="On function" sid="336741751925481" type="Function">
+                                    <param id="0" name="Name">&quot;iventario&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="655420006305655">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="662627280926703" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;pegar&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <event-group description="" sid="229251186745015" title="DebugItem">
                     <sub-events>
                         <event-block sid="697693791561354">
@@ -92,6 +117,22 @@
                                     <param id="0" name="Object">IventoryObj</param>
                                     <param id="1" name="Image point (optional)">1</param>
                                 </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="303801692653985">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="606579578211505" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">IventoryObj</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="931697753188285" type="Function">
+                                    <param id="0" name="Name">&quot;iventario&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;pegar&quot;{###}IventoryObj.item_nome</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="468272066897955" type="IventoryObj" />
                             </actions>
                         </event-block>
                     </sub-events>
@@ -206,14 +247,7 @@
                             </sub-events>
                         </event-block>
                         <event-block sid="754570707443666">
-                            <conditions>
-                                <condition id="-11" name="For Each" sid="771834459694988" type="System">
-                                    <param id="0" name="Object">slote</param>
-                                </condition>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="258240653900189" type="slote">
-                                    <param id="0" name="Instance variable">config</param>
-                                </condition>
-                            </conditions>
+                            <conditions />
                             <actions />
                         </event-block>
                     </sub-events>
