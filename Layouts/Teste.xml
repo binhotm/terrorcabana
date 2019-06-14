@@ -187,8 +187,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>323</x>
-                        <y>367</y>
+                        <x>346</x>
+                        <y>333</y>
                         <z>0</z>
                         <width>200</width>
                         <height>30</height>
@@ -255,6 +255,10 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <config>false</config>
+                        <slote_id>0</slote_id>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
@@ -280,11 +284,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <item_nome>Chave</item_nome>
+                        <item_usavel>1</item_usavel>
+                        <morre_usar>0</morre_usar>
+                        <config>false</config>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>165</x>
-                        <y>249</y>
+                        <x>342</x>
+                        <y>456</y>
                         <z>0</z>
                         <width>70</width>
                         <height>70</height>
@@ -322,6 +332,62 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="itensGame" uid="111">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <item_nome>Acido</item_nome>
+                        <item_usavel>1</item_usavel>
+                        <morre_usar>0</morre_usar>
+                        <config>false</config>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>165</x>
+                        <y>454</y>
+                        <z>0</z>
+                        <width>70</width>
+                        <height>70</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="itensGame" uid="112">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <item_nome>Chave 2</item_nome>
+                        <item_usavel>1</item_usavel>
+                        <morre_usar>0</morre_usar>
+                        <config>false</config>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>479</x>
+                        <y>452</y>
+                        <z>0</z>
+                        <width>70</width>
+                        <height>70</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -344,6 +410,15 @@
             <effects />
         </layer>
     </layers>
-    <nonworld-instances />
+    <nonworld-instances>
+        <instance type="arrItensBanco" uid="110">
+            <properties>
+                <width>0</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="itensBag" uid="113" />
+    </nonworld-instances>
     <effects />
 </c2layout>

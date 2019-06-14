@@ -1298,6 +1298,10 @@
         </object-type>
         <object-type name="slote" sid="398793426996316">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="config" sid="724015760952314" type="boolean" />
+                <instance-variable name="slote_id" sid="352508105727089" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Pin" sid="182797066858299">
                     <behavior id="Pin" />
@@ -1367,18 +1371,9 @@
         <object-type name="itensGame" sid="478014316811586">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="3" loop="0" name="padrao" pingpong="0" repeatcount="1" repeatto="0" sid="798781052477970" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\carragaAcido.png">
-                        <collision-poly>
-                            <point x="0.314286" y="0.314286" />
-                            <point x="0.457143" y="0.0285715" />
-                            <point x="0.657143" y="0.5" />
-                            <point x="0.714286" y="0.642857" />
-                            <point x="0.7" y="0.914286" />
-                            <point x="0.3" y="0.885715" />
-                        </collision-poly>
-                    </frame>
+                <animation framecount="3" loop="1" name="padrao" pingpong="0" repeatcount="1" repeatto="0" sid="798781052477970" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\chave.png">
+                        <image-point name="Name" x="0.471429" y="0" />
                         <collision-poly>
                             <point x="0.442857" y="0.442857" />
                             <point x="0.557143" y="0.442857" />
@@ -1390,6 +1385,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\chave2.png">
+                        <image-point name="Name" x="0.471429" y="0" />
                         <collision-poly>
                             <point x="0.185714" y="0.257143" />
                             <point x="0.742857" y="0.4" />
@@ -1399,8 +1395,25 @@
                             <point x="0.0285714" y="0.5" />
                         </collision-poly>
                     </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\carragaAcido.png">
+                        <image-point name="Name" x="0.471429" y="0" />
+                        <collision-poly>
+                            <point x="0.314286" y="0.314286" />
+                            <point x="0.457143" y="0.0285715" />
+                            <point x="0.657143" y="0.5" />
+                            <point x="0.714286" y="0.642857" />
+                            <point x="0.7" y="0.914286" />
+                            <point x="0.3" y="0.885715" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type global="1" name="arrItensBanco" sid="369680657154937">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type global="1" name="itensBag" sid="488585112457085">
+            <plugin id="Dictionary" />
         </object-type>
     </object-folder>
     <families>
@@ -1448,8 +1461,14 @@
         </family>
         <family name="IventoryObj" plugin-id="Sprite" sid="203536548740652">
             <members>
-                <member>mochila</member>
+                <member>itensGame</member>
             </members>
+            <instance-variables>
+                <instance-variable name="item_nome" sid="459406084067307" type="string" />
+                <instance-variable name="item_usavel" sid="591728198884246" type="number" />
+                <instance-variable name="morre_usar" sid="848585164050591" type="number" />
+                <instance-variable name="config" sid="956130015434312" type="boolean" />
+            </instance-variables>
         </family>
     </families>
     <layout-folder>
