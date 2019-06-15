@@ -5,45 +5,12 @@
     <events>
         <variable constant="0" name="casacoStatus" sid="753199281403383" static="0" type="text"></variable>
         <variable constant="0" name="bolsaStatus" sid="917286878156450" static="0" type="text"></variable>
-        <variable constant="0" name="hasInvetory" sid="377673001422886" static="0" type="number">1</variable>
+        <variable constant="0" name="hasInvetory" sid="377673001422886" static="0" type="number">0</variable>
         <variable constant="0" name="typing" sid="664755304052463" static="0" type="number">0</variable>
-        <variable constant="0" name="hasFaca" sid="653916770209826" static="0" type="number">0</variable>
         <variable constant="0" name="gameStart" sid="203651298173256" static="0" type="number">0</variable>
-        <variable constant="0" name="noFade" sid="160717133428511" static="0" type="number">0</variable>
         <variable comment="Se o personagem ja pegou a mochbila" constant="0" name="isFree" sid="490299496570784" static="0" type="number">0</variable>
-        <variable constant="0" name="debug" sid="781299479377664" static="0" type="number">1</variable>
-        <event-group description="" sid="560617196269730" title="Debug">
-            <sub-events>
-                <event-block sid="350984827149825">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="428229806924283" type="System">
-                            <param id="0" name="Variable">debug</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="615154392158791" type="DEBUG">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="548912128041581" type="System">
-                            <param id="0" name="Variable">noFade</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block disabled="1" sid="434916652617820">
-                    <conditions>
-                        <condition id="-1" name="Every tick" sid="244858511756230" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="933610488296464" type="DEBUG">
-                            <param id="0" name="Text">&quot;X: &quot; &amp; Mouse.X &amp; &quot;Y: &quot;&amp;Mouse.Y</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
+        <variable constant="0" name="debug" sid="781299479377664" static="0" type="number">0</variable>
+        <event-group description="" sid="560617196269730" title="Debug" />
         <event-group description="" sid="429358897934079" title="Preload">
             <sub-events>
                 <event-block sid="846503529869683">
@@ -56,9 +23,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="989077410914497" type="DEBUG">
-                            <param id="0" name="Text">&quot;Tamanho da Tela: &quot; &amp;  WindowWidth &amp; &quot;Tamanho 2&quot; &amp;  WindowHeight</param>
-                        </action>
                         <action id="0" name="Play" sid="795366091228527" type="backgroundSound">
                             <param id="0" name="Audio file">backgroundGameSound</param>
                             <param id="2" name="Loop">1</param>
@@ -69,12 +33,54 @@
                             <param id="0" name="Variable">gameStart</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action disabled="1" id="0" name="Call function" sid="913766083627115" type="Function">
+                            <param id="0" name="Name">&quot;showDialog&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action disabled="1" id="-16" name="Wait" sid="427062969109924" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action disabled="1" id="0" name="Call function" sid="278738409152969" type="Function">
+                            <param id="0" name="Name">&quot;readText&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Auch!&quot;</param>
+                        </action>
+                        <action disabled="1" id="-16" name="Wait" sid="567844497693335" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action disabled="1" id="0" name="Call function" sid="192980487530345" type="Function">
+                            <param id="0" name="Name">&quot;readText&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;O que aconteceu? Onde estou?&quot;</param>
+                        </action>
+                        <action disabled="1" id="-16" name="Wait" sid="152474961284000" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action disabled="1" id="0" name="Call function" sid="796327906402725" type="Function">
+                            <param id="0" name="Name">&quot;readText&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Isso são cordas?! Por que estou presa?!&quot;</param>
+                        </action>
+                        <action disabled="1" id="-16" name="Wait" sid="785552871667685" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action disabled="1" id="0" name="Call function" sid="847385357073285" type="Function">
+                            <param id="0" name="Name">&quot;readText&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Alguém fez isso comigo? POR QUE?!&quot;</param>
+                        </action>
+                        <action disabled="1" id="-16" name="Wait" sid="845365485159751" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action disabled="1" id="0" name="Call function" sid="141648644185968" type="Function">
+                            <param id="0" name="Name">&quot;readText&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Tenho que sair daqui. T_T&quot;</param>
+                        </action>
+                        <action disabled="1" id="-16" name="Wait" sid="538240710160100" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action disabled="1" id="0" name="Call function" sid="849946116117574" type="Function">
+                            <param id="0" name="Name">&quot;hideDialog&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="477058407177479">
-                            <conditions />
-                            <actions />
-                        </event-block>
                         <event-block sid="364687968047861">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="275696696193126" type="System">
@@ -89,22 +95,17 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="328059614480686">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="460796030476494" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="829085425423842" type="invetoryIcon">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
-                </event-block>
-                <event-block sid="258096744145146">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="438128375029187" type="System">
-                            <param id="0" name="Variable">noFade</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-4" name="Set layer visible" sid="829376775418398" type="System">
-                            <param id="0" name="Layer">&quot;dark&quot;</param>
-                            <param id="1" name="Visibility">0</param>
-                        </action>
-                    </actions>
                 </event-block>
                 <event-block sid="960745492643543">
                     <conditions>
@@ -145,9 +146,6 @@
                                     <param id="0" name="X">int(tokenat(bolsaStatus, 0, &quot;|&quot;))</param>
                                     <param id="1" name="Y">int(tokenat(bolsaStatus, 1, &quot;|&quot;))</param>
                                 </action>
-                                <action id="0" name="Set text" sid="242631046745405" type="DEBUG">
-                                    <param id="0" name="Text">int(tokenat(bolsaStatus, 1, &quot;|&quot;))</param>
-                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="486025900995752">
@@ -167,18 +165,11 @@
                                     <param id="0" name="Instance variable">canClick</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="0" name="Play" sid="574299287834689" type="backgroundSound">
-                                    <param id="0" name="Audio file">DoorSound</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">3</param>
-                                    <param id="1" name="Tag (optional)">&quot;doorSound&quot;</param>
-                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-group description="" sid="639493707044309" title="MiscLooping" />
-                <event-group description="" sid="488147915589568" title="Functions">
+                <event-group description="" sid="488147915589568" title="SistemaDeDialogo">
                     <sub-events>
                         <event-block sid="908565870161742">
                             <conditions>
@@ -324,11 +315,6 @@
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="544567249752366" type="System">
                             <param id="0" name="Interval (seconds)">5</param>
-                        </condition>
-                        <condition id="-14" inverted="1" name="Compare variable" sid="877568580962766" type="System">
-                            <param id="0" name="Variable">noFade</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -489,24 +475,6 @@
                                     <param id="1" name="Y">Mouse.Y</param>
                                 </action>
                                 <action behavior="Fade" id="1" name="Start fade" sid="762084596668200" type="GameMessage" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="100407059810709">
-                            <conditions>
-                                <condition id="7" name="Cursor is over object" sid="678431692576251" type="Mouse">
-                                    <param id="0" name="Object">invetoryIcon</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="912308869160171" type="System">
-                                    <param id="0" name="Variable">hasInvetory</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="549568403558185" type="invetoryIcon">
-                                    <param id="0" name="Animation">&quot;hover&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
                             </actions>
                         </event-block>
                     </sub-events>

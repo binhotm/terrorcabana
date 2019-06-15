@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>CENARIO3</name>
     <events>
+        <include>IventorySystem</include>
         <include>GameEngine</include>
         <event-block sid="474426994888007">
             <conditions>

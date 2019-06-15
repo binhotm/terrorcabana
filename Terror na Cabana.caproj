@@ -1414,6 +1414,9 @@
         </object-type>
         <object-type global="1" name="itensBag" sid="488585112457085">
             <plugin id="Dictionary" />
+            <instance-variables>
+                <instance-variable name="create" sid="863216637279433" type="boolean" />
+            </instance-variables>
         </object-type>
     </object-folder>
     <families>
@@ -1501,7 +1504,7 @@
         <event-sheet>SplashScreen.xml</event-sheet>
         <event-sheet>StartScreenEvent.xml</event-sheet>
         <event-sheet>GameEngine.xml</event-sheet>
-        <event-sheet>TesteScreen.xml</event-sheet>
+        <event-sheet>IventorySystem.xml</event-sheet>
         <event-sheet>Historia.xml</event-sheet>
         <event-sheet>Login.xml</event-sheet>
     </event-folder>
