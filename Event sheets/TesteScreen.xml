@@ -77,6 +77,7 @@
         <event-group description="" sid="715404767934569" title="ISystem">
             <sub-events>
                 <variable constant="0" name="itemId" sid="125622085138344" static="0" type="number">-1</variable>
+                <variable constant="0" name="stopPropagation" sid="970075062218995" static="0" type="number">0</variable>
                 <event-group description="" sid="920919786454365" title="Iventario">
                     <sub-events>
                         <event-block sid="312835556518753">
@@ -85,7 +86,12 @@
                                     <param id="0" name="Name">&quot;iventario&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="855594770353236" type="System">
+                                    <param id="0" name="Variable">stopPropagation</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
                             <sub-events>
                                 <event-block sid="655420006305655">
                                     <conditions>
@@ -96,6 +102,110 @@
                                         </condition>
                                     </conditions>
                                     <actions />
+                                    <sub-events>
+                                        <event-block sid="918472630185195">
+                                            <conditions>
+                                                <condition id="1" name="For each key" sid="596954486387583" type="itensBag" />
+                                                <condition id="-14" name="Compare variable" sid="641291732815183" type="System">
+                                                    <param id="0" name="Variable">stopPropagation</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="767986929533858">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="965408509949032" type="System">
+                                                            <param id="0" name="First value">itensBag.CurrentValue</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Set text" sid="262173641568895" type="dbText">
+                                                            <param id="0" name="Text">&quot;ACHOU UM SLOTE POSICAO: &quot; &amp; itensBag.CurrentKey</param>
+                                                        </action>
+                                                        <action id="1" name="Set key" sid="410512234371546" type="itensBag">
+                                                            <param id="0" name="Key">itensBag.CurrentKey</param>
+                                                            <param id="1" name="Value">Function.Param(1)</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="370636490087024" type="System">
+                                                            <param id="0" name="Variable">stopPropagation</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="751198734815319">
+                                            <conditions />
+                                            <actions>
+                                                <action id="0" name="Call function" sid="635804436060298" type="Function">
+                                                    <param id="0" name="Name">&quot;iventario&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;atualizar&quot;{###}Function.Param(2)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="777350022959177">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="958219254837780" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;atualizar&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="283615560889827">
+                                            <conditions>
+                                                <condition id="1" name="For each key" sid="166522633809942" type="itensBag" />
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="619796459597490">
+                                                    <conditions>
+                                                        <condition id="-33" name="Pick by comparison" sid="687641287485455" type="System">
+                                                            <param id="0" name="Object">slote</param>
+                                                            <param id="1" name="Expression">slote.slote_id</param>
+                                                            <param id="2" name="Comparison">0</param>
+                                                            <param id="3" name="Value">itensBag.CurrentKey</param>
+                                                        </condition>
+                                                        <condition id="-8" name="Compare two values" sid="195848153623156" type="System">
+                                                            <param id="0" name="First value">itensBag.CurrentValue</param>
+                                                            <param id="1" name="Comparison">1</param>
+                                                            <param id="2" name="Second value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Spawn another object" sid="513608671824913" type="slote">
+                                                            <param id="0" name="Object">IventoryObj</param>
+                                                            <param id="1" name="Layer">Self.LayerName</param>
+                                                            <param id="2" name="Image point">0</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="571892741143937" type="IventoryObj">
+                                                            <param id="0" name="Instance variable">item_nome</param>
+                                                            <param id="1" name="Value">itensBag.CurrentValue</param>
+                                                        </action>
+                                                        <action id="-13" name="Set boolean" sid="224210808201512" type="IventoryObj">
+                                                            <param id="0" name="Instance variable">noIventorio</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                        <action id="-13" name="Set boolean" sid="388968086708679" type="IventoryObj">
+                                                            <param id="0" name="Instance variable">config</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                        <action behavior="Pin" id="0" name="Pin to object" sid="398000464041542" type="IventoryObj">
+                                                            <param id="0" name="Pin to">slote</param>
+                                                            <param id="1" name="Mode">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -117,6 +227,25 @@
                                     <param id="0" name="Object">IventoryObj</param>
                                     <param id="1" name="Image point (optional)">1</param>
                                 </action>
+                                <action id="-26" name="Move to layer" sid="571554945006717" type="dbText">
+                                    <param id="0" name="Layer">4</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="808540658480232">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Cursor is over object" sid="946127461519216" type="Mouse">
+                                    <param id="0" name="Object">IventoryObj</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="231665148552150" type="dbText">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="264798785682485" type="dbText">
+                                    <param id="0" name="X">-10</param>
+                                    <param id="1" name="Y">-20</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="303801692653985">
@@ -125,6 +254,9 @@
                                     <param id="0" name="Mouse button">0</param>
                                     <param id="1" name="Click type">0</param>
                                     <param id="2" name="Object clicked">IventoryObj</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="615324744758425" type="IventoryObj">
+                                    <param id="0" name="Instance variable">noIventorio</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -138,7 +270,7 @@
                     </sub-events>
                 </event-group>
                 <comment>Nome:&#x0D;&#x0A;Animacao:&#x0D;&#x0A;Frame:&#x0D;&#x0A;Animado: true/false</comment>
-                <event-group description="" sid="806220228780129" title="bancoItens">
+                <event-group description="" sid="806220228780129" title="BancoDadosItens">
                     <sub-events>
                         <event-block sid="345916361614362">
                             <conditions>
@@ -183,6 +315,68 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block sid="867154823431121">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="463372318589072" type="System">
+                                            <param id="0" name="Object to create">arrItensBanco</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="X">0</param>
+                                            <param id="3" name="Y">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="956977226039578" type="arrItensBanco">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;Chave&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="492893784980666" type="arrItensBanco">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;padrao&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="808656056660955" type="arrItensBanco">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">0</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="360827687601169" type="arrItensBanco">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;false&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="308459968430554">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="767423142288964" type="System">
+                                            <param id="0" name="Object to create">arrItensBanco</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="X">0</param>
+                                            <param id="3" name="Y">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="960831886083426" type="arrItensBanco">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;Chave Mestra&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="239781110520785" type="arrItensBanco">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;padrao&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="611552774917746" type="arrItensBanco">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">1</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="470827476681783" type="arrItensBanco">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;false&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                                 <event-block sid="799861638839423">
                                     <conditions />
                                     <actions>
@@ -194,6 +388,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <comment>Sistema de criar os ObejtosNoGame</comment>
                         <event-block sid="221849481913807">
                             <conditions>
                                 <condition id="-11" name="For Each" sid="364437278201633" type="System">
@@ -252,10 +447,10 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="885397791124035" title="createSystem">
+                <event-group description="" sid="885397791124035" title="CreateItemSystem">
                     <sub-events>
                         <variable constant="0" name="localXSlote" sid="763363559503979" static="0" type="number">0</variable>
-                        <variable constant="0" name="slotCounter" sid="331321933738555" static="0" type="number">0</variable>
+                        <variable constant="0" name="slotCounter" sid="331321933738555" static="0" type="number">1</variable>
                         <variable constant="0" name="slotQtde" sid="340816199698980" static="0" type="number">0</variable>
                         <variable constant="0" name="slotMax" sid="808520894168141" static="0" type="number">6</variable>
                         <event-block sid="855720158347252">
@@ -289,26 +484,19 @@
                                             </conditions>
                                             <actions>
                                                 <action id="-9" name="Destroy" sid="358989067399961" type="slote" />
-                                                <action disabled="1" id="-9" name="Destroy" sid="243749697831671" type="mochila" />
                                                 <action id="-3" name="Create object" sid="310285018672662" type="System">
                                                     <param id="0" name="Object to create">slote</param>
                                                     <param id="1" name="Layer">3</param>
                                                     <param id="2" name="X">localXSlote</param>
                                                     <param id="3" name="Y">iventory_bar.Y - 5</param>
                                                 </action>
-                                                <action id="-10" name="Set value" sid="662507081263004" type="slote">
-                                                    <param id="0" name="Instance variable">slote_id</param>
-                                                    <param id="1" name="Value">slotCounter</param>
-                                                </action>
                                                 <action behavior="Pin" id="0" name="Pin to object" sid="242980906772627" type="slote">
                                                     <param id="0" name="Pin to">iventory_bar</param>
                                                     <param id="1" name="Mode">1</param>
                                                 </action>
-                                                <action disabled="1" id="-3" name="Create object" sid="887376204442938" type="System">
-                                                    <param id="0" name="Object to create">mochila</param>
-                                                    <param id="1" name="Layer">3</param>
-                                                    <param id="2" name="X">localXSlote</param>
-                                                    <param id="3" name="Y">iventory_bar.Y</param>
+                                                <action id="-10" name="Set value" sid="314919929903351" type="slote">
+                                                    <param id="0" name="Instance variable">slote_id</param>
+                                                    <param id="1" name="Value">&quot;slote_&quot; &amp; slotCounter</param>
                                                 </action>
                                                 <action id="-9" name="Set value" sid="339861030760605" type="System">
                                                     <param id="0" name="Variable">localXSlote</param>

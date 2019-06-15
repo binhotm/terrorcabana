@@ -1300,7 +1300,7 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="config" sid="724015760952314" type="boolean" />
-                <instance-variable name="slote_id" sid="352508105727089" type="number" />
+                <instance-variable name="slote_id" sid="320148354860845" type="string" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Pin" sid="182797066858299">
@@ -1468,7 +1468,16 @@
                 <instance-variable name="item_usavel" sid="591728198884246" type="number" />
                 <instance-variable name="morre_usar" sid="848585164050591" type="number" />
                 <instance-variable name="config" sid="956130015434312" type="boolean" />
+                <instance-variable name="noIventorio" sid="178403389260647" type="boolean" />
             </instance-variables>
+            <behaviors>
+                <behavior-type name="Pin" sid="370773016567529">
+                    <behavior id="Pin" />
+                </behavior-type>
+                <behavior-type name="DragDrop" sid="139931894912108">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
         </family>
     </families>
     <layout-folder>

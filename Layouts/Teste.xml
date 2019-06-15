@@ -178,23 +178,23 @@
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-16</font>
                         <color>0,0,0</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3.599700928</x>
-                        <y>280.199432373</y>
+                        <x>110.799133301</x>
+                        <y>306.599121094</y>
                         <z>0</z>
-                        <width>200</width>
+                        <width>92.799346924</width>
                         <height>30</height>
                         <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -257,7 +257,7 @@
                     </properties>
                     <instance-variables>
                         <config>false</config>
-                        <slote_id>0</slote_id>
+                        <slote_id></slote_id>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -289,7 +289,17 @@
                         <item_usavel>1</item_usavel>
                         <morre_usar>0</morre_usar>
                         <config>false</config>
+                        <noIventorio>false</noIventorio>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                        <behavior-instance type="DragDrop">
+                            <properties>
+                                <axes>Both</axes>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -344,7 +354,17 @@
                         <item_usavel>1</item_usavel>
                         <morre_usar>0</morre_usar>
                         <config>false</config>
+                        <noIventorio>false</noIventorio>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                        <behavior-instance type="DragDrop">
+                            <properties>
+                                <axes>Both</axes>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -368,11 +388,21 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <item_nome>Chave 2</item_nome>
+                        <item_nome>Chave Mestra</item_nome>
                         <item_usavel>1</item_usavel>
                         <morre_usar>0</morre_usar>
                         <config>false</config>
+                        <noIventorio>false</noIventorio>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                        <behavior-instance type="DragDrop">
+                            <properties>
+                                <axes>Both</axes>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
