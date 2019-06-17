@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>CENARIO1</name>
     <events>
+        <include>GlobalVars</include>
         <include>IventorySystem</include>
         <include>GameEngine</include>
         <event-group description="" sid="405119796744063" title="StartGame">

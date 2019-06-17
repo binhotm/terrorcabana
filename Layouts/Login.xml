@@ -179,9 +179,9 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="debugProgress" uid="101">
+                <instance type="DebugLogin" uid="88">
                     <properties>
-                        <text>DEBUG POR</text>
+                        <text></text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-16</font>
                         <color>255,0,0</color>
@@ -194,11 +194,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>289.75958252</x>
-                        <y>120.479110718</y>
-                        <z>0.000003815</z>
-                        <width>387.519470215</width>
-                        <height>30</height>
+                        <x>293</x>
+                        <y>465</y>
+                        <z>0</z>
+                        <width>405</width>
+                        <height>34</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -288,33 +288,6 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="DebugLogin" uid="88">
-                    <properties>
-                        <text>Text</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-16</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>4.319091797</x>
-                        <y>452.040466309</y>
-                        <z>0.000003815</z>
-                        <width>986.079956055</width>
-                        <height>145.559997559</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="gameLogoSpr" uid="93">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -347,7 +320,6 @@
                 <auto-import></auto-import>
             </properties>
         </instance>
-        <instance type="dtc_login" uid="102" />
     </nonworld-instances>
     <effects />
 </c2layout>

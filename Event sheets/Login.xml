@@ -3,52 +3,16 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Login</name>
     <events>
-        <variable constant="0" name="statusLogin" sid="550127698156013" static="0" type="number">0</variable>
-        <event-block sid="950268663422467">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="285296736291377" type="System" />
-            </conditions>
-            <actions>
-                <action id="0" name="Import file" sid="509694921690344" type="Import">
-                    <param id="0" name="Import file">&quot;editbox.css&quot;</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-group description="" sid="727145219307435" title="AjaxEvents">
+        <include>GlobalVars</include>
+        <event-group description="" sid="424385613547380" title="LayoutEvents">
             <sub-events>
-                <event-block sid="303558907959394">
+                <event-block sid="950268663422467">
                     <conditions>
-                        <condition id="0" name="On completed" sid="141571331303860" type="ajax_login">
-                            <param id="0" name="Tag">&quot;ajax_login&quot;</param>
-                        </condition>
+                        <condition id="-2" name="On start of layout" sid="285296736291377" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="514524885052902" type="DebugLogin">
-                            <param id="0" name="Text">ajax_login.LastData</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="469790750816955">
-                    <conditions>
-                        <condition id="2" name="On progress" sid="567626607348746" type="ajax_login">
-                            <param id="0" name="Tag">&quot;ajax_login&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="977275612226726" type="debugProgress">
-                            <param id="0" name="Text">ajax_login.Progress</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="596077550878028">
-                    <conditions>
-                        <condition id="1" name="On error" sid="360932997181747" type="ajax_login">
-                            <param id="0" name="Tag">&quot;ajax_login&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="466087251996453" type="DebugLogin">
-                            <param id="0" name="Text">ajax_login.LastData</param>
+                        <action id="0" name="Import file" sid="509694921690344" type="Import">
+                            <param id="0" name="Import file">&quot;editbox.css&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -70,7 +34,7 @@
                             <param id="1" name="From">0</param>
                         </action>
                         <action id="-16" name="Wait" sid="271544274096974" type="System">
-                            <param id="0" name="Seconds">0.2</param>
+                            <param id="0" name="Seconds">0.1</param>
                         </action>
                         <action id="4" name="Set animation" sid="348442718740694" type="btnCadastrar">
                             <param id="0" name="Animation">&quot;a0&quot;</param>
@@ -89,44 +53,68 @@
                     <actions>
                         <action id="2" name="Post to URL" sid="607193823254864" type="ajax_login">
                             <param id="0" name="Tag">&quot;ajax_login&quot;</param>
-                            <param id="1" name="URL">&quot;http://ec2-18-231-171-246.sa-east-1.compute.amazonaws.com/api/index.php/login/logon&quot;&amp;login.Text&amp;&quot;/&quot;&amp;password.Text</param>
+                            <param id="1" name="URL">&quot;http://api.terrornacabana.com.br/index.php/login/logon/&quot;&amp;login.Text&amp;&quot;/&quot;&amp;password.Text</param>
                             <param id="2" name="Data">&quot;&quot;</param>
                             <param id="3" name="Method">&quot;GET&quot;</param>
                         </action>
-                        <action id="4" name="Set animation" sid="916746960802185" type="btnLogar">
-                            <param id="0" name="Animation">&quot;a1&quot;</param>
-                            <param id="1" name="From">0</param>
+                        <action id="0" name="Set text" sid="506275989146689" type="DebugLogin">
+                            <param id="0" name="Text">&quot;INICIANDO TENTATIVA DE LOGIN....&quot;</param>
                         </action>
-                        <action id="-16" name="Set opacity" sid="318296304333489" type="btnLogar">
-                            <param id="0" name="Opacity">90</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="224247010461674" type="System">
-                            <param id="0" name="Seconds">0.2</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="587055721856969" type="btnLogar">
-                            <param id="0" name="Animation">&quot;a0&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-16" name="Set opacity" sid="895076366338992" type="btnLogar">
-                            <param id="0" name="Opacity">100</param>
+                        <action id="1" name="Append text" sid="118847682608415" type="DebugLogin">
+                            <param id="0" name="Text">&quot;http://api.terrornacabana.com.br/index.php/login/logon/&quot;&amp;login.Text&amp;&quot;/&quot;&amp;password.Text</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="786527192754439">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="632995469909144" type="System">
-                    <param id="0" name="Variable">statusLogin</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-43" name="Go to next/previous layout" sid="174981488711773" type="System">
-                    <param id="0" name="Which">0</param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group description="" sid="727145219307435" title="AjaxEvents">
+            <sub-events>
+                <event-block sid="303558907959394">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="141571331303860" type="ajax_login">
+                            <param id="0" name="Tag">&quot;ajax_login&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="288725001120851" type="DebugLogin">
+                            <param id="0" name="Text">ajax_login.LastData</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="744003896090960">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="370839499081847" type="System">
+                                    <param id="0" name="First value">int(ajax_login.LastData)</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="706788217988368" type="System">
+                                    <param id="0" name="Variable">userId</param>
+                                    <param id="1" name="Value">int(ajax_login.LastData)</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="727109987964621" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="858931977855687" type="System">
+                                    <param id="0" name="Layout">Historia</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="515477559717010">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="973954817074615" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="858508669012177" type="DebugLogin">
+                                    <param id="0" name="Text">&quot;Erro ao efeturar Login, usuario ou senha invalidos&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

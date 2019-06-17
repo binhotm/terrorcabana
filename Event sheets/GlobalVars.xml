@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GlobalVars</name>
+    <events>
+        <variable comment="Tempo decorrido do jogador" constant="0" name="playtime" sid="174712599256815" static="0" type="text">&quot;0&quot;</variable>
+        <variable comment="Id do loguin do usuario" constant="0" name="userId" sid="658896110670014" static="0" type="number">-1</variable>
+    </events>
+</c2eventsheet>

@@ -1197,9 +1197,6 @@
         <object-type name="debugProgress" sid="289582918737695">
             <plugin id="Text" />
         </object-type>
-        <object-type global="1" name="dtc_login" sid="224543210043330">
-            <plugin id="Dictionary" />
-        </object-type>
         <object-type name="mochila" sid="670807262450083">
             <plugin id="Sprite" />
             <behaviors>
@@ -1507,6 +1504,7 @@
         <event-sheet>IventorySystem.xml</event-sheet>
         <event-sheet>Historia.xml</event-sheet>
         <event-sheet>Login.xml</event-sheet>
+        <event-sheet>GlobalVars.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="9" />

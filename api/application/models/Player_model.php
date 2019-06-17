@@ -1,6 +1,6 @@
 <?php
 
-class User_model extends CI_Model {
+class Player_model extends CI_Model {
 
     private $id;
     private $login;
@@ -20,7 +20,7 @@ class User_model extends CI_Model {
     */
     public function doLogin(String $user, String $password){
 
-        $this->db->select("login,password");
+        $this->db->select("id_player, login,password");
         $this->db->where("login", $user);
         $this->db->where("password",$password);
         $this->db->from("player");
@@ -29,15 +29,9 @@ class User_model extends CI_Model {
         $query = $this->db->get();        
 
         if($query->num_rows() == 1){
-            $result_js['status'] = 'SUCCESS';
-            $result_js['message'] = 'Login efetuado com sucesso!';
+           return (int) $query->result_array[0]['id_player'] ;       
         }else{
-            $result_js['status'] = 'ERROR';
-            $result_js['message'] = 'Usuario ou senha invalidos!';
-        }
-
-        return $result_js;      
+           return 0;
+        }    
     }
-
-
 }
