@@ -1415,6 +1415,9 @@
                 <instance-variable name="create" sid="863216637279433" type="boolean" />
             </instance-variables>
         </object-type>
+        <object-type global="1" name="obj_gameTimer" sid="145391599872735">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families>
         <family name="GameObjects" plugin-id="Sprite" sid="611563804002963">

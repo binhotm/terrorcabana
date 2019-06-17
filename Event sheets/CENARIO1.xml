@@ -3,11 +3,51 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>CENARIO1</name>
     <events>
-        <include>GlobalVars</include>
-        <include>IventorySystem</include>
         <include>GameEngine</include>
         <event-group description="" sid="405119796744063" title="StartGame">
             <sub-events>
+                <event-block sid="706270944136921">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="974812157726897" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="372546957128115">
+                            <conditions>
+                                <condition id="-14" inverted="1" name="Compare variable" sid="431039151315596" type="System">
+                                    <param id="0" name="Variable">bolsaStatus</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="741458271935151" type="obj_mochila">
+                                    <param id="0" name="X">int(tokenat(bolsaStatus, 0, &quot;|&quot;))</param>
+                                    <param id="1" name="Y">int(tokenat(bolsaStatus, 1, &quot;|&quot;))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="808365504482631">
+                            <conditions>
+                                <condition id="-14" inverted="1" name="Compare variable" sid="612111371809486" type="System">
+                                    <param id="0" name="Variable">casacoStatus</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="725669357615739" type="casaco">
+                                    <param id="0" name="X">int(tokenat(casacoStatus, 0, &quot;|&quot;))</param>
+                                    <param id="1" name="Y">int(tokenat(casacoStatus, 1, &quot;|&quot;))</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="900604903336645" type="casaco">
+                                    <param id="0" name="Instance variable">canClick</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block sid="479724455588154">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="568666128028241" type="System" />
@@ -15,23 +55,6 @@
                     <actions>
                         <action id="-9" name="Destroy" sid="714658282984098" type="LEFTARROW" />
                     </actions>
-                    <sub-events>
-                        <event-block sid="679070262409850">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="315276640064080" type="System">
-                                    <param id="0" name="Variable">gameStart</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                                <condition id="-14" inverted="1" name="Compare variable" sid="955514908811238" type="System">
-                                    <param id="0" name="Variable">debug</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                        </event-block>
-                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -95,42 +118,42 @@
                                     <param id="0" name="Variable">isFree</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="0" name="Call function" sid="726170078150125" type="Function">
+                                <action disabled="1" id="0" name="Call function" sid="726170078150125" type="Function">
                                     <param id="0" name="Name">&quot;showDialog&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
-                                <action id="-16" name="Wait" sid="450594478127392" type="System">
+                                <action disabled="1" id="-16" name="Wait" sid="450594478127392" type="System">
                                     <param id="0" name="Seconds">2</param>
                                 </action>
-                                <action id="0" name="Call function" sid="647263117681580" type="Function">
+                                <action disabled="1" id="0" name="Call function" sid="647263117681580" type="Function">
                                     <param id="0" name="Name">&quot;readText&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;Consegui alcançar este casaco!!&quot;</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="494309008461636" type="System">
+                                <action disabled="1" id="-16" name="Wait" sid="494309008461636" type="System">
                                     <param id="0" name="Seconds">2</param>
                                 </action>
-                                <action id="0" name="Call function" sid="506589563884057" type="Function">
+                                <action disabled="1" id="0" name="Call function" sid="506589563884057" type="Function">
                                     <param id="0" name="Name">&quot;readText&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;Encontrei este canivete, preciso usa-lo agora..&quot;</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="384445649941034" type="System">
+                                <action disabled="1" id="-16" name="Wait" sid="384445649941034" type="System">
                                     <param id="0" name="Seconds">2</param>
                                 </action>
-                                <action id="0" name="Call function" sid="215955267523392" type="Function">
+                                <action disabled="1" id="0" name="Call function" sid="215955267523392" type="Function">
                                     <param id="0" name="Name">&quot;readText&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;Argh! &quot;</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="226319205826916" type="System">
+                                <action disabled="1" id="-16" name="Wait" sid="226319205826916" type="System">
                                     <param id="0" name="Seconds">2</param>
                                 </action>
-                                <action id="0" name="Call function" sid="187631203624664" type="Function">
+                                <action disabled="1" id="0" name="Call function" sid="187631203624664" type="Function">
                                     <param id="0" name="Name">&quot;readText&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;UFAAAA consengui me soltar, preciso sair daqui!!&quot;</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="614313323664629" type="System">
+                                <action disabled="1" id="-16" name="Wait" sid="614313323664629" type="System">
                                     <param id="0" name="Seconds">2</param>
                                 </action>
-                                <action id="0" name="Call function" sid="983268938057350" type="Function">
+                                <action disabled="1" id="0" name="Call function" sid="983268938057350" type="Function">
                                     <param id="0" name="Name">&quot;hideDialog&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>

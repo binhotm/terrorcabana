@@ -3,11 +3,12 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GameEngine</name>
     <events>
+        <include>GlobalVars</include>
+        <include>IventorySystem</include>
         <variable comment="Posicao do casaco no Mapa X|Y" constant="0" name="casacoStatus" sid="753199281403383" static="0" type="text"></variable>
         <variable comment="Posicao da Bolsa no Mapa X|Y" constant="0" name="bolsaStatus" sid="917286878156450" static="0" type="text"></variable>
         <variable comment="Verifica se ela ja tem a mochila" constant="0" name="hasInvetory" sid="377673001422886" static="0" type="number">0</variable>
         <variable comment="Verifica se esta escrevendo" constant="0" name="typing" sid="664755304052463" static="0" type="number">0</variable>
-        <variable comment="Da inicio ao jogo" constant="0" name="gameStart" sid="203651298173256" static="0" type="number">0</variable>
         <variable comment="Quando o personagem se solta das cordas" constant="0" name="isFree" sid="490299496570784" static="0" type="number">0</variable>
         <variable constant="0" name="debug" sid="781299479377664" static="0" type="number">0</variable>
         <event-group description="" sid="560617196269730" title="Debug" />
@@ -126,48 +127,6 @@
                             <param id="1" name="Image point (optional)">2</param>
                         </action>
                     </actions>
-                </event-block>
-                <event-block bookmark="1" sid="393380613731479">
-                    <conditions>
-                        <condition id="-2" name="On start of layout" sid="935059541017567" type="System" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="631453088626478">
-                            <conditions>
-                                <condition id="-14" inverted="1" name="Compare variable" sid="947229985593313" type="System">
-                                    <param id="0" name="Variable">bolsaStatus</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="731362958932019" type="obj_mochila">
-                                    <param id="0" name="X">int(tokenat(bolsaStatus, 0, &quot;|&quot;))</param>
-                                    <param id="1" name="Y">int(tokenat(bolsaStatus, 1, &quot;|&quot;))</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="486025900995752">
-                            <conditions>
-                                <condition id="-14" inverted="1" name="Compare variable" sid="193263689371621" type="System">
-                                    <param id="0" name="Variable">casacoStatus</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="108816227233058" type="casaco">
-                                    <param id="0" name="X">int(tokenat(casacoStatus, 0, &quot;|&quot;))</param>
-                                    <param id="1" name="Y">int(tokenat(casacoStatus, 1, &quot;|&quot;))</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="251670748550632" type="casaco">
-                                    <param id="0" name="Instance variable">canClick</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
                 <event-group description="" sid="488147915589568" title="SistemaDeDialogo">
                     <sub-events>
@@ -370,7 +329,7 @@
         </event-group>
         <event-group description="" sid="696505435312956" title="Mouse and Keyboard">
             <sub-events>
-                <event-group description="" sid="284190461194244" title="Misc">
+                <event-group description="" sid="284190461194244" title="Mouse">
                     <sub-events>
                         <event-block sid="466633599829545">
                             <conditions>

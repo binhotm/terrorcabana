@@ -4,7 +4,6 @@
     <name>CENARIO2</name>
     <events>
         <variable constant="0" name="thunderAction" sid="966848856196118" static="0" type="number">0</variable>
-        <include>IventorySystem</include>
         <include>GameEngine</include>
         <event-group description="" sid="769881516197526" title="ObjectosInteracao">
             <sub-events>
