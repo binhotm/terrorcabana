@@ -1945,6 +1945,9 @@
         <object-type name="tb_p4" sid="874113134794047">
             <plugin id="TextBox" />
         </object-type>
+        <object-type global="1" name="arrBauPassword" sid="135093207243927">
+            <plugin id="Arr" />
+        </object-type>
     </object-folder>
     <families>
         <family name="GameObjects" plugin-id="Sprite" sid="611563804002963">

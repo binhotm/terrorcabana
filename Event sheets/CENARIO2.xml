@@ -107,6 +107,30 @@
                 </event-group>
                 <event-group description="" sid="314054841784715" title="BlocoDatas">
                     <sub-events>
+                        <event-block sid="900382392649206">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="783213069399042" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="502414091054098" type="notepadDatas">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="593438927138118">
+                                    <conditions>
+                                        <condition id="3" name="For each element" sid="224940432527357" type="arrBauPassword">
+                                            <param id="0" name="Axes">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Append text" sid="381861330896964" type="notepadDatas">
+                                            <param id="0" name="Text">&quot;Data: &quot; &amp; arrBauPassword.CurValue &amp; newline &amp; newline</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                         <event-block sid="280731796208213">
                             <conditions>
                                 <condition id="6" name="On object clicked" sid="864802404522813" type="Mouse">

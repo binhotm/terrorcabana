@@ -143,7 +143,7 @@
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-16</font>
-                        <color>0,0,0</color>
+                        <color>0,255,51</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -153,8 +153,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>257</x>
-                        <y>521</y>
+                        <x>479</x>
+                        <y>-216</y>
                         <z>0</z>
                         <width>503</width>
                         <height>30</height>
@@ -333,7 +333,6 @@
                         <type>Text</type>
                         <auto-font-size>No</auto-font-size>
                         <id-optional>p1box</id-optional>
-                        <maxlength>1</maxlength>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -360,7 +359,6 @@
                         <type>Text</type>
                         <auto-font-size>No</auto-font-size>
                         <id-optional>p2box</id-optional>
-                        <maxlength>1</maxlength>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -387,7 +385,6 @@
                         <type>Text</type>
                         <auto-font-size>No</auto-font-size>
                         <id-optional>p3box</id-optional>
-                        <maxlength>1</maxlength>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -414,7 +411,6 @@
                         <type>Text</type>
                         <auto-font-size>No</auto-font-size>
                         <id-optional>p4box</id-optional>
-                        <maxlength>1</maxlength>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -433,6 +429,14 @@
             <effects />
         </layer>
     </layers>
-    <nonworld-instances />
+    <nonworld-instances>
+        <instance type="arrBauPassword" uid="139">
+            <properties>
+                <width>6</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+    </nonworld-instances>
     <effects />
 </c2layout>

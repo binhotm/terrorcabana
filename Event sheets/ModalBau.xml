@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ModalBau</name>
     <events>
+        <include>GlobalVars</include>
         <event-group description="" sid="631303388098491" title="StartEventsBau">
             <sub-events>
                 <event-block sid="914392304142712">
@@ -31,6 +32,10 @@
                             <param id="0" name="X">400</param>
                             <param id="1" name="Y">-100</param>
                         </action>
+                        <action id="0" name="Call function" sid="193235320360999" type="Function">
+                            <param id="0" name="Name">&quot;gerarSenhasBau&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="182418106290893">
@@ -38,7 +43,7 @@
                         <condition id="-1" name="Every tick" sid="705593466257314" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="821792119504064" type="dbText">
+                        <action disabled="1" id="0" name="Set text" sid="821792119504064" type="dbText">
                             <param id="0" name="Text">WindowWidth &amp; &quot; - &quot; &amp; WindowHeight</param>
                         </action>
                     </actions>
@@ -56,6 +61,48 @@
                         </condition>
                     </conditions>
                     <actions />
+                    <sub-events>
+                        <event-block sid="909884333145727">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="489205207302668" type="System">
+                                    <param id="0" name="First value">bau_b_password</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">tb_p1.Text &amp; tb_p2.Text &amp; tb_p3.Text &amp; tb_p4.Text</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="553390541746006" type="dbText">
+                                    <param id="0" name="X">bau_locker.X</param>
+                                    <param id="1" name="Y">bau_locker.Y - 50</param>
+                                </action>
+                                <action id="0" name="Set text" sid="827800612850536" type="dbText">
+                                    <param id="0" name="Text">&quot;SENHA CORRETA!!!!! &quot;</param>
+                                </action>
+                                <action id="-24" name="Move to top" sid="651171441606659" type="dbText" />
+                                <action id="4" name="Set font color" sid="722726006411509" type="dbText">
+                                    <param id="0" name="Color">rgb(0, 255, 0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="246470780890139">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="516206487241238" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="355299929357766" type="dbText">
+                                    <param id="0" name="X">bau_locker.X</param>
+                                    <param id="1" name="Y">bau_locker.Y - 50</param>
+                                </action>
+                                <action id="0" name="Set text" sid="229141120173010" type="dbText">
+                                    <param id="0" name="Text">&quot;SENHA ERRADA!!!!! &quot;</param>
+                                </action>
+                                <action id="-24" name="Move to top" sid="247096197233649" type="dbText" />
+                                <action id="4" name="Set font color" sid="467560104312219" type="dbText">
+                                    <param id="0" name="Color">rgb(255, 0, 0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -281,6 +328,10 @@
                         <action id="0" name="Call function" sid="332555242752833" type="Function">
                             <param id="0" name="Name">&quot;abrirBau&quot;</param>
                             <param id="1" name="Parameter {n}">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="634966300730248" type="Function">
+                            <param id="0" name="Name">&quot;gerarSenhasBau&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>

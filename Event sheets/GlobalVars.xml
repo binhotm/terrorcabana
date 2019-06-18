@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GlobalVars</name>
     <events>
+        <variable comment="Senha do Bau preto da CENA 2" constant="0" name="bau_b_password" sid="878529049580333" static="0" type="text"></variable>
         <variable constant="0" name="historyStart" sid="203001886422655" static="0" type="number">1</variable>
         <variable comment="Tempo decorrido do jogador em segundos" constant="0" name="playtime" sid="174712599256815" static="0" type="number">0</variable>
         <variable comment="Id do loguin do usuario" constant="0" name="userId" sid="658896110670014" static="0" type="number">-1</variable>
@@ -36,6 +37,97 @@
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
+                </event-block>
+                <event-block sid="396567794709526">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="600172627189976" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="909316963607410" type="Function">
+                            <param id="0" name="Name">&quot;gerarSenhasBau&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="934702544736442" title="Gerar Senha de Baus">
+            <sub-events>
+                <variable constant="0" name="ramdDate" sid="288825081759236" static="0" type="text"></variable>
+                <variable constant="0" name="iterator" sid="156770136822828" static="0" type="number">0</variable>
+                <event-block sid="444257753429800">
+                    <conditions>
+                        <condition id="0" name="On function" sid="797137370767074" type="Function">
+                            <param id="0" name="Name">&quot;gerarSenhasBau&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="268891474192082" type="System">
+                            <param id="0" name="Variable">iterator</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="714991369801917">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="707616489018962" type="System">
+                                    <param id="0" name="Count">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="919529977561306" type="System">
+                                    <param id="0" name="Variable">ramdDate</param>
+                                    <param id="1" name="Value">Floor(random(0,50))</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="628763594804658">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="527386581005971" type="System">
+                                            <param id="0" name="First value">len(ramdDate)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="2" name="Set at X" sid="927053229805061" type="arrBauPassword">
+                                            <param id="0" name="X">iterator</param>
+                                            <param id="1" name="Value">&quot;190&quot; &amp; ramdDate</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="423421295337611">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="309468409097561" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="2" name="Set at X" sid="693748112663703" type="arrBauPassword">
+                                            <param id="0" name="X">iterator</param>
+                                            <param id="1" name="Value">&quot;19&quot; &amp; ramdDate</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="514032133954571">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="176609369589293" type="System">
+                                            <param id="0" name="Variable">iterator</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="223029062067567">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="883537109448418" type="System">
+                                    <param id="0" name="Variable">bau_b_password</param>
+                                    <param id="1" name="Value">arrBauPassword.At(Floor(random(0,5)))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
