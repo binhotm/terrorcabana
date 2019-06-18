@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ModalBau</name>
+    <events>
+        <event-group description="" sid="631303388098491" title="StartEventsBau">
+            <sub-events>
+                <event-block sid="914392304142712">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="808456330570478" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Stop" sid="816740969983272" type="bau_skin_modal" />
+                        <action id="0" name="Import file" sid="640888012142771" type="Import">
+                            <param id="0" name="Import file">&quot;editbox.css&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="375889746896152" type="BauModal" />
+                        <action id="-3" name="Set position" sid="640514388849268" type="tb_p1">
+                            <param id="0" name="X">100</param>
+                            <param id="1" name="Y">-100</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="674119563075880" type="tb_p2">
+                            <param id="0" name="X">200</param>
+                            <param id="1" name="Y">-100</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="596881513153264" type="tb_p3">
+                            <param id="0" name="X">300</param>
+                            <param id="1" name="Y">-100</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="262454812151118" type="tb_p4">
+                            <param id="0" name="X">400</param>
+                            <param id="1" name="Y">-100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="182418106290893">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="705593466257314" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="821792119504064" type="dbText">
+                            <param id="0" name="Text">WindowWidth &amp; &quot; - &quot; &amp; WindowHeight</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="480460700386542" title="ValidaSenha">
+            <sub-events>
+                <event-block sid="591325166005796">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="419464008854713" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">bau_locker</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="133572405381651" title="Funcao Bau">
+            <sub-events>
+                <variable constant="0" name="bauId" sid="331172405619450" static="0" type="number">0</variable>
+                <event-block sid="820082730517443">
+                    <conditions>
+                        <condition id="0" name="On function" sid="993010764975063" type="Function">
+                            <param id="0" name="Name">&quot;abrirBau&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="573401542332527" type="System">
+                            <param id="0" name="Variable">bauId</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="878452873793338">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="236342505156742" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="490770401738434" type="blackdrop">
+                                    <param id="0" name="Scale">50</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="199801329052987" type="blackdrop">
+                                    <param id="0" name="X">LayoutWidth / 2</param>
+                                    <param id="1" name="Y">LayoutHeight /2 </param>
+                                </action>
+                                <action id="-3" name="Create object" sid="536100813185947" type="System">
+                                    <param id="0" name="Object to create">bau_bg_modal</param>
+                                    <param id="1" name="Layer">&quot;modal&quot;</param>
+                                    <param id="2" name="X">500</param>
+                                    <param id="3" name="Y">300</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="917040796152652" type="bau_bg_modal">
+                                    <param id="0" name="Instance variable">BAU_ID</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="734401165604020" type="bau_bg_modal">
+                                    <param id="0" name="Object">bau_skin_modal</param>
+                                    <param id="1" name="Layer">bau_bg_modal.LayerName</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="991253217090860" type="bau_skin_modal">
+                                    <param id="0" name="Frame number">Function.Param(0)</param>
+                                </action>
+                                <action id="2" name="Stop" sid="949581809755895" type="bau_skin_modal" />
+                                <action id="0" name="Spawn another object" sid="807277271272599" type="bau_skin_modal">
+                                    <param id="0" name="Object">bau_locker</param>
+                                    <param id="1" name="Layer">bau_skin_modal.LayerName</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="810646903391028" type="bau_skin_modal">
+                                    <param id="0" name="Object">bau_spr_password</param>
+                                    <param id="1" name="Layer">bau_skin_modal.LayerName</param>
+                                    <param id="2" name="Image point">6</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="514715517818926" type="bau_skin_modal">
+                                    <param id="0" name="Object">slote_senha_modal</param>
+                                    <param id="1" name="Layer">bau_skin_modal.LayerName</param>
+                                    <param id="2" name="Image point">2</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="717070419088686" type="tb_p1">
+                                    <param id="0" name="Object">slote_senha_modal</param>
+                                    <param id="1" name="Image point (optional)">1</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="516622354196312" type="bau_skin_modal">
+                                    <param id="0" name="Object">slote_senha_modal</param>
+                                    <param id="1" name="Layer">bau_skin_modal.LayerName</param>
+                                    <param id="2" name="Image point">3</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="383761179569662" type="tb_p2">
+                                    <param id="0" name="Object">slote_senha_modal</param>
+                                    <param id="1" name="Image point (optional)">1</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="256499575531172" type="bau_skin_modal">
+                                    <param id="0" name="Object">slote_senha_modal</param>
+                                    <param id="1" name="Layer">bau_skin_modal.LayerName</param>
+                                    <param id="2" name="Image point">4</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="260108199736949" type="tb_p3">
+                                    <param id="0" name="Object">slote_senha_modal</param>
+                                    <param id="1" name="Image point (optional)">1</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="699515702918808" type="bau_skin_modal">
+                                    <param id="0" name="Object">slote_senha_modal</param>
+                                    <param id="1" name="Layer">bau_skin_modal.LayerName</param>
+                                    <param id="2" name="Image point">5</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="484008624797878" type="tb_p4">
+                                    <param id="0" name="Object">slote_senha_modal</param>
+                                    <param id="1" name="Image point (optional)">1</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="782462002354875" type="bau_bg_modal">
+                                    <param id="0" name="Object">close_bau_modal</param>
+                                    <param id="1" name="Layer">bau_bg_modal.LayerName</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="350906752832312" type="close_bau_modal">
+                                    <param id="0" name="Instance variable">BAU_ID</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="356064585856475">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="696311402518068" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="541501694646753" type="blackdrop">
+                                    <param id="0" name="Scale">50</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="557890625337541" type="blackdrop">
+                                    <param id="0" name="X">LayoutWidth / 2</param>
+                                    <param id="1" name="Y">LayoutHeight /2 </param>
+                                </action>
+                                <action id="-3" name="Create object" sid="132835870657227" type="System">
+                                    <param id="0" name="Object to create">bau_bg_modal</param>
+                                    <param id="1" name="Layer">&quot;modal&quot;</param>
+                                    <param id="2" name="X">500</param>
+                                    <param id="3" name="Y">300</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="453593023098451" type="bau_bg_modal">
+                                    <param id="0" name="Instance variable">BAU_ID</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="398332692938624" type="bau_bg_modal">
+                                    <param id="0" name="Object">bau_skin_modal</param>
+                                    <param id="1" name="Layer">bau_bg_modal.LayerName</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="227247415907526" type="bau_skin_modal">
+                                    <param id="0" name="Frame number">Function.Param(0)</param>
+                                </action>
+                                <action id="2" name="Stop" sid="608821122436508" type="bau_skin_modal" />
+                                <action id="0" name="Spawn another object" sid="452975743801471" type="bau_skin_modal">
+                                    <param id="0" name="Object">bau_locker</param>
+                                    <param id="1" name="Layer">bau_skin_modal.LayerName</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="360849650587113" type="bau_bg_modal">
+                                    <param id="0" name="Object">close_bau_modal</param>
+                                    <param id="1" name="Layer">bau_bg_modal.LayerName</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="554421459425585" type="close_bau_modal">
+                                    <param id="0" name="Instance variable">BAU_ID</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="176107276341366">
+                    <conditions>
+                        <condition id="0" name="On function" sid="843307218026464" type="Function">
+                            <param id="0" name="Name">&quot;fecharBau&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="253498491896100">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="114702787043119" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="593975318094562" type="BauModal" />
+                                <action id="9" name="Set scale" sid="621345692389279" type="blackdrop">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="464983807775296" type="blackdrop">
+                                    <param id="0" name="X">-10</param>
+                                    <param id="1" name="Y">-10</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="913618847985394" type="tb_p1">
+                                    <param id="0" name="X">100</param>
+                                    <param id="1" name="Y">-100</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="289504639192848" type="tb_p2">
+                                    <param id="0" name="X">200</param>
+                                    <param id="1" name="Y">-100</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="584532509572214" type="tb_p3">
+                                    <param id="0" name="X">300</param>
+                                    <param id="1" name="Y">-100</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="671874881543260" type="tb_p4">
+                                    <param id="0" name="X">400</param>
+                                    <param id="1" name="Y">-100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="646146422686425" title="BauEvent">
+            <sub-events>
+                <event-block sid="806804894717978">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="352110050917102" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">bau</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="332555242752833" type="Function">
+                            <param id="0" name="Name">&quot;abrirBau&quot;</param>
+                            <param id="1" name="Parameter {n}">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="287752995731797">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="644289932936256" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">close_bau_modal</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="730303084284906" type="Function">
+                            <param id="0" name="Name">&quot;fecharBau&quot;</param>
+                            <param id="1" name="Parameter {n}">close_bau_modal.BAU_ID</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -7,9 +7,9 @@
         <include>IventorySystem</include>
         <variable comment="Posicao do casaco no Mapa X|Y" constant="0" name="casacoStatus" sid="753199281403383" static="0" type="text"></variable>
         <variable comment="Posicao da Bolsa no Mapa X|Y" constant="0" name="bolsaStatus" sid="917286878156450" static="0" type="text"></variable>
-        <variable comment="Verifica se ela ja tem a mochila" constant="0" name="hasInvetory" sid="377673001422886" static="0" type="number">0</variable>
+        <variable comment="Verifica se ela ja tem a mochila" constant="0" name="hasInvetory" sid="377673001422886" static="0" type="number">1</variable>
         <variable comment="Verifica se esta escrevendo" constant="0" name="typing" sid="664755304052463" static="0" type="number">0</variable>
-        <variable comment="Quando o personagem se solta das cordas" constant="0" name="isFree" sid="490299496570784" static="0" type="number">0</variable>
+        <variable comment="Quando o personagem se solta das cordas" constant="0" name="isFree" sid="490299496570784" static="0" type="number">1</variable>
         <variable constant="0" name="debug" sid="781299479377664" static="0" type="number">0</variable>
         <event-group description="" sid="560617196269730" title="Debug" />
         <event-group description="" sid="429358897934079" title="Preload">

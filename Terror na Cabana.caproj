@@ -283,7 +283,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="papel2" sid="634988842044663">
+            <object-type name="papelDatas" sid="634988842044663">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="756868422084892" speed="5">
@@ -328,7 +328,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="papel" sid="557568585946257">
+            <object-type name="papelNomes" sid="557568585946257">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="177257450818229" speed="5">
@@ -870,11 +870,8 @@
         <object-type global="1" name="game_msg" sid="989508493115078">
             <plugin id="Dictionary" />
         </object-type>
-        <object-type name="bloco_nomes" sid="508966042071879">
+        <object-type name="bloco_datas" sid="508966042071879">
             <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="isShow" sid="261926963613124" type="number" />
-            </instance-variables>
             <behaviors>
                 <behavior-type name="Sine" sid="703338584401760">
                     <behavior id="Sin" />
@@ -882,7 +879,7 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="820814297654002" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\itens\CENARIO2\papel_na_parede.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\PNGs\papel.png">
                         <collision-poly>
                             <point x="0" y="0" />
                             <point x="1" y="0" />
@@ -895,11 +892,8 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="bloco_flores" sid="421826534174961">
+        <object-type name="bloco_nomes" sid="421826534174961">
             <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="isShow" sid="584937825234082" type="number" />
-            </instance-variables>
             <behaviors>
                 <behavior-type name="Sine" sid="192022037028798">
                     <behavior id="Sin" />
@@ -907,7 +901,7 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="227555398321593" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\itens\CENARIO2\papel_na_parede_2.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\PNGs\papel.png">
                         <collision-poly>
                             <point x="0" y="0" />
                             <point x="1" y="0" />
@@ -1368,9 +1362,9 @@
         <object-type name="itensGame" sid="478014316811586">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="3" loop="1" name="padrao" pingpong="0" repeatcount="1" repeatto="0" sid="798781052477970" speed="5">
+                <animation framecount="28" loop="1" name="padrao" pingpong="0" repeatcount="1" repeatto="0" sid="798781052477970" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\chave.png">
-                        <image-point name="Name" x="0.485714" y="-0.114286" />
+                        <image-point name="Name" x="0.5" y="0.0428571" />
                         <collision-poly>
                             <point x="0.442857" y="0.442857" />
                             <point x="0.557143" y="0.442857" />
@@ -1381,8 +1375,11 @@
                             <point x="0.128571" y="0.5" />
                         </collision-poly>
                     </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\chave1.png">
+                        <image-point name="Name" x="0.5" y="0.0428571" />
+                    </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\chave2.png">
-                        <image-point name="Name" x="0.485714" y="-0.114286" />
+                        <image-point name="Name" x="0.5" y="0.0428571" />
                         <collision-poly>
                             <point x="0.185714" y="0.257143" />
                             <point x="0.742857" y="0.4" />
@@ -1393,7 +1390,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\carragaAcido.png">
-                        <image-point name="Name" x="0.485714" y="-0.114286" />
+                        <image-point name="Name" x="0.5" y="0.0428571" />
                         <collision-poly>
                             <point x="0.314286" y="0.314286" />
                             <point x="0.457143" y="0.0285715" />
@@ -1402,6 +1399,78 @@
                             <point x="0.7" y="0.914286" />
                             <point x="0.3" y="0.885715" />
                         </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\frasco veneno.png">
+                        <image-point name="Name" x="0.5" y="0.0428571" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\alce.png">
+                        <image-point name="Name" x="0.5" y="0.0428571" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\banco.png">
+                        <image-point name="Name" x="0.5" y="0.0428571" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\bau1.png">
+                        <image-point name="Name" x="0.5" y="0.0428571" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\bau2.png">
+                        <image-point name="Name" x="0.5" y="0.0428571" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\bau3.png">
+                        <image-point name="Name" x="0.5" y="0.0428571" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\candelabro1.png">
+                        <image-point name="Name" x="0.5" y="0.0428571" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\candelabro2.png">
+                        <image-point name="Name" x="0.5" y="0.0428571" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\chapeu.png">
+                        <image-point name="Name" x="0.5" y="0.0428571" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\garrafa.png">
+                        <image-point name="Name" x="0.5" y="0.0428571" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\lixeira.png">
+                        <image-point name="Name" x="0.5" y="0.0428571" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\mancebo.png">
+                        <image-point name="Name" x="0.5" y="0.0428571" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\martelo1.png">
+                        <image-point name="Name" x="0.5" y="0.0428571" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\martelo2.png">
+                        <image-point name="Name" x="0.5" y="0.0428571" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\mochila.png">
+                        <image-point name="Name" x="0.5" y="0.0428571" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\nota1.png">
+                        <image-point name="Name" x="0.5" y="0.0428571" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\nota2.png">
+                        <image-point name="Name" x="0.5" y="0.0428571" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\objeto1.png">
+                        <image-point name="Name" x="0.5" y="0.0428571" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\objeto2.png">
+                        <image-point name="Name" x="0.5" y="0.0428571" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\objeto3.png">
+                        <image-point name="Name" x="0.5" y="0.0428571" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\planta1.png">
+                        <image-point name="Name" x="0.5" y="0.0428571" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\planta2.png">
+                        <image-point name="Name" x="0.5" y="0.0428571" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\toalha.png">
+                        <image-point name="Name" x="0.5" y="0.0428571" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\xicaras.png">
+                        <image-point name="Name" x="0.5" y="0.0428571" />
                     </frame>
                 </animation>
             </animation-folder>
@@ -1417,6 +1486,464 @@
         </object-type>
         <object-type global="1" name="obj_gameTimer" sid="145391599872735">
             <plugin id="Text" />
+        </object-type>
+        <object-type name="alce" sid="237090801245827">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="28" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="698293548961095" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\alce.png">
+                        <collision-poly>
+                            <point x="0.0571429" y="0.0571429" />
+                            <point x="0.5" y="0.171429" />
+                            <point x="0.871429" y="0.128571" />
+                            <point x="0.542857" y="0.5" />
+                            <point x="0.685714" y="0.685714" />
+                            <point x="0.5" y="1" />
+                            <point x="0.357143" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\banco.png">
+                        <collision-poly>
+                            <point x="0.0285714" y="0.0285714" />
+                            <point x="0.971429" y="0.0285714" />
+                            <point x="0.985714" y="0.985714" />
+                            <point x="0.0285714" y="0.971429" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\bau1.png">
+                        <collision-poly>
+                            <point x="0.228571" y="0.228571" />
+                            <point x="0.771429" y="0.228571" />
+                            <point x="0.985714" y="0.5" />
+                            <point x="0.814286" y="0.814286" />
+                            <point x="0.185714" y="0.814286" />
+                            <point x="0.0142857" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\bau2.png">
+                        <collision-poly>
+                            <point x="0.2" y="0.2" />
+                            <point x="0.8" y="0.2" />
+                            <point x="0.985714" y="0.5" />
+                            <point x="0.814286" y="0.814286" />
+                            <point x="0.185714" y="0.814286" />
+                            <point x="0.0142857" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\bau3.png">
+                        <collision-poly>
+                            <point x="0.271429" y="0.271429" />
+                            <point x="0.728571" y="0.271429" />
+                            <point x="0.928571" y="0.5" />
+                            <point x="0.742857" y="0.742857" />
+                            <point x="0.257143" y="0.742857" />
+                            <point x="0.0571429" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\candelabro1.png">
+                        <collision-poly>
+                            <point x="0.342857" y="0.342857" />
+                            <point x="0.5" y="0.457143" />
+                            <point x="0.585714" y="0.414286" />
+                            <point x="0.585714" y="0.5" />
+                            <point x="0.614286" y="0.614286" />
+                            <point x="0.5" y="0.985714" />
+                            <point x="0.371429" y="0.628571" />
+                            <point x="0.385714" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\candelabro2.png">
+                        <collision-poly>
+                            <point x="0.371429" y="0.371429" />
+                            <point x="0.5" y="0.0285714" />
+                            <point x="0.628571" y="0.371429" />
+                            <point x="0.657143" y="0.5" />
+                            <point x="0.628571" y="0.628571" />
+                            <point x="0.5" y="0.971429" />
+                            <point x="0.371429" y="0.628571" />
+                            <point x="0.342857" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\carragaAcido.png">
+                        <collision-poly>
+                            <point x="0.314286" y="0.314286" />
+                            <point x="0.5" y="0.314286" />
+                            <point x="0.657143" y="0.5" />
+                            <point x="0.657143" y="0.657143" />
+                            <point x="0.5" y="0.914286" />
+                            <point x="0.314286" y="0.685714" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\chapeu.png">
+                        <collision-poly>
+                            <point x="0.328571" y="0.328571" />
+                            <point x="0.5" y="0.157143" />
+                            <point x="0.742857" y="0.257143" />
+                            <point x="0.885714" y="0.5" />
+                            <point x="0.857143" y="0.857143" />
+                            <point x="0.5" y="0.785714" />
+                            <point x="0.285714" y="0.714286" />
+                            <point x="0.1" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\chave.png">
+                        <collision-poly>
+                            <point x="0.442857" y="0.442857" />
+                            <point x="0.557143" y="0.442857" />
+                            <point x="0.9" y="0.5" />
+                            <point x="0.585714" y="0.585714" />
+                            <point x="0.5" y="0.585714" />
+                            <point x="0.357143" y="0.642857" />
+                            <point x="0.128571" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\chave1.png">
+                        <collision-poly>
+                            <point x="0.1" y="0.1" />
+                            <point x="0.5" y="0.442857" />
+                            <point x="0.528571" y="0.471429" />
+                            <point x="0.571429" y="0.5" />
+                            <point x="0.871429" y="0.871429" />
+                            <point x="0.5" y="0.571429" />
+                            <point x="0.471429" y="0.528571" />
+                            <point x="0.442857" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\chave2.png">
+                        <collision-poly>
+                            <point x="0.457143" y="0.457143" />
+                            <point x="0.542857" y="0.457143" />
+                            <point x="1" y="0.5" />
+                            <point x="0.542857" y="0.542857" />
+                            <point x="0.457143" y="0.542857" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\frasco veneno.png">
+                        <collision-poly>
+                            <point x="0.285714" y="0.285714" />
+                            <point x="0.5" y="0.271429" />
+                            <point x="0.642857" y="0.357143" />
+                            <point x="0.714286" y="0.5" />
+                            <point x="0.714286" y="0.714286" />
+                            <point x="0.5" y="0.985714" />
+                            <point x="0.285714" y="0.714286" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\garrafa.png">
+                        <collision-poly>
+                            <point x="0.285714" y="0.285714" />
+                            <point x="0.5" y="0.0428571" />
+                            <point x="0.771429" y="0.228571" />
+                            <point x="0.785714" y="0.5" />
+                            <point x="0.785714" y="0.785714" />
+                            <point x="0.5" y="0.957143" />
+                            <point x="0.214286" y="0.785714" />
+                            <point x="0.214286" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\lixeira.png">
+                        <collision-poly>
+                            <point x="0.142857" y="0.142857" />
+                            <point x="0.5" y="0.0571429" />
+                            <point x="0.857143" y="0.142857" />
+                            <point x="0.857143" y="0.857143" />
+                            <point x="0.5" y="0.957143" />
+                            <point x="0.142857" y="0.857143" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\mancebo.png">
+                        <collision-poly>
+                            <point x="0.385714" y="0.385714" />
+                            <point x="0.5" y="0.0142857" />
+                            <point x="0.614286" y="0.385714" />
+                            <point x="0.528571" y="0.5" />
+                            <point x="0.528571" y="0.528571" />
+                            <point x="0.5" y="0.971429" />
+                            <point x="0.485714" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\martelo1.png">
+                        <collision-poly>
+                            <point x="0.457143" y="0.457143" />
+                            <point x="0.5" y="0" />
+                            <point x="0.542857" y="0.457143" />
+                            <point x="0.542857" y="0.542857" />
+                            <point x="0.5" y="0.985714" />
+                            <point x="0.457143" y="0.542857" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\martelo2.png">
+                        <collision-poly>
+                            <point x="0.442857" y="0.442857" />
+                            <point x="0.5" y="0.0714286" />
+                            <point x="0.828571" y="0.171429" />
+                            <point x="0.557143" y="0.5" />
+                            <point x="0.5" y="0.557143" />
+                            <point x="0.1" y="0.9" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\mochila.png">
+                        <collision-poly>
+                            <point x="0.185714" y="0.185714" />
+                            <point x="0.5" y="0.0285714" />
+                            <point x="0.714286" y="0.285714" />
+                            <point x="0.814286" y="0.5" />
+                            <point x="0.771429" y="0.771429" />
+                            <point x="0.5" y="0.985714" />
+                            <point x="0.2" y="0.8" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\nota1.png">
+                        <collision-poly>
+                            <point x="0.214286" y="0.214286" />
+                            <point x="0.785714" y="0.214286" />
+                            <point x="0.814286" y="0.5" />
+                            <point x="0.814286" y="0.814286" />
+                            <point x="0.5" y="1" />
+                            <point x="0.185714" y="0.814286" />
+                            <point x="0.185714" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\nota2.png">
+                        <collision-poly>
+                            <point x="0.185714" y="0.185714" />
+                            <point x="0.5" y="0.128571" />
+                            <point x="0.828571" y="0.171429" />
+                            <point x="0.828571" y="0.828571" />
+                            <point x="0.5" y="0.985714" />
+                            <point x="0.185714" y="0.814286" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\objeto1.png">
+                        <collision-poly>
+                            <point x="0.414286" y="0.414286" />
+                            <point x="0.585714" y="0.414286" />
+                            <point x="0.985714" y="0.5" />
+                            <point x="0.557143" y="0.557143" />
+                            <point x="0.442857" y="0.557143" />
+                            <point x="0.0142857" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\objeto2.png">
+                        <collision-poly>
+                            <point x="0.285714" y="0.285714" />
+                            <point x="0.5" y="0.0285714" />
+                            <point x="0.714286" y="0.285714" />
+                            <point x="0.714286" y="0.714286" />
+                            <point x="0.5" y="0.971429" />
+                            <point x="0.285714" y="0.714286" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\objeto3.png">
+                        <collision-poly>
+                            <point x="0.4" y="0.4" />
+                            <point x="0.5" y="0.0142857" />
+                            <point x="0.614286" y="0.385714" />
+                            <point x="0.614286" y="0.614286" />
+                            <point x="0.5" y="0.971429" />
+                            <point x="0.4" y="0.6" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\planta1.png">
+                        <collision-poly>
+                            <point x="0.214286" y="0.214286" />
+                            <point x="0.5" y="0.171429" />
+                            <point x="0.8" y="0.2" />
+                            <point x="0.714286" y="0.5" />
+                            <point x="0.885714" y="0.885714" />
+                            <point x="0.5" y="1" />
+                            <point x="0.214286" y="0.785714" />
+                            <point x="0.128571" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\planta2.png">
+                        <collision-poly>
+                            <point x="0.271429" y="0.271429" />
+                            <point x="0.5" y="0.271429" />
+                            <point x="0.9" y="0.1" />
+                            <point x="0.642857" y="0.5" />
+                            <point x="0.828571" y="0.828571" />
+                            <point x="0.5" y="0.971429" />
+                            <point x="0.1" y="0.9" />
+                            <point x="0.0142857" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\toalha.png">
+                        <collision-poly>
+                            <point x="0.157143" y="0.157143" />
+                            <point x="0.5" y="0.0142857" />
+                            <point x="0.828571" y="0.171429" />
+                            <point x="0.828571" y="0.5" />
+                            <point x="0.671429" y="0.671429" />
+                            <point x="0.5" y="0.885714" />
+                            <point x="0.314286" y="0.685714" />
+                            <point x="0.314286" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\xicaras.png">
+                        <collision-poly>
+                            <point x="0.357143" y="0.357143" />
+                            <point x="0.5" y="0.157143" />
+                            <point x="0.842857" y="0.157143" />
+                            <point x="0.842857" y="0.5" />
+                            <point x="0.614286" y="0.614286" />
+                            <point x="0.5" y="0.728571" />
+                            <point x="0.171429" y="0.828571" />
+                            <point x="0.0571429" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteFont5" sid="730398683190214">
+            <plugin id="SpriteFontPlus" />
+            <texture />
+        </object-type>
+        <object-type name="notepadDatas" sid="299037767316021">
+            <plugin id="SpriteFontPlus" />
+            <behaviors>
+                <behavior-type name="Pin" sid="621885241569435">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="bau_bg_modal" sid="809028531206986">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="856775344133726" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500998" original-source="C:\Users\Fabricio-\Desktop\git\finais\baupreto\baublackmodal_0003_janela-modal.png">
+                        <image-point name="close" x="0.986874" y="0.0199601" />
+                        <collision-poly>
+                            <point x="0.00954654" y="0.0159681" />
+                            <point x="0.99284" y="0.011976" />
+                            <point x="0.990453" y="0.984032" />
+                            <point x="0.5" y="0.998004" />
+                            <point x="0.00954654" y="0.984032" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="bau_skin_modal" sid="494063975923334">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="600086589094982" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501139" original-source="C:\Users\Fabricio-\Desktop\git\finais\baupreto\baublackmodal_0002s_0002_contorno.png">
+                        <image-point name="locker" x="0.497462" y="0.703872" />
+                        <image-point name="p1" x="0.304569" y="0.410023" />
+                        <image-point name="p2" x="0.417513" y="0.410023" />
+                        <image-point name="p3" x="0.530457" y="0.410023" />
+                        <image-point name="p4" x="0.643401" y="0.410023" />
+                        <image-point name="texto" x="0.5" y="0.136674" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0.975888" y="1" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0291878" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501094" original-source="C:\Users\Fabricio-\Desktop\git\finais\baupreto\bauroxo.png">
+                        <image-point name="locker" x="0.497436" y="0.704595" />
+                        <image-point name="Imagepoint 2" x="0.301282" y="0.323851" />
+                        <image-point name="Imagepoint 6" x="0.501282" y="0.118162" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501094" original-source="C:\Users\Fabricio-\Desktop\git\finais\baupreto\bauroxocinza.png">
+                        <image-point name="locker" x="0.497436" y="0.704595" />
+                        <image-point name="Imagepoint 2" x="0.301282" y="0.323851" />
+                        <image-point name="Imagepoint 6" x="0.501282" y="0.118162" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="bau_locker" sid="861432912488551">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="975420520860675" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\baupreto\bau_locker.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.5" />
+                            <point x="0.716216" y="0.716216" />
+                            <point x="0.5" y="1" />
+                            <point x="0.283784" y="0.716216" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="bau_spr_password" sid="582606767696330">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="355769373155299" speed="5">
+                    <frame duration="1" hotspotX="0.501475" hotspotY="0.515152" original-source="C:\Users\Fabricio-\Desktop\git\finais\baupreto\bau_spr_password.png">
+                        <collision-poly>
+                            <point x="0.0058997" y="0.0606061" />
+                            <point x="0.498525" y="0.0606061" />
+                            <point x="0.985251" y="0.151515" />
+                            <point x="0.955752" y="0.484848" />
+                            <point x="0.985251" y="0.848485" />
+                            <point x="0.498525" y="0.727273" />
+                            <point x="0.0058997" y="0.939394" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="close_bau_modal" sid="982009478687001">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="451917418333313" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\baupreto\close_bau_moda.png">
+                        <collision-poly>
+                            <point x="0.0454545" y="0.0454545" />
+                            <point x="0.5" y="0.0227273" />
+                            <point x="0.931818" y="0.0681818" />
+                            <point x="0.977273" y="0.5" />
+                            <point x="0.931818" y="0.931818" />
+                            <point x="0.5" y="0.977273" />
+                            <point x="0.0681818" y="0.931818" />
+                            <point x="0.0227273" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="slote_senha_modal" sid="722899251634576">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="593529204562358" speed="5">
+                    <frame duration="1" hotspotX="0.506329" hotspotY="0.506329" original-source="C:\Users\Fabricio-\Desktop\git\finais\baupreto\sloteSenha.png">
+                        <image-point name="textbox" x="0.151899" y="0.126582" />
+                        <collision-poly>
+                            <point x="0.0759494" y="0.0759494" />
+                            <point x="0.493671" y="0.0126582" />
+                            <point x="0.924051" y="0.0759494" />
+                            <point x="0.987342" y="0.493671" />
+                            <point x="0.924051" y="0.924051" />
+                            <point x="0.493671" y="0.987342" />
+                            <point x="0.0759494" y="0.924051" />
+                            <point x="0.0126582" y="0.493671" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="tb_p1" sid="896792554914116">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="tb_p2" sid="356654284797676">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="tb_p3" sid="949471203405937">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="tb_p4" sid="874113134794047">
+            <plugin id="TextBox" />
         </object-type>
     </object-folder>
     <families>
@@ -1437,8 +1964,8 @@
                 <member>obj_agua</member>
                 <member>obj_mochila</member>
                 <member>panp</member>
-                <member>papel</member>
-                <member>papel2</member>
+                <member>papelDatas</member>
+                <member>papelNomes</member>
                 <member>plantas</member>
                 <member>porta</member>
                 <member>prateleira</member>
@@ -1482,13 +2009,39 @@
                 </behavior-type>
             </behaviors>
         </family>
+        <family name="BlocoPapel" plugin-id="Sprite" sid="604157609648346">
+            <members>
+                <member>bloco_datas</member>
+                <member>bloco_nomes</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="isOpen" sid="256977088506445" type="boolean" />
+            </instance-variables>
+        </family>
+        <family name="BauModal" plugin-id="Sprite" sid="341298417779556">
+            <members>
+                <member>bau_bg_modal</member>
+                <member>bau_locker</member>
+                <member>bau_skin_modal</member>
+                <member>bau_spr_password</member>
+                <member>close_bau_modal</member>
+                <member>slote_senha_modal</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="isOpen" sid="343637872449258" type="boolean" />
+                <instance-variable name="BAU_ID" sid="663637494792805" type="number" />
+            </instance-variables>
+        </family>
     </families>
     <layout-folder>
         <layout-folder name="GAME">
             <layout>CENARIO1.xml</layout>
             <layout>CENARIO2.xml</layout>
             <layout>CENARIO3.xml</layout>
+        </layout-folder>
+        <layout-folder name="Testes">
             <layout>Teste.xml</layout>
+            <layout>ModalBau.xml</layout>
         </layout-folder>
         <layout>SplashScreen.xml</layout>
         <layout>StartScreen.xml</layout>
@@ -1501,13 +2054,16 @@
             <event-sheet>CENARIO3.xml</event-sheet>
             <event-sheet>CENARIO2.xml</event-sheet>
         </event-folder>
+        <event-folder name="Engine">
+            <event-sheet>GameEngine.xml</event-sheet>
+            <event-sheet>GlobalVars.xml</event-sheet>
+            <event-sheet>IventorySystem.xml</event-sheet>
+            <event-sheet>ModalBau.xml</event-sheet>
+        </event-folder>
         <event-sheet>SplashScreen.xml</event-sheet>
         <event-sheet>StartScreenEvent.xml</event-sheet>
-        <event-sheet>GameEngine.xml</event-sheet>
-        <event-sheet>IventorySystem.xml</event-sheet>
         <event-sheet>Historia.xml</event-sheet>
         <event-sheet>Login.xml</event-sheet>
-        <event-sheet>GlobalVars.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="9" />

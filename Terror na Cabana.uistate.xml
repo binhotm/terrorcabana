@@ -10,8 +10,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">CENARIO1</layout>
-        <event-sheet order="1">IventorySystem</event-sheet>
+        <layout active="1" order="1">ModalBau</layout>
+        <event-sheet order="0">GlobalVars</event-sheet>
+        <event-sheet order="2">ModalBau</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -23,18 +24,22 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="0" name="GameObjects" />
         <family expanded="0" name="backgroundStart" />
         <family expanded="0" name="IventoryObj" />
+        <family expanded="0" name="BlocoPapel" />
+        <family expanded="1" name="BauModal" />
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
-        <folder expanded="0" path="object-folder/CENARIOS/" />
+        <folder expanded="1" path="object-folder/CENARIOS/" />
         <folder expanded="0" path="object-folder/MISC/" />
         <folder expanded="0" path="object-folder/CHARACTER/" />
         <folder expanded="0" path="object-folder/HISTORY/" />
         <folder expanded="0" path="object-folder/StartScreen/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="layout-folder/GAME/" />
+        <folder expanded="1" path="layout-folder/Testes/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="event-folder/CENARIOS/" />
+        <folder expanded="1" path="event-folder/Engine/" />
         <folder expanded="1" path="file-folder/" />
         <folder expanded="0" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
@@ -50,10 +55,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/janela/" />
         <folder expanded="1" path="animation-folder/mancebo/" />
         <folder expanded="1" path="animation-folder/velas/" />
-        <folder expanded="1" path="animation-folder/papel2/" />
+        <folder expanded="1" path="animation-folder/papelDatas/" />
         <folder expanded="1" path="animation-folder/obj_mochila/" />
         <folder expanded="1" path="animation-folder/panp/" />
-        <folder expanded="1" path="animation-folder/papel/" />
+        <folder expanded="1" path="animation-folder/papelNomes/" />
         <folder expanded="1" path="animation-folder/plantas/" />
         <folder expanded="1" path="animation-folder/lixo/" />
         <folder expanded="1" path="animation-folder/prateleira/" />
@@ -80,8 +85,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/FatecJogos/" />
         <folder expanded="1" path="animation-folder/FatecLogo/" />
         <folder expanded="1" path="animation-folder/lerpSprite/" />
+        <folder expanded="1" path="animation-folder/bloco_datas/" />
         <folder expanded="1" path="animation-folder/bloco_nomes/" />
-        <folder expanded="1" path="animation-folder/bloco_flores/" />
         <folder expanded="1" path="animation-folder/fundo_janela/" />
         <folder expanded="1" path="animation-folder/fundo_janela_flash/" />
         <folder expanded="1" path="animation-folder/fundo_janela_flash_all/" />
@@ -102,5 +107,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/slote/" />
         <folder expanded="1" path="animation-folder/chave/" />
         <folder expanded="1" path="animation-folder/itensGame/" />
+        <folder expanded="1" path="animation-folder/alce/" />
+        <folder expanded="1" path="animation-folder/bau_bg_modal/" />
+        <folder expanded="1" path="animation-folder/bau_skin_modal/" />
+        <folder expanded="1" path="animation-folder/bau_locker/" />
+        <folder expanded="1" path="animation-folder/bau_spr_password/" />
+        <folder expanded="1" path="animation-folder/close_bau_modal/" />
+        <folder expanded="1" path="animation-folder/slote_senha_modal/" />
     </folders-expanded>
 </c2uistate>

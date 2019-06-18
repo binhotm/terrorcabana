@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GlobalVars</name>
     <events>
-        <variable constant="0" name="historyStart" sid="203001886422655" static="0" type="number">0</variable>
+        <variable constant="0" name="historyStart" sid="203001886422655" static="0" type="number">1</variable>
         <variable comment="Tempo decorrido do jogador em segundos" constant="0" name="playtime" sid="174712599256815" static="0" type="number">0</variable>
         <variable comment="Id do loguin do usuario" constant="0" name="userId" sid="658896110670014" static="0" type="number">-1</variable>
         <variable comment="Da inicio ao jogo" constant="0" name="gameStart" sid="950952482998270" static="0" type="number">0</variable>
