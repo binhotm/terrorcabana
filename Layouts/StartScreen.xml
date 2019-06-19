@@ -42,11 +42,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>544</x>
+                        <x>520.604736328</x>
                         <y>297</y>
                         <z>0</z>
-                        <width>1286.790527344</width>
-                        <height>604.791564941</height>
+                        <width>1240</width>
+                        <height>605</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -67,11 +67,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>512</x>
-                        <y>312</y>
+                        <x>523</x>
+                        <y>299.5</y>
                         <z>0</z>
-                        <width>1024</width>
-                        <height>576</height>
+                        <width>1240</width>
+                        <height>609</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -142,7 +142,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="dark" sid="434910156204283">
+        <layer name="scruro" sid="434910156204283">
             <initially-visible>1</initially-visible>
             <background-color>0,0,0</background-color>
             <transparent>0</transparent>

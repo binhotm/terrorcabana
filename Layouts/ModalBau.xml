@@ -58,10 +58,13 @@
                     </properties>
                     <instance-variables>
                         <name>Bau</name>
-                        <onStorage>false</onStorage>
                         <isDragable>0</isDragable>
                         <isVisible>0</isVisible>
                         <canClick>0</canClick>
+                        <toolbox>1</toolbox>
+                        <killonuse>false</killonuse>
+                        <canPick>true</canPick>
+                        <isOpened>false</isOpened>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -153,8 +156,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>479</x>
-                        <y>-216</y>
+                        <x>-344</x>
+                        <y>970</y>
                         <z>0</z>
                         <width>503</width>
                         <height>30</height>
@@ -202,11 +205,22 @@
                         <isOpen>false</isOpen>
                         <BAU_ID>0</BAU_ID>
                     </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Outline">
+                            <parameters>
+                                <blue>255</blue>
+                                <green>255</green>
+                                <just-outline>0</just-outline>
+                                <red>255</red>
+                                <width>2</width>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>393</x>
-                        <y>858</y>
+                        <x>101</x>
+                        <y>104</y>
                         <z>0</z>
                         <width>74</width>
                         <height>74</height>
@@ -231,8 +245,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>385</x>
-                        <y>911</y>
+                        <x>397</x>
+                        <y>928</y>
                         <z>0</z>
                         <width>788</width>
                         <height>439</height>
@@ -309,8 +323,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>925</x>
-                        <y>-199</y>
+                        <x>-304</x>
+                        <y>768</y>
                         <z>0</z>
                         <width>79</width>
                         <height>79</height>
@@ -333,6 +347,7 @@
                         <type>Text</type>
                         <auto-font-size>No</auto-font-size>
                         <id-optional>p1box</id-optional>
+                        <maxlength>1</maxlength>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -359,6 +374,7 @@
                         <type>Text</type>
                         <auto-font-size>No</auto-font-size>
                         <id-optional>p2box</id-optional>
+                        <maxlength>1</maxlength>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -385,6 +401,7 @@
                         <type>Text</type>
                         <auto-font-size>No</auto-font-size>
                         <id-optional>p3box</id-optional>
+                        <maxlength>1</maxlength>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -411,6 +428,7 @@
                         <type>Text</type>
                         <auto-font-size>No</auto-font-size>
                         <id-optional>p4box</id-optional>
+                        <maxlength>1</maxlength>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

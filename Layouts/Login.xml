@@ -139,6 +139,7 @@
                         <type>Text</type>
                         <auto-font-size>No</auto-font-size>
                         <id-optional>loginid</id-optional>
+                        <maxlength>255</maxlength>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -165,6 +166,7 @@
                         <type>Password</type>
                         <auto-font-size>No</auto-font-size>
                         <id-optional>passid</id-optional>
+                        <maxlength>255</maxlength>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -185,7 +187,7 @@
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-16</font>
                         <color>255,0,0</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
+                        <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>

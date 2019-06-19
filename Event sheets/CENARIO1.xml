@@ -6,6 +6,7 @@
         <include>GameEngine</include>
         <event-group description="" sid="405119796744063" title="StartGame">
             <sub-events>
+                <event-group description="" sid="460063013472156" title="ALLTIEMINTEM_C1" />
                 <event-block sid="706270944136921">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="974812157726897" type="System" />
@@ -54,12 +55,32 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="714658282984098" type="LEFTARROW" />
+                        <action id="0" name="Set text" sid="805894777734051" type="Text">
+                            <param id="0" name="Text">LayoutName</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="222881492556159" title="ItensClick">
             <sub-events>
+                <event-group description="" sid="879383034021557" title="Banco">
+                    <sub-events>
+                        <event-block sid="159659153169046">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="433307042477811" type="banquinho">
+                                    <param id="0" name="Object">armariofechado</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="747269317520252" type="obj_agua">
+                                    <param id="0" name="Instance variable">toolbox</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <event-group description="" sid="487383937345169" title="Mochila">
                     <sub-events>
                         <event-block sid="742651033729808">
@@ -118,44 +139,48 @@
                                     <param id="0" name="Variable">isFree</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action disabled="1" id="0" name="Call function" sid="726170078150125" type="Function">
+                                <action id="0" name="Call function" sid="726170078150125" type="Function">
                                     <param id="0" name="Name">&quot;showDialog&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
-                                <action disabled="1" id="-16" name="Wait" sid="450594478127392" type="System">
+                                <action id="-16" name="Wait" sid="450594478127392" type="System">
                                     <param id="0" name="Seconds">2</param>
                                 </action>
-                                <action disabled="1" id="0" name="Call function" sid="647263117681580" type="Function">
+                                <action id="0" name="Call function" sid="647263117681580" type="Function">
                                     <param id="0" name="Name">&quot;readText&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;Consegui alcançar este casaco!!&quot;</param>
                                 </action>
-                                <action disabled="1" id="-16" name="Wait" sid="494309008461636" type="System">
+                                <action id="-16" name="Wait" sid="494309008461636" type="System">
                                     <param id="0" name="Seconds">2</param>
                                 </action>
-                                <action disabled="1" id="0" name="Call function" sid="506589563884057" type="Function">
+                                <action id="0" name="Call function" sid="506589563884057" type="Function">
                                     <param id="0" name="Name">&quot;readText&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;Encontrei este canivete, preciso usa-lo agora..&quot;</param>
                                 </action>
-                                <action disabled="1" id="-16" name="Wait" sid="384445649941034" type="System">
+                                <action id="-16" name="Wait" sid="384445649941034" type="System">
                                     <param id="0" name="Seconds">2</param>
                                 </action>
-                                <action disabled="1" id="0" name="Call function" sid="215955267523392" type="Function">
+                                <action id="0" name="Call function" sid="215955267523392" type="Function">
                                     <param id="0" name="Name">&quot;readText&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;Argh! &quot;</param>
                                 </action>
-                                <action disabled="1" id="-16" name="Wait" sid="226319205826916" type="System">
+                                <action id="-16" name="Wait" sid="226319205826916" type="System">
                                     <param id="0" name="Seconds">2</param>
                                 </action>
-                                <action disabled="1" id="0" name="Call function" sid="187631203624664" type="Function">
+                                <action id="0" name="Call function" sid="187631203624664" type="Function">
                                     <param id="0" name="Name">&quot;readText&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;UFAAAA consengui me soltar, preciso sair daqui!!&quot;</param>
                                 </action>
-                                <action disabled="1" id="-16" name="Wait" sid="614313323664629" type="System">
+                                <action id="-16" name="Wait" sid="614313323664629" type="System">
                                     <param id="0" name="Seconds">2</param>
                                 </action>
-                                <action disabled="1" id="0" name="Call function" sid="983268938057350" type="Function">
+                                <action id="0" name="Call function" sid="983268938057350" type="Function">
                                     <param id="0" name="Name">&quot;hideDialog&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-9" name="Set value" sid="930582038099607" type="System">
+                                    <param id="0" name="Variable">stopLight</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -202,6 +227,10 @@
                                     <param id="0" name="Object">armariofechado</param>
                                     <param id="1" name="Image point (optional)">2</param>
                                 </action>
+                                <action id="-4" name="Set position to another object" sid="603682705123225" type="caveira_item">
+                                    <param id="0" name="Object">armariofechado</param>
+                                    <param id="1" name="Image point (optional)">3</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="924559139845782">
@@ -220,17 +249,17 @@
                                     <param id="0" name="Animation">&quot;Default&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="-1" name="Set X" sid="948930863095921" type="bau_cinza">
+                                <action id="-3" name="Set position" sid="948930863095921" type="bau_cinza">
                                     <param id="0" name="X">-10</param>
+                                    <param id="1" name="Y">-10</param>
                                 </action>
-                                <action id="-2" name="Set Y" sid="447347900065457" type="bau_cinza">
-                                    <param id="0" name="Y">-10</param>
-                                </action>
-                                <action id="-1" name="Set X" sid="272931133020261" type="bau_roxo">
+                                <action id="-3" name="Set position" sid="272931133020261" type="bau_roxo">
                                     <param id="0" name="X">-10</param>
+                                    <param id="1" name="Y">-10</param>
                                 </action>
-                                <action id="-2" name="Set Y" sid="242854729566997" type="bau_roxo">
-                                    <param id="0" name="Y">-10</param>
+                                <action id="-3" name="Set position" sid="184042798969841" type="caveira_item">
+                                    <param id="0" name="X">-10</param>
+                                    <param id="1" name="Y">-10</param>
                                 </action>
                             </actions>
                         </event-block>

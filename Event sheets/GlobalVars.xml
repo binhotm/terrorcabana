@@ -3,8 +3,10 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GlobalVars</name>
     <events>
+        <variable constant="0" name="blackDropActive" sid="311507672066454" static="0" type="number">0</variable>
+        <variable constant="0" name="marteloOpen" sid="801920400116997" static="0" type="number">0</variable>
         <variable comment="Senha do Bau preto da CENA 2" constant="0" name="bau_b_password" sid="878529049580333" static="0" type="text"></variable>
-        <variable constant="0" name="historyStart" sid="203001886422655" static="0" type="number">1</variable>
+        <variable constant="0" name="historyStart" sid="203001886422655" static="0" type="number">0</variable>
         <variable comment="Tempo decorrido do jogador em segundos" constant="0" name="playtime" sid="174712599256815" static="0" type="number">0</variable>
         <variable comment="Id do loguin do usuario" constant="0" name="userId" sid="658896110670014" static="0" type="number">-1</variable>
         <variable comment="Da inicio ao jogo" constant="0" name="gameStart" sid="950952482998270" static="0" type="number">0</variable>
@@ -19,6 +21,32 @@
                             <param id="0" name="Text">playtime</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="757880477200115">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="171879351163727" type="System">
+                                    <param id="0" name="Variable">hasInvetory</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="988996774797069" type="invetoryIcon">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="185758797846080">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="860039833824382" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="943482224384910" type="invetoryIcon">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="889784424561064">
                     <conditions>

@@ -3,10 +3,307 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>CENARIO2</name>
     <events>
-        <variable comment="Evento que Dispara o Trovao e Flash da janela" constant="0" name="thunderAction" sid="966848856196118" static="0" type="number">1</variable>
+        <variable comment="Evento que Dispara o Trovao e Flash da janela" constant="0" name="thunderAction" sid="966848856196118" static="0" type="number">0</variable>
         <include>GameEngine</include>
+        <include>ModalBau</include>
         <event-group description="" sid="769881516197526" title="ObjectosInteracao">
             <sub-events>
+                <event-group description="" sid="345920134254989" title="Martelo">
+                    <sub-events>
+                        <event-block sid="973751443476539">
+                            <conditions>
+                                <condition id="7" name="Cursor is over object" sid="959182530471307" type="Mouse">
+                                    <param id="0" name="Object">martelo_obj</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="878496591262890" type="dbText">
+                                    <param id="0" name="Object">martelo_obj</param>
+                                    <param id="1" name="Image point (optional)">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="897519954742114" type="dbText">
+                                    <param id="0" name="Text">&quot;Martelo&quot;</param>
+                                </action>
+                                <action id="-27" name="Set effect enabled" sid="526746597526487" type="martelo_obj">
+                                    <param id="0" name="Mode">1</param>
+                                    <param id="1" name="Effect">&quot;Outline&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="570092960426149">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Cursor is over object" sid="286390557708660" type="Mouse">
+                                    <param id="0" name="Object">martelo_obj</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="340883874072025" type="dbText">
+                                    <param id="0" name="X">100</param>
+                                    <param id="1" name="Y">-100</param>
+                                </action>
+                                <action id="-27" name="Set effect enabled" sid="465033195818654" type="martelo_obj">
+                                    <param id="0" name="Mode">0</param>
+                                    <param id="1" name="Effect">&quot;Outline&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="287577321848401">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="792991322866751" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">martelo_obj</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="458862700472292" type="Function">
+                                    <param id="0" name="Name">&quot;iventario&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;pegar&quot;{###}&quot;Martelo&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="441355731960232" type="Function">
+                                    <param id="0" name="Name">&quot;inGameMessage&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Peguei o Martelo&quot;</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="912296919907969" type="martelo_obj" />
+                                <action id="-9" name="Set value" sid="169688304792878" type="System">
+                                    <param id="0" name="Variable">blackDropActive</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="616154664253545" type="System">
+                                    <param id="0" name="Variable">marteloOpen</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="314054841784715" title="BlocoDatas">
+                    <sub-events>
+                        <event-block sid="900382392649206">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="783213069399042" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="502414091054098" type="notepadDatas">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="593438927138118">
+                                    <conditions>
+                                        <condition id="3" name="For each element" sid="224940432527357" type="arrBauPassword">
+                                            <param id="0" name="Axes">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Append text" sid="381861330896964" type="notepadDatas">
+                                            <param id="0" name="Text">&quot;Data: &quot; &amp; arrBauPassword.CurValue &amp; newline &amp; newline</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="280731796208213">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="864802404522813" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">papelDatas</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="834543068165198" type="System">
+                                    <param id="0" name="Variable">isFree</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="600190639590131" type="bloco_nomes">
+                                    <param id="0" name="Instance variable">isOpen</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="105399491568235">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="253285001261898" type="bloco_datas">
+                                            <param id="0" name="Instance variable">isOpen</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="439776431679966" type="notepadDatas">
+                                            <param id="0" name="Pin to">bloco_datas</param>
+                                            <param id="1" name="Mode">1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="869274359157876" type="System">
+                                            <param id="0" name="Variable">blackDropActive</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="433540553677966" type="bloco_datas">
+                                            <param id="0" name="Object">papelDatas</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                        <action behavior="Sine" id="0" name="Set active" sid="864363691587770" type="bloco_datas">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="479968876529058" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="961223582319638" type="bloco_datas">
+                                            <param id="0" name="Instance variable">isOpen</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="258963781585663">
+                                            <conditions />
+                                            <actions />
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="827288760284566">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="837408363662464" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">bloco_datas</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="848888589882470">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="309253452313856" type="bloco_datas">
+                                            <param id="0" name="Instance variable">isOpen</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="451360425780868" type="System">
+                                            <param id="0" name="Seconds">0.01</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="670847196323827" type="System">
+                                            <param id="0" name="Variable">blackDropActive</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="778485700739324" type="bloco_datas">
+                                            <param id="0" name="X">-147</param>
+                                            <param id="1" name="Y">298</param>
+                                        </action>
+                                        <action behavior="Sine" id="0" name="Set active" sid="299679091178534" type="bloco_datas">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="794240914835208" type="bloco_datas">
+                                            <param id="0" name="Instance variable">isOpen</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="180072396833785" title="BlocoNomes">
+                    <sub-events>
+                        <event-block sid="973954578617407">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="615651259505094" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">papelNomes</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="864837304835968" type="System">
+                                    <param id="0" name="Variable">isFree</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="910859165380343" type="bloco_datas">
+                                    <param id="0" name="Instance variable">isOpen</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="944550112922585">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="950134548739197" type="bloco_nomes">
+                                            <param id="0" name="Instance variable">isOpen</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="814606685758131" type="notepadNomes">
+                                            <param id="0" name="Text">&quot;Karen G&quot; &amp; newline &amp; &quot;Nubia S&quot; &amp; newline &amp;&quot;Hemily&quot; &amp; newline &amp; &quot;Melanini&quot; &amp; newline &amp; &quot;Khatelen E&quot; &amp; newline &amp; &quot;Thayna J&quot; &amp;  newline &amp; &quot;Jeniffer H&quot;</param>
+                                        </action>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="670951924757249" type="notepadNomes">
+                                            <param id="0" name="Pin to">bloco_nomes</param>
+                                            <param id="1" name="Mode">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="816478489523472" type="System">
+                                            <param id="0" name="Variable">blackDropActive</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="298186946363932" type="bloco_nomes">
+                                            <param id="0" name="Object">papelNomes</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                        <action behavior="Sine" id="0" name="Set active" sid="709800185471973" type="bloco_nomes">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="500375866536517" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="893658053789689" type="bloco_nomes">
+                                            <param id="0" name="Instance variable">isOpen</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="380603669950498">
+                                            <conditions />
+                                            <actions />
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="289557207976953">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="713057486915256" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">bloco_nomes</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="961886689476876">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="741578574793233" type="bloco_nomes">
+                                            <param id="0" name="Instance variable">isOpen</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="289616115957232" type="System">
+                                            <param id="0" name="Seconds">0.01</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="256856916949213" type="System">
+                                            <param id="0" name="Variable">blackDropActive</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="903268806275066" type="bloco_nomes">
+                                            <param id="0" name="X">-147</param>
+                                            <param id="1" name="Y">298</param>
+                                        </action>
+                                        <action behavior="Sine" id="0" name="Set active" sid="758740914663560" type="bloco_nomes">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="506487366865321" type="bloco_nomes">
+                                            <param id="0" name="Instance variable">isOpen</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <event-group description="" sid="536374685832294" title="Janela">
                     <sub-events>
                         <event-block sid="118493437315671">
@@ -73,255 +370,35 @@
                                     <param id="0" name="Variable">casacoStatus</param>
                                     <param id="1" name="Value">&quot;350|600|1&quot;</param>
                                 </action>
-                                <action disabled="1" id="-16" name="Wait" sid="900649020701515" type="System">
+                                <action id="-16" name="Wait" sid="900649020701515" type="System">
                                     <param id="0" name="Seconds">1</param>
                                 </action>
-                                <action disabled="1" id="0" name="Call function" sid="345851006623960" type="Function">
+                                <action id="0" name="Call function" sid="345851006623960" type="Function">
                                     <param id="0" name="Name">&quot;showDialog&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
-                                <action disabled="1" id="-16" name="Wait" sid="830237878675461" type="System">
-                                    <param id="0" name="Seconds">1</param>
+                                <action id="-16" name="Wait" sid="830237878675461" type="System">
+                                    <param id="0" name="Seconds">1.5</param>
                                 </action>
-                                <action disabled="1" id="0" name="Call function" sid="315623778262152" type="Function">
+                                <action id="0" name="Call function" sid="315623778262152" type="Function">
                                     <param id="0" name="Name">&quot;readText&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;Ohh meu deus, que susto!!!&quot;</param>
                                 </action>
-                                <action disabled="1" id="-16" name="Wait" sid="745770586857334" type="System">
+                                <action id="-16" name="Wait" sid="745770586857334" type="System">
                                     <param id="0" name="Seconds">2</param>
                                 </action>
-                                <action disabled="1" id="0" name="Call function" sid="276217010018725" type="Function">
+                                <action id="0" name="Call function" sid="276217010018725" type="Function">
                                     <param id="0" name="Name">&quot;readText&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;Parece que algo caiu.&quot;</param>
                                 </action>
-                                <action disabled="1" id="-16" name="Wait" sid="473697307919539" type="System">
+                                <action id="-16" name="Wait" sid="473697307919539" type="System">
                                     <param id="0" name="Seconds">2</param>
                                 </action>
-                                <action disabled="1" id="0" name="Call function" sid="844386366287146" type="Function">
+                                <action id="0" name="Call function" sid="844386366287146" type="Function">
                                     <param id="0" name="Name">&quot;hideDialog&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
-                        </event-block>
-                    </sub-events>
-                </event-group>
-                <event-group description="" sid="314054841784715" title="BlocoDatas">
-                    <sub-events>
-                        <event-block sid="900382392649206">
-                            <conditions>
-                                <condition id="-2" name="On start of layout" sid="783213069399042" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Set text" sid="502414091054098" type="notepadDatas">
-                                    <param id="0" name="Text">&quot;&quot;</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="593438927138118">
-                                    <conditions>
-                                        <condition id="3" name="For each element" sid="224940432527357" type="arrBauPassword">
-                                            <param id="0" name="Axes">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="1" name="Append text" sid="381861330896964" type="notepadDatas">
-                                            <param id="0" name="Text">&quot;Data: &quot; &amp; arrBauPassword.CurValue &amp; newline &amp; newline</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="280731796208213">
-                            <conditions>
-                                <condition id="6" name="On object clicked" sid="864802404522813" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
-                                    <param id="1" name="Click type">0</param>
-                                    <param id="2" name="Object clicked">papelDatas</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="834543068165198" type="System">
-                                    <param id="0" name="Variable">isFree</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="105399491568235">
-                                    <conditions>
-                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="253285001261898" type="bloco_datas">
-                                            <param id="0" name="Instance variable">isOpen</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="9" name="Set scale" sid="331204577086988" type="blackdrop">
-                                            <param id="0" name="Scale">50</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="103759257340137" type="blackdrop">
-                                            <param id="0" name="X">WindowWidth /2</param>
-                                            <param id="1" name="Y">WindowHeight /2</param>
-                                        </action>
-                                        <action behavior="Pin" id="0" name="Pin to object" sid="439776431679966" type="notepadDatas">
-                                            <param id="0" name="Pin to">bloco_datas</param>
-                                            <param id="1" name="Mode">1</param>
-                                        </action>
-                                        <action id="-4" name="Set position to another object" sid="433540553677966" type="bloco_datas">
-                                            <param id="0" name="Object">papelDatas</param>
-                                            <param id="1" name="Image point (optional)">0</param>
-                                        </action>
-                                        <action behavior="Sine" id="0" name="Set active" sid="864363691587770" type="bloco_datas">
-                                            <param id="0" name="State">1</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="479968876529058" type="System">
-                                            <param id="0" name="Seconds">0.5</param>
-                                        </action>
-                                        <action id="-13" name="Set boolean" sid="961223582319638" type="bloco_datas">
-                                            <param id="0" name="Instance variable">isOpen</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                    </actions>
-                                    <sub-events>
-                                        <event-block sid="258963781585663">
-                                            <conditions />
-                                            <actions />
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="827288760284566">
-                            <conditions>
-                                <condition id="6" name="On object clicked" sid="837408363662464" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
-                                    <param id="1" name="Click type">0</param>
-                                    <param id="2" name="Object clicked">bloco_datas</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="848888589882470">
-                                    <conditions>
-                                        <condition id="-8" name="Is boolean instance variable set" sid="309253452313856" type="bloco_datas">
-                                            <param id="0" name="Instance variable">isOpen</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="9" name="Set scale" sid="699662079194844" type="blackdrop">
-                                            <param id="0" name="Scale">1</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="503127862443719" type="blackdrop">
-                                            <param id="0" name="X">-10</param>
-                                            <param id="1" name="Y">-10</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="778485700739324" type="bloco_datas">
-                                            <param id="0" name="X">-147</param>
-                                            <param id="1" name="Y">298</param>
-                                        </action>
-                                        <action behavior="Sine" id="0" name="Set active" sid="299679091178534" type="bloco_datas">
-                                            <param id="0" name="State">0</param>
-                                        </action>
-                                        <action id="-13" name="Set boolean" sid="794240914835208" type="bloco_datas">
-                                            <param id="0" name="Instance variable">isOpen</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-group>
-                <event-group description="" sid="180072396833785" title="BlocoNomes">
-                    <sub-events>
-                        <event-block sid="973954578617407">
-                            <conditions>
-                                <condition id="6" name="On object clicked" sid="615651259505094" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
-                                    <param id="1" name="Click type">0</param>
-                                    <param id="2" name="Object clicked">papelNomes</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="864837304835968" type="System">
-                                    <param id="0" name="Variable">isFree</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="944550112922585">
-                                    <conditions>
-                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="950134548739197" type="bloco_nomes">
-                                            <param id="0" name="Instance variable">isOpen</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="9" name="Set scale" sid="108268514918423" type="blackdrop">
-                                            <param id="0" name="Scale">50</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="263434816162897" type="blackdrop">
-                                            <param id="0" name="X">WindowWidth /2</param>
-                                            <param id="1" name="Y">WindowHeight /2</param>
-                                        </action>
-                                        <action id="-4" name="Set position to another object" sid="298186946363932" type="bloco_nomes">
-                                            <param id="0" name="Object">papelNomes</param>
-                                            <param id="1" name="Image point (optional)">0</param>
-                                        </action>
-                                        <action behavior="Sine" id="0" name="Set active" sid="709800185471973" type="bloco_nomes">
-                                            <param id="0" name="State">1</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="500375866536517" type="System">
-                                            <param id="0" name="Seconds">0.5</param>
-                                        </action>
-                                        <action id="-13" name="Set boolean" sid="893658053789689" type="bloco_nomes">
-                                            <param id="0" name="Instance variable">isOpen</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                    </actions>
-                                    <sub-events>
-                                        <event-block sid="380603669950498">
-                                            <conditions />
-                                            <actions />
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="289557207976953">
-                            <conditions>
-                                <condition id="6" name="On object clicked" sid="713057486915256" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
-                                    <param id="1" name="Click type">0</param>
-                                    <param id="2" name="Object clicked">bloco_nomes</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="961886689476876">
-                                    <conditions>
-                                        <condition id="-8" name="Is boolean instance variable set" sid="741578574793233" type="bloco_nomes">
-                                            <param id="0" name="Instance variable">isOpen</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="9" name="Set scale" sid="285450439536912" type="blackdrop">
-                                            <param id="0" name="Scale">1</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="402369547876059" type="blackdrop">
-                                            <param id="0" name="X">-10</param>
-                                            <param id="1" name="Y">-10</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="903268806275066" type="bloco_nomes">
-                                            <param id="0" name="X">-147</param>
-                                            <param id="1" name="Y">298</param>
-                                        </action>
-                                        <action behavior="Sine" id="0" name="Set active" sid="758740914663560" type="bloco_nomes">
-                                            <param id="0" name="State">0</param>
-                                        </action>
-                                        <action id="-13" name="Set boolean" sid="506487366865321" type="bloco_nomes">
-                                            <param id="0" name="Instance variable">isOpen</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>

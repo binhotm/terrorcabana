@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ActionBar</name>
+    <events>
+        <include>GameEngine</include>
+        <event-block sid="549572406746518">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="277980626350824" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">GameObjects</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="567743711725986" type="System">
+                    <param id="0" name="Variable">isFree</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="246745090646738" type="System">
+                    <param id="0" name="Variable">hasInvetory</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="717644102772311" type="action_box" />
+                <action id="-9" name="Destroy" sid="351905552038716" type="action_btn_close" />
+                <action id="-9" name="Destroy" sid="423400796051819" type="action_btn_pegar" />
+                <action id="-9" name="Destroy" sid="735255098874464" type="action_btn_usar" />
+            </actions>
+            <sub-events>
+                <event-block sid="663650456534129">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="887511629191795" type="GameObjects">
+                            <param id="0" name="Instance variable">toolbox</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="399257855300928" type="GameObjects">
+                            <param id="0" name="Object">action_box</param>
+                            <param id="1" name="Layer">5</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="377758843485320" type="System">
+                            <param id="0" name="Object to create">action_btn_close</param>
+                            <param id="1" name="Layer">action_box.LayerName</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">-10</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="950598682349212" type="System">
+                            <param id="0" name="Object to create">action_btn_usar</param>
+                            <param id="1" name="Layer">action_box.LayerName</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">-10</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="623609381499550" type="System">
+                            <param id="0" name="Object to create">action_btn_pegar</param>
+                            <param id="1" name="Layer">action_box.LayerName</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">-10</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="155316655966469" type="action_box">
+                            <param id="0" name="Instance variable">itemId</param>
+                            <param id="1" name="Value">GameObjects.name</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="738626126667295" type="action_box" />
+                        <action id="0" name="Set text" sid="343998645628904" type="Text">
+                            <param id="0" name="Text">GameMessage.X &amp; &quot; | &quot; &amp; GameObjects.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="745158763665287">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="205930447027982" type="Mouse">
+                    <param id="0" name="Object">action_btn_pegar</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-27" name="Set effect enabled" sid="986450428352695" type="action_btn_pegar">
+                    <param id="0" name="Mode">1</param>
+                    <param id="1" name="Effect">&quot;Outline&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="865734954505553">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="691095481103552" type="Mouse">
+                    <param id="0" name="Object">action_btn_pegar</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-27" name="Set effect enabled" sid="462841307431676" type="action_btn_pegar">
+                    <param id="0" name="Mode">0</param>
+                    <param id="1" name="Effect">&quot;Outline&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="909408898096323">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="664184339883995" type="Mouse">
+                    <param id="0" name="Object">action_btn_usar</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-27" name="Set effect enabled" sid="878947254973663" type="action_btn_usar">
+                    <param id="0" name="Mode">1</param>
+                    <param id="1" name="Effect">&quot;Outline&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="230404964332833">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="505921389689342" type="Mouse">
+                    <param id="0" name="Object">action_btn_usar</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-27" name="Set effect enabled" sid="846173969791053" type="action_btn_usar">
+                    <param id="0" name="Mode">0</param>
+                    <param id="1" name="Effect">&quot;Outline&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="336618360105233">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="625683586683643" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">action_btn_close</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="826321210503418" type="action_box" />
+                <action id="-9" name="Destroy" sid="240711677853493" type="action_btn_close" />
+                <action id="-9" name="Destroy" sid="431128977492567" type="action_btn_pegar" />
+                <action id="-9" name="Destroy" sid="129721452820864" type="action_btn_usar" />
+            </actions>
+        </event-block>
+        <event-block sid="909518769087649">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="553300802524676" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">action_btn_pegar</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="644042022301412" type="Function">
+                    <param id="0" name="Name">&quot;iventario&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;pegar&quot;{###}action_box.itemId</param>
+                </action>
+                <action id="0" name="Call function" sid="860433205120476" type="Function">
+                    <param id="0" name="Name">&quot;inGameMessage&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Peguei &quot; &amp; action_box.itemId</param>
+                </action>
+                <action id="-9" name="Destroy" sid="183030895440277" type="action_box" />
+                <action id="-9" name="Destroy" sid="606365882570722" type="action_btn_close" />
+                <action id="-9" name="Destroy" sid="974267741764942" type="action_btn_pegar" />
+                <action id="-9" name="Destroy" sid="419444277079753" type="action_btn_usar" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

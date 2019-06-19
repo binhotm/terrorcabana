@@ -118,10 +118,12 @@
                     </properties>
                     <instance-variables>
                         <name>Porta</name>
-                        <onStorage>false</onStorage>
                         <isDragable>0</isDragable>
                         <isVisible>0</isVisible>
                         <canClick>0</canClick>
+                        <toolbox>1</toolbox>
+                        <killonuse>false</killonuse>
+                        <canPick>true</canPick>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -147,10 +149,12 @@
                     </properties>
                     <instance-variables>
                         <name>Cesto de lixo</name>
-                        <onStorage>false</onStorage>
                         <isDragable>0</isDragable>
                         <isVisible>0</isVisible>
                         <canClick>0</canClick>
+                        <toolbox>1</toolbox>
+                        <killonuse>false</killonuse>
+                        <canPick>true</canPick>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -176,10 +180,12 @@
                     </properties>
                     <instance-variables>
                         <name>Mesa de objetos</name>
-                        <onStorage>false</onStorage>
                         <isDragable>0</isDragable>
                         <isVisible>0</isVisible>
                         <canClick>0</canClick>
+                        <toolbox>1</toolbox>
+                        <killonuse>false</killonuse>
+                        <canPick>true</canPick>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -205,10 +211,12 @@
                     </properties>
                     <instance-variables>
                         <name>Default</name>
-                        <onStorage>false</onStorage>
                         <isDragable>0</isDragable>
                         <isVisible>0</isVisible>
                         <canClick>0</canClick>
+                        <toolbox>1</toolbox>
+                        <killonuse>false</killonuse>
+                        <canPick>true</canPick>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -234,10 +242,12 @@
                     </properties>
                     <instance-variables>
                         <name>Prateleira</name>
-                        <onStorage>false</onStorage>
                         <isDragable>0</isDragable>
                         <isVisible>0</isVisible>
                         <canClick>0</canClick>
+                        <toolbox>1</toolbox>
+                        <killonuse>false</killonuse>
+                        <canPick>true</canPick>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -307,10 +317,12 @@
                     </properties>
                     <instance-variables>
                         <name>Candelabrio</name>
-                        <onStorage>false</onStorage>
                         <isDragable>0</isDragable>
                         <isVisible>0</isVisible>
                         <canClick>0</canClick>
+                        <toolbox>1</toolbox>
+                        <killonuse>false</killonuse>
+                        <canPick>true</canPick>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -590,6 +602,42 @@
                     </world>
                 </instance>
             </instances>
+            <effects />
+        </layer>
+        <layer name="gui" sid="148548120256593">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
+            <effects />
+        </layer>
+        <layer name="modal" sid="190108004183907">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
             <effects />
         </layer>
     </layers>

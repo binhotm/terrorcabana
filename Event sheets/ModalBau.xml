@@ -3,7 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ModalBau</name>
     <events>
-        <include>GlobalVars</include>
         <event-group description="" sid="631303388098491" title="StartEventsBau">
             <sub-events>
                 <event-block sid="914392304142712">
@@ -32,10 +31,6 @@
                             <param id="0" name="X">400</param>
                             <param id="1" name="Y">-100</param>
                         </action>
-                        <action id="0" name="Call function" sid="193235320360999" type="Function">
-                            <param id="0" name="Name">&quot;gerarSenhasBau&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="182418106290893">
@@ -52,6 +47,32 @@
         </event-group>
         <event-group description="" sid="480460700386542" title="ValidaSenha">
             <sub-events>
+                <event-block sid="789486494724420">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="946371940073613" type="Mouse">
+                            <param id="0" name="Object">bau_locker</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-27" name="Set effect enabled" sid="366967179459502" type="bau_locker">
+                            <param id="0" name="Mode">1</param>
+                            <param id="1" name="Effect">&quot;Outline&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="254898389678896">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="397937857085646" type="Mouse">
+                            <param id="0" name="Object">bau_locker</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-27" name="Set effect enabled" sid="384663445473649" type="bau_locker">
+                            <param id="0" name="Mode">0</param>
+                            <param id="1" name="Effect">&quot;Outline&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="591325166005796">
                     <conditions>
                         <condition id="6" name="On object clicked" sid="419464008854713" type="Mouse">
@@ -82,6 +103,64 @@
                                 <action id="4" name="Set font color" sid="722726006411509" type="dbText">
                                     <param id="0" name="Color">rgb(0, 255, 0)</param>
                                 </action>
+                                <action id="0" name="Play" sid="417086409717682" type="backgroundSound">
+                                    <param id="0" name="Audio file">open chest</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;bau_success&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="921543868178657" type="Function">
+                                    <param id="0" name="Name">&quot;fecharBau&quot;</param>
+                                    <param id="1" name="Parameter {n}">close_bau_modal.BAU_ID</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="931230090506520" type="dbText">
+                                    <param id="0" name="X">10</param>
+                                    <param id="1" name="Y">-100</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="290327382909483" type="bau">
+                                    <param id="0" name="Instance variable">isOpened</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="931819989909592" type="Function">
+                                    <param id="0" name="Name">&quot;showDialog&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-16" name="Wait" sid="115129584397115" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="301670459084010" type="Function">
+                                    <param id="0" name="Name">&quot;readText&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Ufffa abriu!!&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="458852558311005" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="0" name="Call function" sid="854234425930162" type="Function">
+                                    <param id="0" name="Name">&quot;readText&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Vamos ver o que temos aqui.&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="654249772155482" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="0" name="Call function" sid="703857213914076" type="Function">
+                                    <param id="0" name="Name">&quot;hideDialog&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-9" name="Set value" sid="321895134819712" type="System">
+                                    <param id="0" name="Variable">blackDropActive</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="220657215899407" type="martelo_obj">
+                                    <param id="0" name="X">lampada_default.X</param>
+                                    <param id="1" name="Y">lampada_default.Y + 100</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="873049797176433" type="martelo_obj">
+                                    <param id="0" name="Layer">7</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="436840531570127" type="System">
+                                    <param id="0" name="Variable">marteloOpen</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="246470780890139">
@@ -94,11 +173,17 @@
                                     <param id="1" name="Y">bau_locker.Y - 50</param>
                                 </action>
                                 <action id="0" name="Set text" sid="229141120173010" type="dbText">
-                                    <param id="0" name="Text">&quot;SENHA ERRADA!!!!! &quot;</param>
+                                    <param id="0" name="Text">&quot;SENHA INCORRETA&quot;</param>
                                 </action>
                                 <action id="-24" name="Move to top" sid="247096197233649" type="dbText" />
                                 <action id="4" name="Set font color" sid="467560104312219" type="dbText">
                                     <param id="0" name="Color">rgb(255, 0, 0)</param>
+                                </action>
+                                <action id="0" name="Play" sid="152806718717358" type="backgroundSound">
+                                    <param id="0" name="Audio file">error_bau</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;erro_bau&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -120,6 +205,9 @@
                             <param id="0" name="Variable">bauId</param>
                             <param id="1" name="Value">Function.Param(0)</param>
                         </action>
+                        <action id="0" name="Set text" sid="121131471350245" type="Text">
+                            <param id="0" name="Text"> bau_b_password</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="878452873793338">
@@ -131,12 +219,9 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="9" name="Set scale" sid="490770401738434" type="blackdrop">
-                                    <param id="0" name="Scale">50</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="199801329052987" type="blackdrop">
-                                    <param id="0" name="X">LayoutWidth / 2</param>
-                                    <param id="1" name="Y">LayoutHeight /2 </param>
+                                <action id="-9" name="Set value" sid="877032851305704" type="System">
+                                    <param id="0" name="Variable">blackDropActive</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                                 <action id="-3" name="Create object" sid="536100813185947" type="System">
                                     <param id="0" name="Object to create">bau_bg_modal</param>
@@ -223,12 +308,9 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="9" name="Set scale" sid="541501694646753" type="blackdrop">
-                                    <param id="0" name="Scale">50</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="557890625337541" type="blackdrop">
-                                    <param id="0" name="X">LayoutWidth / 2</param>
-                                    <param id="1" name="Y">LayoutHeight /2 </param>
+                                <action id="-9" name="Set value" sid="208726714518269" type="System">
+                                    <param id="0" name="Variable">blackDropActive</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                                 <action id="-3" name="Create object" sid="132835870657227" type="System">
                                     <param id="0" name="Object to create">bau_bg_modal</param>
@@ -285,12 +367,9 @@
                             </conditions>
                             <actions>
                                 <action id="-9" name="Destroy" sid="593975318094562" type="BauModal" />
-                                <action id="9" name="Set scale" sid="621345692389279" type="blackdrop">
-                                    <param id="0" name="Scale">1</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="464983807775296" type="blackdrop">
-                                    <param id="0" name="X">-10</param>
-                                    <param id="1" name="Y">-10</param>
+                                <action id="-9" name="Set value" sid="421183575442807" type="System">
+                                    <param id="0" name="Variable">blackDropActive</param>
+                                    <param id="1" name="Value">0</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="913618847985394" type="tb_p1">
                                     <param id="0" name="X">100</param>
@@ -323,15 +402,14 @@
                             <param id="1" name="Click type">0</param>
                             <param id="2" name="Object clicked">bau</param>
                         </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="504446779526187" type="bau">
+                            <param id="0" name="Instance variable">isOpened</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="332555242752833" type="Function">
                             <param id="0" name="Name">&quot;abrirBau&quot;</param>
                             <param id="1" name="Parameter {n}">0</param>
-                        </action>
-                        <action id="0" name="Call function" sid="634966300730248" type="Function">
-                            <param id="0" name="Name">&quot;gerarSenhasBau&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
@@ -347,6 +425,10 @@
                         <action id="0" name="Call function" sid="730303084284906" type="Function">
                             <param id="0" name="Name">&quot;fecharBau&quot;</param>
                             <param id="1" name="Parameter {n}">close_bau_modal.BAU_ID</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="249128701213744" type="dbText">
+                            <param id="0" name="X">10</param>
+                            <param id="1" name="Y">-100</param>
                         </action>
                     </actions>
                 </event-block>

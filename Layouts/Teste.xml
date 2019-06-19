@@ -290,6 +290,8 @@
                         <morre_usar>0</morre_usar>
                         <config>false</config>
                         <noIventorio>false</noIventorio>
+                        <pos_x>0</pos_x>
+                        <pos_y>0</pos_y>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -355,6 +357,8 @@
                         <morre_usar>0</morre_usar>
                         <config>false</config>
                         <noIventorio>false</noIventorio>
+                        <pos_x>0</pos_x>
+                        <pos_y>0</pos_y>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -393,6 +397,8 @@
                         <morre_usar>0</morre_usar>
                         <config>false</config>
                         <noIventorio>false</noIventorio>
+                        <pos_x>0</pos_x>
+                        <pos_y>0</pos_y>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -450,6 +456,8 @@
                         <morre_usar>0</morre_usar>
                         <config>false</config>
                         <noIventorio>false</noIventorio>
+                        <pos_x>0</pos_x>
+                        <pos_y>0</pos_y>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />

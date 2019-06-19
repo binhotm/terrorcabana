@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GameOver</name>
+    <events>
+        <include>GlobalVars</include>
+        <event-block sid="224756100498614">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="386975398665843" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">spr_btn_gameover</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="476158417749210" type="System">
+                    <param id="0" name="Layout">StartScreen</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="886844238503704">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="831405355100259" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="843842609354842" type="System">
+                    <param id="0" name="Variable">user_id</param>
+                    <param id="1" name="Value">userId</param>
+                </action>
+                <action id="0" name="Play" sid="841840930173310" type="backgroundSound">
+                    <param id="0" name="Audio file">death scream effect</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;morreu&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <variable constant="0" name="user_id" sid="235033543436571" static="0" type="number">0</variable>
+        <event-group description="" sid="316793858128231" title="Local" />
+        <event-block sid="639913494074422">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="684453085536306" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Request URL" sid="213637292048310" type="ajax_login">
+                    <param id="0" name="Tag">&quot;morte_score&quot;</param>
+                    <param id="1" name="URL">&quot;http://api.terrornacabana.com.br/index.php/score/savelose/&quot; &amp; userId &amp; &quot;/&quot; &amp; playtime</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="933411047920809">
+            <conditions>
+                <condition id="0" name="On completed" sid="338335415540926" type="ajax_login">
+                    <param id="0" name="Tag">&quot;morte_score&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Request URL" sid="382806596717575" type="ajax_login">
+                    <param id="0" name="Tag">&quot;checkscore&quot;</param>
+                    <param id="1" name="URL">&quot;http://api.terrornacabana.com.br/index.php/score/checkscore/&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="640910144308298">
+            <conditions>
+                <condition id="0" name="On completed" sid="486862067538428" type="ajax_login">
+                    <param id="0" name="Tag">&quot;checkscore&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="687117683461265" type="loadingGif">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="513287388824903">
+                    <conditions>
+                        <condition id="3" name="For each element" sid="828721551131523" type="scoreArr">
+                            <param id="0" name="Axes">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set at X" sid="990623364459841" type="scoreArr">
+                            <param id="0" name="X">scoreArr.CurX</param>
+                            <param id="1" name="Value">tokenat(ajax_login.LastData,scoreArr.CurX, &quot;|&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="329925847197973">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="690143910887168" type="System">
+                            <param id="0" name="Object">txtScore</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="130760280719682" type="txtScore">
+                            <param id="0" name="Text">scoreArr.At(txtScore.IID)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

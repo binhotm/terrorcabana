@@ -117,11 +117,13 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <name>Porta Algo</name>
-                        <onStorage>false</onStorage>
+                        <name>Mancebo</name>
                         <isDragable>0</isDragable>
                         <isVisible>0</isVisible>
                         <canClick>0</canClick>
+                        <toolbox>1</toolbox>
+                        <killonuse>false</killonuse>
+                        <canPick>false</canPick>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -129,10 +131,10 @@
                         <x>341</x>
                         <y>399</y>
                         <z>0</z>
-                        <width>171</width>
+                        <width>119</width>
                         <height>322</height>
                         <depth>0</depth>
-                        <hotspotX>0.502923965</hotspotX>
+                        <hotspotX>0.722689092</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -147,10 +149,12 @@
                     </properties>
                     <instance-variables>
                         <name>Casaco</name>
-                        <onStorage>false</onStorage>
                         <isDragable>0</isDragable>
                         <isVisible>0</isVisible>
                         <canClick>0</canClick>
+                        <toolbox>0</toolbox>
+                        <killonuse>false</killonuse>
+                        <canPick>true</canPick>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -175,11 +179,13 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <name>Alse</name>
-                        <onStorage>false</onStorage>
+                        <name>Alce Parede</name>
                         <isDragable>0</isDragable>
                         <isVisible>0</isVisible>
                         <canClick>0</canClick>
+                        <toolbox>1</toolbox>
+                        <killonuse>true</killonuse>
+                        <canPick>false</canPick>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -205,10 +211,12 @@
                     </properties>
                     <instance-variables>
                         <name>Bolsa</name>
-                        <onStorage>false</onStorage>
                         <isDragable>0</isDragable>
                         <isVisible>0</isVisible>
                         <canClick>0</canClick>
+                        <toolbox>0</toolbox>
+                        <killonuse>false</killonuse>
+                        <canPick>true</canPick>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -234,10 +242,12 @@
                     </properties>
                     <instance-variables>
                         <name>Fresta rachada</name>
-                        <onStorage>false</onStorage>
                         <isDragable>0</isDragable>
                         <isVisible>0</isVisible>
                         <canClick>0</canClick>
+                        <toolbox>1</toolbox>
+                        <killonuse>false</killonuse>
+                        <canPick>true</canPick>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -263,16 +273,19 @@
                     </properties>
                     <instance-variables>
                         <name>Armario</name>
-                        <onStorage>false</onStorage>
                         <isDragable>0</isDragable>
                         <isVisible>0</isVisible>
                         <canClick>0</canClick>
+                        <toolbox>0</toolbox>
+                        <killonuse>false</killonuse>
+                        <canPick>true</canPick>
+                        <canOpen>0</canOpen>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>749</x>
-                        <y>382</y>
+                        <x>797</x>
+                        <y>381</y>
                         <z>0</z>
                         <width>353</width>
                         <height>372</height>
@@ -291,11 +304,13 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <name>Garrafa</name>
-                        <onStorage>false</onStorage>
+                        <name>Garrafa Acido</name>
                         <isDragable>0</isDragable>
                         <isVisible>0</isVisible>
                         <canClick>0</canClick>
+                        <toolbox>0</toolbox>
+                        <killonuse>true</killonuse>
+                        <canPick>true</canPick>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -342,17 +357,19 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <name>Bau  cinza</name>
-                        <onStorage>false</onStorage>
+                        <name>Bau cinza</name>
                         <isDragable>0</isDragable>
                         <isVisible>0</isVisible>
                         <canClick>0</canClick>
+                        <toolbox>1</toolbox>
+                        <killonuse>false</killonuse>
+                        <canPick>true</canPick>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>608</x>
-                        <y>-31</y>
+                        <x>604</x>
+                        <y>-30</y>
                         <z>0</z>
                         <width>65</width>
                         <height>39</height>
@@ -372,10 +389,12 @@
                     </properties>
                     <instance-variables>
                         <name>Bau roxo</name>
-                        <onStorage>false</onStorage>
                         <isDragable>0</isDragable>
                         <isVisible>0</isVisible>
                         <canClick>0</canClick>
+                        <toolbox>0</toolbox>
+                        <killonuse>false</killonuse>
+                        <canPick>true</canPick>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -401,16 +420,23 @@
                     </properties>
                     <instance-variables>
                         <name>Banquinho</name>
-                        <onStorage>false</onStorage>
                         <isDragable>0</isDragable>
                         <isVisible>0</isVisible>
                         <canClick>0</canClick>
+                        <toolbox>0</toolbox>
+                        <killonuse>false</killonuse>
+                        <canPick>true</canPick>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DragDrop">
                             <properties>
                                 <axes>Horizontal only</axes>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="BoundToLayout">
+                            <properties>
+                                <bound-by>Edge</bound-by>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -429,7 +455,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="itensGame" uid="119">
+                <instance type="caveira_item" uid="168">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -437,143 +463,22 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <item_nome>Chave</item_nome>
-                        <item_usavel>1</item_usavel>
-                        <morre_usar>0</morre_usar>
-                        <config>false</config>
-                        <noIventorio>false</noIventorio>
+                        <name>Caveira</name>
+                        <isDragable>0</isDragable>
+                        <isVisible>0</isVisible>
+                        <canClick>0</canClick>
+                        <toolbox>1</toolbox>
+                        <killonuse>false</killonuse>
+                        <canPick>true</canPick>
                     </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Pin" />
-                        <behavior-instance type="DragDrop">
-                            <properties>
-                                <axes>Both</axes>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>503</x>
-                        <y>319</y>
+                        <x>854</x>
+                        <y>-44</y>
                         <z>0</z>
-                        <width>70</width>
-                        <height>70</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="itensGame" uid="120">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <item_nome>Acido</item_nome>
-                        <item_usavel>1</item_usavel>
-                        <morre_usar>0</morre_usar>
-                        <config>false</config>
-                        <noIventorio>false</noIventorio>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Pin" />
-                        <behavior-instance type="DragDrop">
-                            <properties>
-                                <axes>Both</axes>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>506</x>
-                        <y>398</y>
-                        <z>0</z>
-                        <width>70</width>
-                        <height>70</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="itensGame" uid="121">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <item_nome>Chave Mestra</item_nome>
-                        <item_usavel>1</item_usavel>
-                        <morre_usar>0</morre_usar>
-                        <config>false</config>
-                        <noIventorio>false</noIventorio>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Pin" />
-                        <behavior-instance type="DragDrop">
-                            <properties>
-                                <axes>Both</axes>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>503</x>
-                        <y>467</y>
-                        <z>0</z>
-                        <width>70</width>
-                        <height>70</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="itensGame" uid="125">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <item_nome>Chave 2</item_nome>
-                        <item_usavel>1</item_usavel>
-                        <morre_usar>0</morre_usar>
-                        <config>false</config>
-                        <noIventorio>false</noIventorio>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Pin" />
-                        <behavior-instance type="DragDrop">
-                            <properties>
-                                <axes>Both</axes>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>597</x>
-                        <y>341</y>
-                        <z>0</z>
-                        <width>70</width>
-                        <height>70</height>
+                        <width>54</width>
+                        <height>52</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -629,7 +534,7 @@
             <effects />
         </layer>
         <layer name="dark" sid="687542967005671">
-            <initially-visible>0</initially-visible>
+            <initially-visible>1</initially-visible>
             <background-color>0,0,0</background-color>
             <transparent>0</transparent>
             <parallax>
@@ -639,7 +544,7 @@
             <zoom-rate>1</zoom-rate>
             <opacity>1</opacity>
             <force-own-texture>0</force-own-texture>
-            <global>0</global>
+            <global>1</global>
             <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
@@ -737,6 +642,41 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="iventory_bar" uid="114">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="LiteTween">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <tweened-property>Vertical</tweened-property>
+                                <function>EaseOutBounce</function>
+                                <target>100,100</target>
+                                <target-mode>Absolute</target-mode>
+                                <duration>1.5</duration>
+                                <enforce-mode>Enforce</enforce-mode>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>492</x>
+                        <y>-48</y>
+                        <z>0</z>
+                        <width>530</width>
+                        <height>95</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.50526315</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="LEFTARROW" uid="21">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -810,11 +750,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>361</x>
-                        <y>-20</y>
+                        <x>460.5</x>
+                        <y>-15.5</y>
                         <z>0</z>
-                        <width>339</width>
-                        <height>30</height>
+                        <width>538</width>
+                        <height>39</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -981,7 +921,7 @@
                                 <active-at-start>No</active-at-start>
                                 <fade-in-time>0</fade-in-time>
                                 <wait-time>0</wait-time>
-                                <fade-out-time>1</fade-out-time>
+                                <fade-out-time>2</fade-out-time>
                                 <destroy>No</destroy>
                             </properties>
                         </behavior-instance>
@@ -989,11 +929,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-191</x>
-                        <y>205</y>
+                        <x>562</x>
+                        <y>676</y>
                         <z>0</z>
-                        <width>339</width>
-                        <height>30</height>
+                        <width>405</width>
+                        <height>36</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1014,49 +954,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>144</x>
-                        <y>21</y>
+                        <x>32</x>
+                        <y>20</y>
                         <z>0</z>
-                        <width>70</width>
-                        <height>59</height>
+                        <width>50.152309418</width>
+                        <height>42.271232605</height>
                         <depth>0</depth>
                         <hotspotX>0.504000008</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="iventory_bar" uid="114">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="LiteTween">
-                            <properties>
-                                <active-on-start>No</active-on-start>
-                                <tweened-property>Vertical</tweened-property>
-                                <function>EaseOutBounce</function>
-                                <target>100,100</target>
-                                <target-mode>Absolute</target-mode>
-                                <duration>1.5</duration>
-                                <enforce-mode>Enforce</enforce-mode>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>492</x>
-                        <y>-48</y>
-                        <z>0</z>
-                        <width>530</width>
-                        <height>95</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.50526315</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1128,8 +1033,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>276</x>
-                        <y>-61</y>
+                        <x>278</x>
+                        <y>-53</y>
                         <z>0</z>
                         <width>71</width>
                         <height>71</height>
@@ -1170,6 +1075,24 @@
             </instances>
             <effects />
         </layer>
+        <layer name="modal" sid="365856885200169">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
+            <effects />
+        </layer>
     </layers>
     <nonworld-instances>
         <instance type="object_save" uid="81">
@@ -1179,6 +1102,7 @@
                 <depth>1</depth>
             </properties>
         </instance>
+        <instance type="a" uid="191" />
     </nonworld-instances>
     <effects />
 </c2layout>
