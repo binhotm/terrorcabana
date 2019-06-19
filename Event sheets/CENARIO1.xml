@@ -223,14 +223,17 @@
                                     <param id="0" name="Object">armariofechado</param>
                                     <param id="1" name="Image point (optional)">1</param>
                                 </action>
+                                <action id="-24" name="Move to top" sid="521411544403003" type="bau_cinza" />
                                 <action id="-4" name="Set position to another object" sid="105083100019974" type="bau_roxo">
                                     <param id="0" name="Object">armariofechado</param>
                                     <param id="1" name="Image point (optional)">2</param>
                                 </action>
+                                <action id="-24" name="Move to top" sid="521452341558514" type="bau_roxo" />
                                 <action id="-4" name="Set position to another object" sid="603682705123225" type="caveira_item">
                                     <param id="0" name="Object">armariofechado</param>
                                     <param id="1" name="Image point (optional)">3</param>
                                 </action>
+                                <action id="-24" name="Move to top" sid="850853778736495" type="caveira_item" />
                             </actions>
                         </event-block>
                         <event-block sid="924559139845782">

@@ -416,7 +416,20 @@
                             <conditions>
                                 <condition id="-2" name="On start of layout" sid="798654864764421" type="System" />
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="-3" name="Set position" sid="152280525561736" type="bau_cinza">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">-100</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="370949942548140" type="bau_roxo">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">-100</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="896382866701778" type="caveira_item">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">-100</param>
+                                </action>
+                            </actions>
                             <sub-events>
                                 <event-block sid="390345545865316">
                                     <conditions>
@@ -472,6 +485,78 @@
                                             </conditions>
                                             <actions>
                                                 <action id="-15" name="Set visible" sid="421456809243603" type="GameObjects">
+                                                    <param id="0" name="Visibility">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="613692327907936">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="779472582196653" type="GameObjects">
+                                                    <param id="0" name="Instance variable">name</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Garrafa Acido&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="895864300160048" type="GameObjects">
+                                                    <param id="0" name="Visibility">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="527996452888575">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="230941172198075" type="System">
+                                            <param id="0" name="First value">LayoutName</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;CENARIO3&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="757666416665387" type="GameObjects">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="375265795484453">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="505589878445010" type="GameObjects">
+                                                    <param id="0" name="Instance variable">name</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Bolsa&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="105323931738300" type="GameObjects">
+                                                    <param id="0" name="Visibility">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="663955648036676">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="153695068291583" type="GameObjects">
+                                                    <param id="0" name="Instance variable">name</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Bau&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="594284913305715" type="GameObjects">
+                                                    <param id="0" name="Visibility">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="530826744765706">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="671242953541493" type="GameObjects">
+                                                    <param id="0" name="Instance variable">name</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Garrafa Acido&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="146076398922759" type="GameObjects">
                                                     <param id="0" name="Visibility">0</param>
                                                 </action>
                                             </actions>

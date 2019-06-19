@@ -143,7 +143,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="bau_cinza" sid="984220117167339">
+            <object-type global="1" name="bau_cinza" sid="984220117167339">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="936501075848504" speed="5">
@@ -161,7 +161,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="bau_roxo" sid="719066631970999">
+            <object-type global="1" name="bau_roxo" sid="719066631970999">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="407499069728967" speed="5">
@@ -411,7 +411,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="obj_agua" sid="258316685891360">
+            <object-type global="1" name="obj_agua" sid="258316685891360">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="573916937063976" speed="5">
@@ -2018,7 +2018,7 @@
             </behaviors>
             <texture />
         </object-type>
-        <object-type name="caveira_item" sid="311835074445755">
+        <object-type global="1" name="caveira_item" sid="311835074445755">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="620136903177181" speed="5">

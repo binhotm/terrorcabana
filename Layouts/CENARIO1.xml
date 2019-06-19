@@ -154,7 +154,7 @@
                         <canClick>0</canClick>
                         <toolbox>0</toolbox>
                         <killonuse>false</killonuse>
-                        <canPick>true</canPick>
+                        <canPick>false</canPick>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -474,8 +474,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>854</x>
-                        <y>-44</y>
+                        <x>809</x>
+                        <y>-33</y>
                         <z>0</z>
                         <width>54</width>
                         <height>52</height>

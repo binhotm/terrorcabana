@@ -44,7 +44,7 @@
             <actions>
                 <action id="0" name="Request URL" sid="213637292048310" type="ajax_login">
                     <param id="0" name="Tag">&quot;morte_score&quot;</param>
-                    <param id="1" name="URL">&quot;http://api.terrornacabana.com.br/index.php/score/savelose/&quot; &amp; userId &amp; &quot;/&quot; &amp; playtime</param>
+                    <param id="1" name="URL">&quot;http://18.231.171.246/api/index.php/score/savelose/&quot; &amp; userId &amp; &quot;/&quot; &amp; playtime</param>
                 </action>
             </actions>
         </event-block>

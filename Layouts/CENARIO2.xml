@@ -80,9 +80,9 @@
                         <isDragable>0</isDragable>
                         <isVisible>0</isVisible>
                         <canClick>0</canClick>
-                        <toolbox>0</toolbox>
+                        <toolbox>1</toolbox>
                         <killonuse>false</killonuse>
-                        <canPick>true</canPick>
+                        <canPick>false</canPick>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -233,7 +233,7 @@
                         <canClick>0</canClick>
                         <toolbox>1</toolbox>
                         <killonuse>false</killonuse>
-                        <canPick>true</canPick>
+                        <canPick>false</canPick>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -326,7 +326,7 @@
                         <canClick>0</canClick>
                         <toolbox>1</toolbox>
                         <killonuse>false</killonuse>
-                        <canPick>true</canPick>
+                        <canPick>false</canPick>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
