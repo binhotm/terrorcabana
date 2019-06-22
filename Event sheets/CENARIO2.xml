@@ -328,7 +328,7 @@
                                 <action behavior="Flash" id="0" name="Flash" sid="588168859243279" type="fundo_janela_flash">
                                     <param id="0" name="&apos;On&apos; time">0.2</param>
                                     <param id="1" name="&apos;Off&apos; time">0.2</param>
-                                    <param id="2" name="Duration">1.0</param>
+                                    <param id="2" name="Duration">0.3</param>
                                 </action>
                                 <action id="9" name="Set scale" sid="538482186628023" type="fundo_janela_flash_all">
                                     <param id="0" name="Scale">50</param>
@@ -347,7 +347,7 @@
                                 <action behavior="Flash" id="0" name="Flash" sid="484383328279655" type="fundo_janela_flash_all">
                                     <param id="0" name="&apos;On&apos; time">0.1</param>
                                     <param id="1" name="&apos;Off&apos; time">0.1</param>
-                                    <param id="2" name="Duration">1.0</param>
+                                    <param id="2" name="Duration">0.3</param>
                                 </action>
                             </actions>
                         </event-block>

@@ -103,7 +103,7 @@
                         <character-width>16</character-width>
                         <character-height>16</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
-                        <text>Pressione para inicar</text>
+                        <text>Pressione para iniciar</text>
                         <scale>2</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Center</horizontal-alignment>

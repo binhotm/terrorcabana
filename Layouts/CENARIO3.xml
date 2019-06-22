@@ -202,7 +202,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="panp" uid="42">
+                <instance type="pano_item" uid="42">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -210,7 +210,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <name>Default</name>
+                        <name>Pano</name>
                         <isDragable>0</isDragable>
                         <isVisible>0</isVisible>
                         <canClick>0</canClick>
@@ -316,7 +316,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <name>Candelabrio</name>
+                        <name>Candelabro</name>
                         <isDragable>0</isDragable>
                         <isVisible>0</isVisible>
                         <canClick>0</canClick>

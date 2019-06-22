@@ -247,7 +247,7 @@
                         <canClick>0</canClick>
                         <toolbox>1</toolbox>
                         <killonuse>false</killonuse>
-                        <canPick>true</canPick>
+                        <canPick>false</canPick>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1049,7 +1049,7 @@
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Pixel Ex,-16,400,0</font>
+                        <font>VCR OSD Mono,-16,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>

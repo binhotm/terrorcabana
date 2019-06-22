@@ -445,6 +445,20 @@
                                         </action>
                                     </actions>
                                     <sub-events>
+                                        <event-block sid="381812022368033">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="220816763808277" type="GameObjects">
+                                                    <param id="0" name="Instance variable">name</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Pano&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="945764513694582" type="GameObjects">
+                                                    <param id="0" name="Visibility">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
                                         <event-block sid="993413638659514">
                                             <conditions>
                                                 <condition id="-7" name="Compare instance variable" sid="448651008319334" type="GameObjects">
@@ -489,16 +503,30 @@
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="613692327907936">
+                                        <event-block sid="363818346780929">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="779472582196653" type="GameObjects">
+                                                <condition id="-7" name="Compare instance variable" sid="357647488870585" type="GameObjects">
+                                                    <param id="0" name="Instance variable">name</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Pano&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="168516702483891" type="GameObjects">
+                                                    <param id="0" name="Visibility">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="312702212100441">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="784870164606367" type="GameObjects">
                                                     <param id="0" name="Instance variable">name</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;Garrafa Acido&quot;</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-15" name="Set visible" sid="895864300160048" type="GameObjects">
+                                                <action id="-15" name="Set visible" sid="587498795333540" type="GameObjects">
                                                     <param id="0" name="Visibility">0</param>
                                                 </action>
                                             </actions>
@@ -617,7 +645,7 @@
                         </action>
                         <action id="0" name="Call function" sid="847385357073285" type="Function">
                             <param id="0" name="Name">&quot;readText&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;Alguém fez isso comigo? POR QUE?!&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Alguém fez isso comigo? POR QUÊ?!&quot;</param>
                         </action>
                         <action id="-16" name="Wait" sid="845365485159751" type="System">
                             <param id="0" name="Seconds">3</param>

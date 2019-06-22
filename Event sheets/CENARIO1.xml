@@ -155,7 +155,7 @@
                                 </action>
                                 <action id="0" name="Call function" sid="506589563884057" type="Function">
                                     <param id="0" name="Name">&quot;readText&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;Encontrei este canivete, preciso usa-lo agora..&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Encontrei este canivete, preciso usá-lo agora..&quot;</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="384445649941034" type="System">
                                     <param id="0" name="Seconds">2</param>
@@ -172,7 +172,7 @@
                                     <param id="1" name="Parameter {n}">&quot;UFAAAA consengui me soltar, preciso sair daqui!!&quot;</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="614313323664629" type="System">
-                                    <param id="0" name="Seconds">2</param>
+                                    <param id="0" name="Seconds">3</param>
                                 </action>
                                 <action id="0" name="Call function" sid="983268938057350" type="Function">
                                     <param id="0" name="Name">&quot;hideDialog&quot;</param>

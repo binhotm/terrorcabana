@@ -1184,7 +1184,7 @@
                         <type>Text</type>
                         <auto-font-size>No</auto-font-size>
                         <id-optional>p1box</id-optional>
-                        <maxlength>1</maxlength>
+                        <maxlength>255</maxlength>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1211,7 +1211,7 @@
                         <type>Text</type>
                         <auto-font-size>No</auto-font-size>
                         <id-optional>p2box</id-optional>
-                        <maxlength>1</maxlength>
+                        <maxlength>255</maxlength>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1238,7 +1238,7 @@
                         <type>Text</type>
                         <auto-font-size>No</auto-font-size>
                         <id-optional>p3box</id-optional>
-                        <maxlength>1</maxlength>
+                        <maxlength>255</maxlength>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1265,7 +1265,7 @@
                         <type>Text</type>
                         <auto-font-size>No</auto-font-size>
                         <id-optional>p4box</id-optional>
-                        <maxlength>1</maxlength>
+                        <maxlength>255</maxlength>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1284,7 +1284,7 @@
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-16</font>
+                        <font>VCR OSD Mono,-16,400,0</font>
                         <color>0,255,51</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>

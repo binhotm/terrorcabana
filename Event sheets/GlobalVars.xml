@@ -6,10 +6,10 @@
         <variable constant="0" name="blackDropActive" sid="311507672066454" static="0" type="number">0</variable>
         <variable constant="0" name="marteloOpen" sid="801920400116997" static="0" type="number">0</variable>
         <variable comment="Senha do Bau preto da CENA 2" constant="0" name="bau_b_password" sid="878529049580333" static="0" type="text"></variable>
-        <variable constant="0" name="historyStart" sid="203001886422655" static="0" type="number">0</variable>
+        <variable constant="0" name="historyStart" sid="203001886422655" static="0" type="number">1</variable>
         <variable comment="Tempo decorrido do jogador em segundos" constant="0" name="playtime" sid="174712599256815" static="0" type="number">0</variable>
         <variable comment="Id do loguin do usuario" constant="0" name="userId" sid="658896110670014" static="0" type="number">-1</variable>
-        <variable comment="Da inicio ao jogo" constant="0" name="gameStart" sid="950952482998270" static="0" type="number">0</variable>
+        <variable comment="Da inicio ao jogo" constant="0" name="gameStart" sid="950952482998270" static="0" type="number">1</variable>
         <event-group description="" sid="609543453779105" title="Tempo de Jogo">
             <sub-events>
                 <event-block sid="392348283393334">
