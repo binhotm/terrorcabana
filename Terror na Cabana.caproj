@@ -415,7 +415,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="573916937063976" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.506494" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\itens\CENARIO1\agua.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506494" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\frasco veneno.png">
                             <image-point name="bar" x="0.375" y="-0.0519481" />
                             <collision-poly>
                                 <point x="0.1875" y="0.0779221" />
@@ -468,6 +468,7 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="211248338166871" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\itens\CENARIO1\madeirasolta.png">
+                            <image-point name="Imagepoint 1" x="0.486842" y="0.0304054" />
                             <collision-poly>
                                 <point x="0.197368" y="0.0506757" />
                                 <point x="0.5" y="0.0168919" />
@@ -1083,7 +1084,7 @@
             </effects>
             <texture original-source="C:\Users\DigiageBigdata\Desktop\fatec\Terror na Cabana SRC\Animations\bg_one\Default\000.png" />
         </object-type>
-        <object-type name="DebugLogin" sid="822800103493624">
+        <object-type name="debugMessage" sid="822800103493624">
             <plugin id="Text" />
         </object-type>
         <object-type name="SpriteFont4" sid="512105557902081">
@@ -1099,42 +1100,6 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="819717134155967" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.501424" original-source="C:\Users\Fabricio-\Desktop\git\finais\login_tela_sprite_0005_retangulo.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="btnLogar" sid="322683684723579">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="a0" pingpong="0" repeatcount="1" repeatto="0" sid="636671657769038" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\buttons.png" />
-                </animation>
-                <animation framecount="1" loop="0" name="a1" pingpong="0" repeatcount="1" repeatto="0" sid="588202275859541" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\buttons.png">
-                        <collision-poly>
-                            <point x="0.0194805" y="0" />
-                            <point x="1" y="0" />
-                            <point x="1" y="0.934783" />
-                            <point x="0.0194805" y="0.934783" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="btnCadastrar" sid="942583016970200">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="a0" pingpong="0" repeatcount="1" repeatto="0" sid="219055575692404" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\buttons.png" />
-                </animation>
-                <animation framecount="1" loop="0" name="a1" pingpong="0" repeatcount="1" repeatto="0" sid="996359984434799" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\buttons.png">
-                        <collision-poly>
-                            <point x="0" y="0" />
-                            <point x="0.980519" y="0" />
-                            <point x="0.980519" y="0.934783" />
-                            <point x="0" y="0.934783" />
-                        </collision-poly>
-                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -2617,6 +2582,33 @@
         <object-type global="1" name="a" sid="595213397759922">
             <plugin id="Dictionary" />
         </object-type>
+        <object-type name="edt_Nome" sid="626117074109912">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="edt_Login" sid="383014938593785">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="edt_Email" sid="211001165257038">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="edt_Senha" sid="195933943902352">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="edt_Senha2" sid="415563468608971">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="btn_Cadastrar" sid="508202802963852">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="btnCancelar" sid="112743599023527">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="btnLogin" sid="657992860030300">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="btnCadastrar" sid="162369152978305">
+            <plugin id="Button" />
+        </object-type>
     </object-folder>
     <families>
         <family name="GameObjects" plugin-id="Sprite" sid="611563804002963">
@@ -2726,6 +2718,7 @@
             <layout>SplashScreen.xml</layout>
             <layout>StartScreen.xml</layout>
             <layout>Login.xml</layout>
+            <layout>Cadastro.xml</layout>
             <layout>GameOver.xml</layout>
         </layout-folder>
         <layout>Historia.xml</layout>
@@ -2750,6 +2743,7 @@
         <event-sheet>Historia.xml</event-sheet>
         <event-sheet>Login.xml</event-sheet>
         <event-sheet>GameOver.xml</event-sheet>
+        <event-sheet>Cadastro.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="9" />
@@ -2798,5 +2792,8 @@
             <file name="loading-logo.png" />
         </file-folder>
         <file name="editbox.css" />
+        <file name="gamefont.css" />
+        <file name="vcr_osd_mono_1.001-webfont.woff" />
+        <file name="vcr_osd_mono_1.001-webfont.woff2" />
     </files-folder>
 </c2project>

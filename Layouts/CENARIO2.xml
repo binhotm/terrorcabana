@@ -80,7 +80,7 @@
                         <isDragable>0</isDragable>
                         <isVisible>0</isVisible>
                         <canClick>0</canClick>
-                        <toolbox>1</toolbox>
+                        <toolbox>0</toolbox>
                         <killonuse>false</killonuse>
                         <canPick>false</canPick>
                     </instance-variables>
@@ -655,8 +655,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>453</x>
-                        <y>822</y>
+                        <x>960</x>
+                        <y>855</y>
                         <z>0</z>
                         <width>339</width>
                         <height>30</height>

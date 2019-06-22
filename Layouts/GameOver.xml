@@ -126,7 +126,7 @@
                         <opacity>0.300000012</opacity>
                     </world>
                 </instance>
-                <instance type="DebugLogin" uid="174">
+                <instance type="debugMessage" uid="174">
                     <properties>
                         <text></text>
                         <initial-visibility>Visible</initial-visibility>
