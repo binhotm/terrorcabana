@@ -34,4 +34,25 @@ class Player_model extends CI_Model {
            return 0;
         }    
     }
+
+    public function checkLogin(String $login){
+        $this->db->select("id_player, login");
+        $this->db->where("login", $login);      
+        $this->db->from("player");
+        $this->db->limit(1);
+
+        $query = $this->db->get();        
+
+        if($query->num_rows() == 1){
+           return false;       
+        }else{
+           return true;
+        }   
+
+    }
+
+    public function createAccount($data){
+        $this->db->insert('player', $data); 
+        return $this->db->insert_id();
+    }
 }

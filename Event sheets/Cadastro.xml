@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Cadastro</name>
+    <events>
+        <include>GlobalVars</include>
+        <event-group description="" sid="103364665427856" title="Ajax Cadastro">
+            <sub-events>
+                <event-block sid="231977829968194">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="484840095759020" type="ajax_login">
+                            <param id="0" name="Tag">&quot;ajax_cadastro&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="655651275962799" type="debugMessage">
+                            <param id="0" name="Color">rgb(255, 0, 0)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="155443509745164">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="890028485943541" type="System">
+                                    <param id="0" name="First value">int(ajax_login.LastData)</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">int(&quot;0&quot;)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="936055863066753" type="debugMessage">
+                                    <param id="0" name="Text">&quot;Cadastro realizado com sucesso!&quot;</param>
+                                </action>
+                                <action id="4" name="Set font color" sid="265374317343755" type="debugMessage">
+                                    <param id="0" name="Color">rgb(0, 255, 0)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="133993231789878" type="System">
+                                    <param id="0" name="Variable">userId</param>
+                                    <param id="1" name="Value">int(ajax_login.LastData)</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="518093627282312" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="993586083951436" type="System">
+                                    <param id="0" name="Layout">Login</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="882396914733201">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="785372272107313" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="422117989633549" type="debugMessage">
+                                    <param id="0" name="Text">ajax_login.LastData</param>
+                                </action>
+                                <action id="1" name="Append text" sid="913081929870525" type="debugMessage">
+                                    <param id="0" name="Text">API_URL &amp;&quot;index.php/login/createaccount/&quot; &amp; URLEncode(edt_Nome.Text) &amp; &quot;/&quot; &amp; URLEncode(edt_Login.Text) &amp; &quot;/&quot; &amp; URLEncode(edt_Email.Text) &amp; &quot;/&quot;&amp; URLEncode(edt_Senha.Text) &amp; &quot;/&quot; &amp; URLEncode(edt_Senha2.Text)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="171000866970896">
+                    <conditions>
+                        <condition id="1" name="On error" sid="912804336259439" type="ajax_login">
+                            <param id="0" name="Tag">&quot;ajax_cadastro&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="702339000840741" type="debugMessage">
+                            <param id="0" name="Text">&quot;Erro ao conectar com servidor&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="791433559919208">
+                    <conditions>
+                        <condition id="2" name="On progress" sid="264144522678511" type="ajax_login">
+                            <param id="0" name="Tag">&quot;ajax_cadastro&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="557932656015678" type="debugMessage">
+                            <param id="0" name="Text">ajax_login.Progress &amp;&quot;%&quot; </param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="815348314419866" title="Botoes">
+            <sub-events>
+                <event-block sid="192825894103259">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="965289708385405" type="btnCancelar" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="885861349963920" type="System">
+                            <param id="0" name="Layout">Login</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="251512743295020">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="852703702840913" type="btn_Cadastrar" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Request URL" sid="329443891523434" type="ajax_login">
+                            <param id="0" name="Tag">&quot;ajax_cadastro&quot; </param>
+                            <param id="1" name="URL">API_URL &amp;&quot;index.php/login/createaccount/&quot; &amp; URLEncode(edt_Nome.Text) &amp; &quot;/&quot; &amp; URLEncode(edt_Login.Text) &amp; &quot;/&quot; &amp; URLEncode(edt_Email.Text) &amp; &quot;/&quot;&amp; URLEncode(edt_Senha.Text) &amp; &quot;/&quot; &amp; URLEncode(edt_Senha2.Text)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="860334486258389" type="debugMessage">
+                            <param id="0" name="Text">&quot;Conectando com o Servidor...&quot;</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="104009170764801" type="debugMessage">
+                            <param id="0" name="Color">rgb(0, 255, 0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

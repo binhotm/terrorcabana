@@ -4,15 +4,15 @@
 It is entirely optional and the project will load without it.  If you are placing the project under source control,
 you probably do not want to add any .uistate.xml files to the repository.-->
     <camera>
-        <position-x>500</position-x>
-        <position-y>300</position-y>
-        <position-z>476.838</position-z>
-        <lookat-x>500</lookat-x>
-        <lookat-y>300</lookat-y>
+        <position-x>536.467</position-x>
+        <position-y>416.05</position-y>
+        <position-z>51.2</position-z>
+        <lookat-x>536.467</lookat-x>
+        <lookat-y>416.05</lookat-y>
         <lookat-z>0</lookat-z>
     </camera>
     <snap-to-grid>0</snap-to-grid>
-    <show-grid>0</show-grid>
+    <show-grid>1</show-grid>
     <snap-width>32</snap-width>
     <snap-height>32</snap-height>
     <show-collision-polys>0</show-collision-polys>
@@ -23,15 +23,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Margins" />
         <property expanded="1" name="Effects" />
     </properties>
-    <active-layer name="interacao" />
+    <active-layer name="form" />
     <layers>
-        <layer locked="1" name="BACKGROUND" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="CENARIO" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="OBJETOS" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="lampada" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="dark" parallax-in-editor="0" visible="0" />
-        <layer locked="0" name="interacao" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="gui" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="modal" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="seila" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="bacground" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="seila" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="form" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="logo" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="bg" parallax-in-editor="0" visible="1" />
     </layers>
 </c2uistate>

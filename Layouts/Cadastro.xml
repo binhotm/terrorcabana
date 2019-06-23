@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Login</name>
-    <sid>535080034149567</sid>
-    <event-sheet>Login</event-sheet>
+    <name>Cadastro</name>
+    <sid>111450066651813</sid>
+    <event-sheet>Cadastro</event-sheet>
     <size>
         <width>1000</width>
         <height>600</height>
@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="seila" sid="435115808770144">
+        <layer name="seila" sid="602219258927183">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="backgroundLogin" uid="87">
+                <instance type="backgroundLogin" uid="167">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -52,7 +52,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="bacground" sid="407257569557416">
+        <layer name="bacground" sid="278946926515259">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -68,7 +68,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="textBoxLogin" uid="86">
+                <instance type="textBoxLogin" uid="178">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -79,10 +79,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>492.722229004</x>
-                        <y>333.192352295</y>
+                        <y>334.379760742</y>
                         <z>0</z>
-                        <width>421.7862854</width>
-                        <height>345.17590332</height>
+                        <width>422</width>
+                        <height>415</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.501424491</hotspotY>
@@ -93,7 +93,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="seila" sid="435115808770144">
+        <layer name="seila" sid="820353965313260">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -111,7 +111,7 @@
             <instances />
             <effects />
         </layer>
-        <layer name="form" sid="304696562683326">
+        <layer name="form" sid="158574352126435">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -127,61 +127,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="login" uid="84">
-                    <properties>
-                        <text></text>
-                        <placeholder>login</placeholder>
-                        <tooltip>Preencha com o login</tooltip>
-                        <initial-visibility>Visible</initial-visibility>
-                        <enabled>Yes</enabled>
-                        <read-only>No</read-only>
-                        <spell-check>No</spell-check>
-                        <type>Text</type>
-                        <auto-font-size>No</auto-font-size>
-                        <id-optional>loginid</id-optional>
-                        <maxlength>40</maxlength>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>321</x>
-                        <y>199</y>
-                        <z>0</z>
-                        <width>350.200256348</width>
-                        <height>64</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                    </world>
-                </instance>
-                <instance type="password" uid="85">
-                    <properties>
-                        <text></text>
-                        <placeholder>senha</placeholder>
-                        <tooltip>Preencha com a Senha</tooltip>
-                        <initial-visibility>Visible</initial-visibility>
-                        <enabled>Yes</enabled>
-                        <read-only>No</read-only>
-                        <spell-check>No</spell-check>
-                        <type>Password</type>
-                        <auto-font-size>No</auto-font-size>
-                        <id-optional>passid</id-optional>
-                        <maxlength>255</maxlength>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>321</x>
-                        <y>298</y>
-                        <z>0</z>
-                        <width>349</width>
-                        <height>64</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                    </world>
-                </instance>
-                <instance type="debugMessage" uid="88">
+                <instance type="debugMessage" uid="194">
                     <properties>
                         <text></text>
                         <initial-visibility>Visible</initial-visibility>
@@ -196,10 +142,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>293</x>
-                        <y>465</y>
+                        <x>283</x>
+                        <y>561</y>
                         <z>0</z>
-                        <width>405</width>
+                        <width>419</width>
                         <height>34</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -208,22 +154,157 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="btnLogin" uid="198">
+                <instance type="edt_Nome" uid="192">
+                    <properties>
+                        <text></text>
+                        <placeholder>Nome</placeholder>
+                        <tooltip></tooltip>
+                        <initial-visibility>Visible</initial-visibility>
+                        <enabled>Yes</enabled>
+                        <read-only>No</read-only>
+                        <spell-check>No</spell-check>
+                        <type>Text</type>
+                        <auto-font-size>Yes</auto-font-size>
+                        <id-optional></id-optional>
+                        <maxlength>150</maxlength>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>335</x>
+                        <y>160</y>
+                        <z>0</z>
+                        <width>322</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                    </world>
+                </instance>
+                <instance type="edt_Login" uid="193">
+                    <properties>
+                        <text></text>
+                        <placeholder>Login</placeholder>
+                        <tooltip></tooltip>
+                        <initial-visibility>Visible</initial-visibility>
+                        <enabled>Yes</enabled>
+                        <read-only>No</read-only>
+                        <spell-check>No</spell-check>
+                        <type>Text</type>
+                        <auto-font-size>Yes</auto-font-size>
+                        <id-optional></id-optional>
+                        <maxlength>40</maxlength>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>335</x>
+                        <y>224</y>
+                        <z>0</z>
+                        <width>322</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                    </world>
+                </instance>
+                <instance type="edt_Email" uid="199">
+                    <properties>
+                        <text></text>
+                        <placeholder>Email</placeholder>
+                        <tooltip></tooltip>
+                        <initial-visibility>Visible</initial-visibility>
+                        <enabled>Yes</enabled>
+                        <read-only>No</read-only>
+                        <spell-check>No</spell-check>
+                        <type>Email</type>
+                        <auto-font-size>Yes</auto-font-size>
+                        <id-optional></id-optional>
+                        <maxlength>150</maxlength>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>335</x>
+                        <y>288</y>
+                        <z>0</z>
+                        <width>322</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                    </world>
+                </instance>
+                <instance type="edt_Senha" uid="200">
+                    <properties>
+                        <text></text>
+                        <placeholder>Senha</placeholder>
+                        <tooltip></tooltip>
+                        <initial-visibility>Visible</initial-visibility>
+                        <enabled>Yes</enabled>
+                        <read-only>No</read-only>
+                        <spell-check>No</spell-check>
+                        <type>Password</type>
+                        <auto-font-size>Yes</auto-font-size>
+                        <id-optional></id-optional>
+                        <maxlength>255</maxlength>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>335</x>
+                        <y>352</y>
+                        <z>0</z>
+                        <width>322</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                    </world>
+                </instance>
+                <instance type="edt_Senha2" uid="201">
+                    <properties>
+                        <text></text>
+                        <placeholder>Confirmar Senha</placeholder>
+                        <tooltip></tooltip>
+                        <initial-visibility>Visible</initial-visibility>
+                        <enabled>Yes</enabled>
+                        <read-only>No</read-only>
+                        <spell-check>No</spell-check>
+                        <type>Password</type>
+                        <auto-font-size>Yes</auto-font-size>
+                        <id-optional></id-optional>
+                        <maxlength>255</maxlength>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>335</x>
+                        <y>416</y>
+                        <z>0</z>
+                        <width>322</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                    </world>
+                </instance>
+                <instance type="btn_Cadastrar" uid="195">
                     <properties>
                         <type>Button</type>
-                        <text>Logar</text>
-                        <tooltip>Realiza Login no game</tooltip>
+                        <text>Cadastrar</text>
+                        <tooltip></tooltip>
                         <initial-visibility>Visible</initial-visibility>
                         <enabled>Yes</enabled>
                         <auto-font-size>Yes</auto-font-size>
-                        <id-optional>btnLogin</id-optional>
+                        <id-optional>btnCadastrar</id-optional>
                         <checked>No</checked>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>322</x>
-                        <y>398</y>
+                        <x>335</x>
+                        <y>480</y>
                         <z>0</z>
                         <width>143</width>
                         <height>50</height>
@@ -232,22 +313,22 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="btnCadastrar" uid="202">
+                <instance type="btnCancelar" uid="196">
                     <properties>
                         <type>Button</type>
-                        <text>Cadastrar</text>
-                        <tooltip>Vai para tela de cadastro</tooltip>
+                        <text>Cancelar</text>
+                        <tooltip></tooltip>
                         <initial-visibility>Visible</initial-visibility>
                         <enabled>Yes</enabled>
                         <auto-font-size>Yes</auto-font-size>
-                        <id-optional>btnCad</id-optional>
+                        <id-optional>btnCancelar</id-optional>
                         <checked>No</checked>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>528</x>
-                        <y>396</y>
+                        <x>514</x>
+                        <y>479.768005371</y>
                         <z>0</z>
                         <width>143</width>
                         <height>50</height>
@@ -259,7 +340,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="logo" sid="206016180604193">
+        <layer name="logo" sid="712115025263304">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -277,7 +358,7 @@
             <instances />
             <effects />
         </layer>
-        <layer name="bg" sid="467240145546353">
+        <layer name="bg" sid="580358274120257">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -293,7 +374,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="gameLogoSpr" uid="93">
+                <instance type="gameLogoSpr" uid="197">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -319,12 +400,6 @@
             <effects />
         </layer>
     </layers>
-    <nonworld-instances>
-        <instance type="Import" uid="99">
-            <properties>
-                <auto-import></auto-import>
-            </properties>
-        </instance>
-    </nonworld-instances>
+    <nonworld-instances />
     <effects />
 </c2layout>

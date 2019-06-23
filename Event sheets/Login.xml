@@ -11,9 +11,6 @@
                         <condition id="-2" name="On start of layout" sid="285296736291377" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Import file" sid="509694921690344" type="Import">
-                            <param id="0" name="Import file">&quot;editbox.css&quot;</param>
-                        </action>
                         <action id="-21" name="Reset global variables" sid="825111284914297" type="System" />
                         <action id="-45" name="Reset persisted objects" sid="987770080495244" type="System" />
                         <action id="-9" name="Set value" sid="928555871219626" type="System">
@@ -21,53 +18,41 @@
                             <param id="1" name="Value">0</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="381256233344881">
+                            <conditions />
+                            <actions />
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="888294242453697" title="Buttons Controller">
             <sub-events>
-                <event-block sid="489425046688264">
+                <event-block sid="875713248330829">
                     <conditions>
-                        <condition id="6" name="On object clicked" sid="759100496182134" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">0</param>
-                            <param id="2" name="Object clicked">btnCadastrar</param>
-                        </condition>
+                        <condition id="0" name="On clicked" sid="255120049077166" type="btnLogin" />
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="565800597961766" type="btnCadastrar">
-                            <param id="0" name="Animation">&quot;a1&quot;</param>
-                            <param id="1" name="From">0</param>
+                        <action id="0" name="Request URL" sid="607193823254864" type="ajax_login">
+                            <param id="0" name="Tag">&quot;ajax_login&quot;</param>
+                            <param id="1" name="URL">API_URL &amp;&quot;index.php/login/logon/&quot;&amp;login.Text&amp;&quot;/&quot;&amp;password.Text</param>
                         </action>
-                        <action id="-16" name="Wait" sid="271544274096974" type="System">
-                            <param id="0" name="Seconds">0.1</param>
+                        <action id="4" name="Set font color" sid="473617025691913" type="debugMessage">
+                            <param id="0" name="Color">rgb(0, 255, 0)</param>
                         </action>
-                        <action id="4" name="Set animation" sid="348442718740694" type="btnCadastrar">
-                            <param id="0" name="Animation">&quot;a0&quot;</param>
-                            <param id="1" name="From">1</param>
+                        <action id="0" name="Set text" sid="506275989146689" type="debugMessage">
+                            <param id="0" name="Text">&quot;INICIANDO TENTATIVA DE LOGIN....&quot;</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="990389185288068">
+                <event-block sid="181561087113676">
                     <conditions>
-                        <condition id="6" name="On object clicked" sid="987594170415388" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">0</param>
-                            <param id="2" name="Object clicked">btnLogar</param>
-                        </condition>
+                        <condition id="0" name="On clicked" sid="659475988083085" type="btnCadastrar" />
                     </conditions>
                     <actions>
-                        <action id="2" name="Post to URL" sid="607193823254864" type="ajax_login">
-                            <param id="0" name="Tag">&quot;ajax_login&quot;</param>
-                            <param id="1" name="URL">&quot;http://18.231.171.246/api/index.php/login/logon/&quot;&amp;login.Text&amp;&quot;/&quot;&amp;password.Text</param>
-                            <param id="2" name="Data">&quot;&quot;</param>
-                            <param id="3" name="Method">&quot;GET&quot;</param>
-                        </action>
-                        <action id="4" name="Set font color" sid="473617025691913" type="DebugLogin">
-                            <param id="0" name="Color">rgb(0, 255, 0)</param>
-                        </action>
-                        <action id="0" name="Set text" sid="506275989146689" type="DebugLogin">
-                            <param id="0" name="Text">&quot;INICIANDO TENTATIVA DE LOGIN....&quot;</param>
+                        <action id="-2" name="Go to layout" sid="977520056591965" type="System">
+                            <param id="0" name="Layout">Cadastro</param>
                         </action>
                     </actions>
                 </event-block>
@@ -82,7 +67,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set font color" sid="632220010844135" type="DebugLogin">
+                        <action id="4" name="Set font color" sid="632220010844135" type="debugMessage">
                             <param id="0" name="Color">rgb(255, 0, 0)</param>
                         </action>
                     </actions>
@@ -96,10 +81,10 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set font color" sid="900861009771217" type="DebugLogin">
+                                <action id="4" name="Set font color" sid="900861009771217" type="debugMessage">
                                     <param id="0" name="Color">rgb(103, 251, 0)</param>
                                 </action>
-                                <action id="0" name="Set text" sid="288725001120851" type="DebugLogin">
+                                <action id="0" name="Set text" sid="288725001120851" type="debugMessage">
                                     <param id="0" name="Text">&quot;Login efetuado com sucesso!&quot;</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="706788217988368" type="System">
@@ -119,7 +104,7 @@
                                 <condition id="-22" name="Else" sid="973954817074615" type="System" />
                             </conditions>
                             <actions>
-                                <action id="0" name="Set text" sid="858508669012177" type="DebugLogin">
+                                <action id="0" name="Set text" sid="858508669012177" type="debugMessage">
                                     <param id="0" name="Text">&quot;Erro ao efeturar Login, usuario ou senha invalidos&quot;</param>
                                 </action>
                             </actions>
@@ -133,11 +118,23 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="342862800723011" type="DebugLogin">
+                        <action id="0" name="Set text" sid="342862800723011" type="debugMessage">
                             <param id="0" name="Text">&quot;Sistema de Login Offline =(&quot;</param>
                         </action>
-                        <action id="4" name="Set font color" sid="882696414686841" type="DebugLogin">
+                        <action id="4" name="Set font color" sid="882696414686841" type="debugMessage">
                             <param id="0" name="Color">rgb(255, 0, 0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="258344543649981">
+                    <conditions>
+                        <condition id="2" name="On progress" sid="766351260728835" type="ajax_login">
+                            <param id="0" name="Tag">&quot;ajax_cadastro&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="944593231789641" type="debugMessage">
+                            <param id="0" name="Text">ajax_login.Progress &amp;&quot;%&quot; </param>
                         </action>
                     </actions>
                 </event-block>

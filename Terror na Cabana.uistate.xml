@@ -10,22 +10,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">CENARIO1</layout>
-        <layout order="3">CENARIO2</layout>
-        <layout order="5">Login</layout>
-        <layout order="6">CENARIO3</layout>
-        <layout order="8">SplashScreen</layout>
-        <layout order="12">StartScreen</layout>
-        <layout order="13">Historia</layout>
-        <event-sheet order="1">CENARIO1</event-sheet>
-        <event-sheet active="1" order="2">GameEngine</event-sheet>
-        <event-sheet order="4">IventorySystem</event-sheet>
-        <event-sheet order="7">CENARIO2</event-sheet>
-        <event-sheet order="9">GlobalVars</event-sheet>
-        <event-sheet order="10">CENARIO3</event-sheet>
-        <event-sheet order="11">Historia</event-sheet>
-        <event-sheet order="14">StartScreenEvent</event-sheet>
-        <event-sheet order="15">SplashScreen</event-sheet>
+        <layout active="1" order="1">Cadastro</layout>
+        <layout order="4">Login</layout>
+        <event-sheet order="0">Cadastro</event-sheet>
+        <event-sheet order="2">GlobalVars</event-sheet>
+        <event-sheet order="3">Login</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -52,9 +41,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="layout-folder/Testes/" />
         <folder expanded="1" path="layout-folder/GameScreens/" />
         <folder expanded="1" path="event-folder/" />
-        <folder expanded="1" path="event-folder/CENARIOS/" />
+        <folder expanded="0" path="event-folder/CENARIOS/" />
         <folder expanded="1" path="event-folder/Engine/" />
-        <folder expanded="1" path="event-folder/Testes/" />
+        <folder expanded="0" path="event-folder/Testes/" />
         <folder expanded="1" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
@@ -108,8 +97,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/invetoryIcon/" />
         <folder expanded="1" path="animation-folder/fadeSprite/" />
         <folder expanded="1" path="animation-folder/textBoxLogin/" />
-        <folder expanded="1" path="animation-folder/btnLogar/" />
-        <folder expanded="1" path="animation-folder/btnCadastrar/" />
         <folder expanded="1" path="animation-folder/papelTexto/" />
         <folder expanded="1" path="animation-folder/btn_continue/" />
         <folder expanded="1" path="animation-folder/Sprite/" />
