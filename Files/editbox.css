@@ -57,28 +57,28 @@
 
 input {
     border-radius: 10px 10px;
-    font-family: "vcr_osd_monoregular", "Corrier New";
+    font-family: "vcr_osd_monoregular", "Courier New";
     text-align: center;
-    font-size: 1.2em;
+    font-size: 2.1em;
 }
 
 #loginid{
     border-radius: 10px 10px;
-    font-family: "Corrier New";
+    font-family:  "vcr_osd_monoregular", "Courier New";
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 
 #passid{
     border-radius: 10px 10px;
-    font-family: "Corrier New";
+    font-family:  "vcr_osd_monoregular", "Courier New";
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 #p1box, #p2box, #p3box, #p4box{
-    font-family: "Corrier New";
+    font-family:  "vcr_osd_monoregular", "Courier New";
     text-align: center;
     font-size: 2.1em;
 }
