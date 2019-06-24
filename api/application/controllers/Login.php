@@ -46,12 +46,12 @@ class Login extends CI_Controller {
               
         $this->load->model('player_model');
 
-        if($nome == ""){
+        if($name == ""){
             echo "ERRO: Nome em branco";
             die();
         }
       
-        if(strlen($nome) <= 3){
+        if(strlen($name) <= 3){
             echo "ERRO: Nome pequeno de mais.";
             die();
         }

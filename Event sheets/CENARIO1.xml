@@ -348,42 +348,42 @@
                                     <param id="0" name="Variable">isFree</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action disabled="1" id="0" name="Call function" sid="726170078150125" type="Function">
+                                <action id="0" name="Call function" sid="726170078150125" type="Function">
                                     <param id="0" name="Name">&quot;showDialog&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
-                                <action disabled="1" id="-16" name="Wait" sid="450594478127392" type="System">
+                                <action id="-16" name="Wait" sid="450594478127392" type="System">
                                     <param id="0" name="Seconds">2</param>
                                 </action>
-                                <action disabled="1" id="0" name="Call function" sid="647263117681580" type="Function">
+                                <action id="0" name="Call function" sid="647263117681580" type="Function">
                                     <param id="0" name="Name">&quot;readText&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;Consegui alcançar este casaco!!&quot;</param>
                                 </action>
-                                <action disabled="1" id="-16" name="Wait" sid="494309008461636" type="System">
+                                <action id="-16" name="Wait" sid="494309008461636" type="System">
                                     <param id="0" name="Seconds">2</param>
                                 </action>
-                                <action disabled="1" id="0" name="Call function" sid="506589563884057" type="Function">
+                                <action id="0" name="Call function" sid="506589563884057" type="Function">
                                     <param id="0" name="Name">&quot;readText&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;Encontrei este canivete, preciso usá-lo agora..&quot;</param>
                                 </action>
-                                <action disabled="1" id="-16" name="Wait" sid="384445649941034" type="System">
+                                <action id="-16" name="Wait" sid="384445649941034" type="System">
                                     <param id="0" name="Seconds">2</param>
                                 </action>
-                                <action disabled="1" id="0" name="Call function" sid="215955267523392" type="Function">
+                                <action id="0" name="Call function" sid="215955267523392" type="Function">
                                     <param id="0" name="Name">&quot;readText&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;Argh! &quot;</param>
                                 </action>
-                                <action disabled="1" id="-16" name="Wait" sid="226319205826916" type="System">
+                                <action id="-16" name="Wait" sid="226319205826916" type="System">
                                     <param id="0" name="Seconds">2</param>
                                 </action>
-                                <action disabled="1" id="0" name="Call function" sid="187631203624664" type="Function">
+                                <action id="0" name="Call function" sid="187631203624664" type="Function">
                                     <param id="0" name="Name">&quot;readText&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;UFAAAA consengui me soltar, preciso sair daqui!!&quot;</param>
                                 </action>
-                                <action disabled="1" id="-16" name="Wait" sid="614313323664629" type="System">
+                                <action id="-16" name="Wait" sid="614313323664629" type="System">
                                     <param id="0" name="Seconds">3</param>
                                 </action>
-                                <action disabled="1" id="0" name="Call function" sid="983268938057350" type="Function">
+                                <action id="0" name="Call function" sid="983268938057350" type="Function">
                                     <param id="0" name="Name">&quot;hideDialog&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
