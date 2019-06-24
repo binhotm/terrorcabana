@@ -301,6 +301,7 @@
                         <toolbox>1</toolbox>
                         <killonuse>false</killonuse>
                         <canPick>true</canPick>
+                        <isOpened>0</isOpened>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

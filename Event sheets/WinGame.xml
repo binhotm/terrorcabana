@@ -1,87 +1,81 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>GameOver</name>
+    <name>WinGame</name>
     <events>
         <include>GlobalVars</include>
-        <event-block sid="270714149188078">
+        <event-block sid="103807789822942">
             <conditions>
-                <condition id="0" name="On clicked" sid="829845324642890" type="btnMenu" />
+                <condition id="0" name="On clicked" sid="148007640027388" type="btnMenu" />
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="929549912309661" type="System">
+                <action id="-2" name="Go to layout" sid="825980803877483" type="System">
                     <param id="0" name="Layout">StartScreen</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="886844238503704">
+        <event-block sid="756479274245353">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="831405355100259" type="System" />
+                <condition id="-2" name="On start of layout" sid="195235076763610" type="System" />
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="325430806141937" type="GameObjects" />
-                <action id="0" name="Play" sid="841840930173310" type="backgroundSound">
-                    <param id="0" name="Audio file">death scream effect</param>
-                    <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">0</param>
-                    <param id="1" name="Tag (optional)">&quot;morreu&quot;</param>
-                </action>
-                <action id="-4" name="Set layer visible" sid="847570413741069" type="System">
+                <action id="-9" name="Destroy" sid="400695428757444" type="GameObjects" />
+                <action id="-4" name="Set layer visible" sid="539582923732621" type="System">
                     <param id="0" name="Layer">&quot;gui&quot;</param>
                     <param id="1" name="Visibility">0</param>
                 </action>
-                <action id="0" name="Request URL" sid="213637292048310" type="ajax_login">
+                <action id="0" name="Request URL" sid="396580680031028" type="ajax_login">
                     <param id="0" name="Tag">&quot;morte_score&quot;</param>
-                    <param id="1" name="URL">API_URL &amp; &quot;index.php/score/savelose/&quot; &amp; userId &amp; &quot;/&quot; &amp; playtime</param>
+                    <param id="1" name="URL">API_URL &amp; &quot;index.php/score/savewin/&quot; &amp; userId &amp; &quot;/&quot; &amp; playtime</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="933411047920809">
+        <event-block sid="435110575719962">
             <conditions>
-                <condition id="0" name="On completed" sid="338335415540926" type="ajax_login">
+                <condition id="0" name="On completed" sid="982075269443245" type="ajax_login">
                     <param id="0" name="Tag">&quot;morte_score&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Request URL" sid="382806596717575" type="ajax_login">
+                <action id="0" name="Request URL" sid="191837268295275" type="ajax_login">
                     <param id="0" name="Tag">&quot;checkscore&quot;</param>
                     <param id="1" name="URL">API_URL &amp; &quot;index.php/score/checkscore/&quot;</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="640910144308298">
+        <event-block sid="895747690186079">
             <conditions>
-                <condition id="0" name="On completed" sid="486862067538428" type="ajax_login">
+                <condition id="0" name="On completed" sid="909056290325690" type="ajax_login">
                     <param id="0" name="Tag">&quot;checkscore&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-15" name="Set visible" sid="687117683461265" type="loadingGif">
+                <action id="-15" name="Set visible" sid="647015148768810" type="loadingGif">
                     <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
             <sub-events>
-                <event-block sid="513287388824903">
+                <event-block sid="790476478972911">
                     <conditions>
-                        <condition id="3" name="For each element" sid="828721551131523" type="scoreArr">
+                        <condition id="3" name="For each element" sid="137057274440529" type="scoreArr">
                             <param id="0" name="Axes">2</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="2" name="Set at X" sid="990623364459841" type="scoreArr">
+                        <action id="2" name="Set at X" sid="237122331401337" type="scoreArr">
                             <param id="0" name="X">scoreArr.CurX</param>
                             <param id="1" name="Value">tokenat(ajax_login.LastData,scoreArr.CurX, &quot;|&quot;)</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="329925847197973">
+                <event-block sid="770557580008041">
                     <conditions>
-                        <condition id="-11" name="For Each" sid="690143910887168" type="System">
+                        <condition id="-11" name="For Each" sid="910431497477505" type="System">
                             <param id="0" name="Object">txtScore</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="130760280719682" type="txtScore">
+                        <action id="0" name="Set text" sid="742680405115797" type="txtScore">
                             <param id="0" name="Text">scoreArr.At(txtScore.IID)</param>
                         </action>
                     </actions>

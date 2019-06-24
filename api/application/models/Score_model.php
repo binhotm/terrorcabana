@@ -37,6 +37,7 @@ class Score_model extends CI_Model {
         $this->db->select('player.name, min(score.time) score');
         $this->db->from('score');
         $this->db->join('player', 'player.id_player = score.player');
+        $this->db->where('win', 1);
         $this->db->group_by('score.player');
         $this->db->order_by('score', 'ASC');
         $this->db->limit(5);

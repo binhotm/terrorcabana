@@ -40,6 +40,8 @@
     </used-behaviors>
     <used-effects>
         <effect author="Scirra" id="blacknwhite">Black &amp; White</effect>
+        <effect author="Scirra" id="blurhorizontal">Blur Horizontal</effect>
+        <effect author="Scirra" id="blurvertical">Blur Vertical</effect>
         <effect author="Scirra" id="multiply">Multiply</effect>
         <effect author="R0J0hound" id="outline">Outline</effect>
         <effect author="Scirra" id="radialblur">Radial blur</effect>
@@ -74,7 +76,7 @@
     </configuration-settings>
     <object-folder>
         <object-folder name="CENARIOS">
-            <object-type name="armariofechado" sid="480185626628162">
+            <object-type global="1" name="armariofechado" sid="480185626628162">
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="canOpen" sid="779319729010986" type="number" />
@@ -163,6 +165,9 @@
             </object-type>
             <object-type global="1" name="bau_roxo" sid="719066631970999">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="isOpened" sid="229657642570261" type="number" />
+                </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="407499069728967" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\itens\CENARIO1\armario\bau_marrom.png">
@@ -247,18 +252,19 @@
             </object-type>
             <object-type name="janela" sid="684266896906157">
                 <plugin id="Sprite" />
+                <effects>
+                    <effect-type name="Outline">
+                        <effect id="outline" />
+                    </effect-type>
+                </effects>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="571819237792248" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.501873" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\itens\CENARIO2\janela.png">
                             <collision-poly>
-                                <point x="0.285714" y="0.307116" />
-                                <point x="0.444444" y="0.269663" />
-                                <point x="0.638889" y="0.269663" />
-                                <point x="0.642857" y="0.498127" />
-                                <point x="0.559524" y="0.558052" />
-                                <point x="0.444444" y="0.561798" />
-                                <point x="0.325397" y="0.531835" />
-                                <point x="0.277778" y="0.464419" />
+                                <point x="0.047619" y="0.0599251" />
+                                <point x="0.952381" y="0.0337079" />
+                                <point x="0.884921" y="0.921348" />
+                                <point x="0.0714286" y="0.917603" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -470,6 +476,7 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="116778904334755" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.502674" original-source="C:\Users\Fabricio-\Google Drive\Game Development\Survival Horror PC Source\Assets\cenario\lampada.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="1.06417" />
                             <collision-poly>
                                 <point x="0.211538" y="0.0320856" />
                                 <point x="0.557692" y="0.00534759" />
@@ -1794,10 +1801,10 @@
                 <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="600086589094982" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.501139" original-source="C:\Users\Fabricio-\Desktop\git\finais\baupreto\baublackmodal_0002s_0002_contorno.png">
                         <image-point name="locker" x="0.497462" y="0.703872" />
-                        <image-point name="p1" x="0.304569" y="0.410023" />
-                        <image-point name="p2" x="0.417513" y="0.410023" />
-                        <image-point name="p3" x="0.530457" y="0.410023" />
-                        <image-point name="p4" x="0.643401" y="0.410023" />
+                        <image-point name="p1" x="0.317259" y="0.410023" />
+                        <image-point name="p2" x="0.442893" y="0.410023" />
+                        <image-point name="p3" x="0.56599" y="0.410023" />
+                        <image-point name="p4" x="0.691624" y="0.410023" />
                         <image-point name="texto" x="0.5" y="0.136674" />
                         <collision-poly>
                             <point x="0" y="0" />
@@ -1809,13 +1816,19 @@
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.501094" original-source="C:\Users\Fabricio-\Desktop\git\finais\baupreto\bauroxo.png">
                         <image-point name="locker" x="0.497436" y="0.704595" />
-                        <image-point name="Imagepoint 2" x="0.301282" y="0.323851" />
-                        <image-point name="Imagepoint 6" x="0.501282" y="0.118162" />
+                        <image-point name="p1" x="0.388462" y="0.40919" />
+                        <image-point name="p2" x="0.515385" y="0.40919" />
+                        <image-point name="p3" x="0.641026" y="0.40919" />
+                        <image-point name="p4" x="0.64359" y="0.40919" />
+                        <image-point name="texto" x="0.5" y="0.135667" />
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.501094" original-source="C:\Users\Fabricio-\Desktop\git\finais\baupreto\bauroxocinza.png">
                         <image-point name="locker" x="0.497436" y="0.704595" />
-                        <image-point name="Imagepoint 2" x="0.301282" y="0.323851" />
-                        <image-point name="Imagepoint 6" x="0.501282" y="0.118162" />
+                        <image-point name="p1" x="0.388462" y="0.40919" />
+                        <image-point name="p2" x="0.515385" y="0.40919" />
+                        <image-point name="p3" x="0.621795" y="0.40919" />
+                        <image-point name="p4" x="0.64359" y="0.40919" />
+                        <image-point name="texto" x="0.5" y="0.135667" />
                     </frame>
                 </animation>
             </animation-folder>
@@ -2550,9 +2563,6 @@
         <object-type name="Browser" sid="153785105061232">
             <plugin id="Browser" />
         </object-type>
-        <object-type global="1" name="a" sid="595213397759922">
-            <plugin id="Dictionary" />
-        </object-type>
         <object-type global="1" name="pano_item" sid="313363960053145">
             <plugin id="Sprite" />
             <animation-folder>
@@ -2570,6 +2580,7 @@
                     </frame>
                 </animation>
             </animation-folder>
+        </object-type>
         <object-type name="edt_Nome" sid="626117074109912">
             <plugin id="TextBox" />
         </object-type>
@@ -2597,6 +2608,162 @@
         <object-type name="btnCadastrar" sid="162369152978305">
             <plugin id="Button" />
         </object-type>
+        <object-type name="chaveArmario" sid="646459621141988">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="604847139245779">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <effects>
+                <effect-type name="Outline">
+                    <effect id="outline" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="240598592858137" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\itens_mine\chave1.png">
+                        <image-point name="Imagepoint 1" x="0.5" y="-0.285714" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.914286" y="0.1" />
+                            <point x="0.885714" y="0.942857" />
+                            <point x="0.171429" y="0.828571" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="dbTextItem" sid="960552127266681">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="whitePaper" sid="761544259226520">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="874120246279986">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="182869425058062" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\PNGs\papel.png">
+                        <image-point name="Imagepoint 1" x="0.0521739" y="0.15625" />
+                        <image-point name="Imagepoint 2" x="0.5" y="-0.117188" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.5" />
+                            <point x="0.856522" y="0.871094" />
+                            <point x="0.5" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="whitePaperText" sid="665571820522783">
+            <plugin id="SpriteFontPlus" />
+            <behaviors>
+                <behavior-type name="Pin" sid="347983127133325">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <effects>
+                <effect-type name="BlurHorizontal">
+                    <effect id="blurhorizontal" />
+                </effect-type>
+                <effect-type name="BlurVertical">
+                    <effect id="blurvertical" />
+                </effect-type>
+            </effects>
+            <texture />
+        </object-type>
+        <object-type name="chavePorta" sid="562646862596524">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="297567600571887">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <effects>
+                <effect-type name="Outline">
+                    <effect id="outline" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="755050963927191" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\PNGs\chave.png">
+                        <image-point name="Imagepoint 1" x="0.57" y="0.085" />
+                        <collision-poly>
+                            <point x="0.2" y="0.3" />
+                            <point x="0.5" y="0.4" />
+                            <point x="0.733333" y="0.4" />
+                            <point x="0.9" y="0.5" />
+                            <point x="0.8" y="0.7" />
+                            <point x="0.5" y="0.6" />
+                            <point x="0.2" y="0.7" />
+                            <point x="0.133333" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="887129109072097">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="775646135394621" speed="5">
+                    <frame duration="1" hotspotX="0.096" hotspotY="0.204" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="winGameBg" sid="391458258855655">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Fabricio-\Desktop\git\finais\wingame\wingame_0002_Layer-6.png" />
+        </object-type>
+        <object-type name="winGameLogo" sid="568069651070386">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="383866958930409" speed="5">
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\wingame\wingame_0001_fase-1-.png">
+                        <collision-poly>
+                            <point x="0.0521739" y="0.15" />
+                            <point x="0.495652" y="0.025" />
+                            <point x="0.991304" y="0.025" />
+                            <point x="0.956522" y="0.5" />
+                            <point x="0.921739" y="0.775" />
+                            <point x="0.495652" y="0.85" />
+                            <point x="0.2" y="0.425" />
+                            <point x="0.0173913" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite3" sid="119650454420895">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="318263685508348" speed="5">
+                    <frame duration="1" hotspotX="0.502146" hotspotY="0.5" original-source="C:\Users\Fabricio-\Desktop\git\finais\wingame\wingame_0000_voce-venceu.png">
+                        <collision-poly>
+                            <point x="0.0600858" y="0.304348" />
+                            <point x="0.497854" y="0.173913" />
+                            <point x="0.927039" y="0.369565" />
+                            <point x="0.982833" y="0.5" />
+                            <point x="0.948498" y="0.73913" />
+                            <point x="0.497854" y="0.782609" />
+                            <point x="0.0214592" y="0.891304" />
+                            <point x="0.00429185" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btnMenu" sid="848643759378035">
+            <plugin id="Button" />
+        </object-type>
+        <object-type global="1" name="intesBagArrCp" sid="386930778806405">
+            <plugin id="Arr" />
+        </object-type>
     </object-folder>
     <families>
         <family name="GameObjects" plugin-id="Sprite" sid="611563804002963">
@@ -2609,6 +2776,8 @@
                 <member>busto</member>
                 <member>casaco</member>
                 <member>caveira_item</member>
+                <member>chaveArmario</member>
+                <member>chavePorta</member>
                 <member>janela</member>
                 <member>lixo</member>
                 <member>madeirasolta</member>
@@ -2708,6 +2877,7 @@
             <layout>Login.xml</layout>
             <layout>Cadastro.xml</layout>
             <layout>GameOver.xml</layout>
+            <layout>WinScreen.xml</layout>
         </layout-folder>
         <layout>Historia.xml</layout>
     </layout-folder>
@@ -2732,6 +2902,7 @@
         <event-sheet>Login.xml</event-sheet>
         <event-sheet>GameOver.xml</event-sheet>
         <event-sheet>Cadastro.xml</event-sheet>
+        <event-sheet>WinGame.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="9" />

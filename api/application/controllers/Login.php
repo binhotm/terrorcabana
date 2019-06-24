@@ -36,8 +36,25 @@ class Login extends CI_Controller {
 
 
     public function createAccount($name ="", $login="", $email="", $password="", $password2 = ""){
-        
+
+        $name = urldecode($name);
+        $login = urldecode($login);
+        $email = urldecode($email);
+        $password = urldecode($password);
+        $password2 = urldecode($password2);
+
+              
         $this->load->model('player_model');
+
+        if($nome == ""){
+            echo "ERRO: Nome em branco";
+            die();
+        }
+      
+        if(strlen($nome) <= 3){
+            echo "ERRO: Nome pequeno de mais.";
+            die();
+        }
 
         if($login == ""){
             echo "ERRO: Login em branco";
@@ -47,6 +64,16 @@ class Login extends CI_Controller {
       
         if(strlen($login) <= 3){
             echo "ERRO: Login pequeno de mais.";
+            die();
+        }
+
+        if(strlen($email) <= 3){
+            echo "ERRO: Email pequeno de mais.";
+            die();
+        }
+
+        if($email == ""){
+            echo "ERRO: Email em branco";
             die();
         }
 

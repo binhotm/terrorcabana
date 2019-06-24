@@ -30,6 +30,8 @@ class Score extends CI_Controller {
             exit;
         }
 
+        $time = gmdate("H:i:s", $time);
+
         $ret = $this->score_model->saveScore($player, $time, 0, 1);
                 
         echo $ret;        
@@ -45,6 +47,8 @@ class Score extends CI_Controller {
             exit;
         }
 
+        $time = gmdate("H:i:s", $time);
+        
         $ret = $this->score_model->saveScore($player, $time, 1, 0);
                 
         echo $ret;        

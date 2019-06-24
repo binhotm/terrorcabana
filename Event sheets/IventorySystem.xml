@@ -156,6 +156,367 @@
         <variable constant="0" name="iventOpening" sid="780322788115784" static="0" type="number">0</variable>
         <event-group description="" sid="715404767934569" title="IventorySistem">
             <sub-events>
+                <event-group description="" sid="490329092210211" title="MouseActions">
+                    <sub-events>
+                        <event-block disabled="1" sid="113302531103994">
+                            <conditions>
+                                <condition id="7" name="Cursor is over object" sid="838475846621440" type="Mouse">
+                                    <param id="0" name="Object">IventoryObj</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="419304183915760" type="System">
+                                    <param id="0" name="Variable">iventOpening</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pin" id="1" name="Unpin" sid="244314367844988" type="IventoryObj" />
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="899221785005268">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Cursor is over object" sid="272859620133409" type="Mouse">
+                                    <param id="0" name="Object">IventoryObj</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="141492559781503" type="IventoryObj">
+                                    <param id="0" name="Pin to">slote</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="717465306679432">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="166243877786292" type="System">
+                                    <param id="0" name="Interval (seconds)">0.5</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block disabled="1" sid="216719388170649">
+                                    <conditions>
+                                        <condition id="1" inverted="1" name="Is overlapping another object" sid="593554668915188" type="IventoryObj">
+                                            <param id="0" name="Object">slote</param>
+                                        </condition>
+                                        <condition behavior="DragDrop" id="0" inverted="1" name="Is dragging" sid="993222612434954" type="IventoryObj" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="809294697536199" type="Function">
+                                            <param id="0" name="Name">&quot;iventario&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;atualizar&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="108105269288992">
+                            <conditions>
+                                <condition behavior="DragDrop" id="0" name="Is dragging" sid="641525096572229" type="IventoryObj" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Pin" id="1" name="Unpin" sid="113877940885394" type="IventoryObj" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="648562342833560">
+                            <conditions>
+                                <condition behavior="DragDrop" id="2" name="On drop" sid="849998599899505" type="IventoryObj" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="522775661500669">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="520575633767643" type="IventoryObj">
+                                            <param id="0" name="Object">caveira_item</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="852736938754516" type="IventoryObj">
+                                            <param id="0" name="Instance variable">item_nome</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Garrafa Acido&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="760106998089979" type="caveira_item" />
+                                        <action id="0" name="Call function" sid="450645692888040" type="Function">
+                                            <param id="0" name="Name">&quot;inGameMessage&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;Usou o Garrafa com acido.&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="863662689108842" type="Function">
+                                            <param id="0" name="Name">&quot;iventario&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;remover&quot;{###}IventoryObj.item_nome</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="717133611081734" type="Function">
+                                            <param id="0" name="Name">&quot;showDialog&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="417856062608635" type="System">
+                                            <param id="0" name="Seconds">3</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="708953582462587" type="Function">
+                                            <param id="0" name="Name">&quot;readText&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;Parece que funcionou!!&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="696735612336816" type="System">
+                                            <param id="0" name="Seconds">3</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="253061339049204" type="Function">
+                                            <param id="0" name="Name">&quot;readText&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;Esta derretendo a caveira..&quot; &amp; newline &amp; &quot;Hoo não..  tinha um bilhete dentro..&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="713497317218962" type="System">
+                                            <param id="0" name="Seconds">4</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="103625782606824" type="Function">
+                                            <param id="0" name="Name">&quot;readText&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;Não consigo mais ler oque tem aqui =(...&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="304982557778943" type="System">
+                                            <param id="0" name="Seconds">3</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="362231850782633" type="Function">
+                                            <param id="0" name="Name">&quot;hideDialog&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="695552145322435" type="System">
+                                            <param id="0" name="Seconds">1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="755113047303373" type="System">
+                                            <param id="0" name="Variable">blackDropActive</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="372039451154761" type="whitePaper">
+                                            <param id="0" name="X">lampada_default.X</param>
+                                            <param id="1" name="Y">lampada_default.Y + 100</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="177710143792873" type="whitePaperText">
+                                            <param id="0" name="Object">whitePaper</param>
+                                            <param id="1" name="Image point (optional)">1</param>
+                                        </action>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="123144148575541" type="whitePaperText">
+                                            <param id="0" name="Pin to">whitePaper</param>
+                                            <param id="1" name="Mode">1</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="759702318490189" type="whitePaperText">
+                                            <param id="0" name="Text">&quot;Senha do Bau R: &quot; &amp; bau_b_password_roxo</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="279105131837032">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="337898519458466" type="IventoryObj">
+                                            <param id="0" name="Object">caveira_item</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="150038771106016" type="IventoryObj">
+                                            <param id="0" name="Instance variable">item_nome</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Martelo&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="331126959829465" type="caveira_item" />
+                                        <action id="0" name="Call function" sid="915133750590370" type="Function">
+                                            <param id="0" name="Name">&quot;inGameMessage&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;Usou o Martelo&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="419257370896269" type="Function">
+                                            <param id="0" name="Name">&quot;iventario&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;remover&quot;{###}IventoryObj.item_nome</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="735469788444554" type="Function">
+                                            <param id="0" name="Name">&quot;showDialog&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="933931269666002" type="System">
+                                            <param id="0" name="Seconds">3</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="730530764583144" type="Function">
+                                            <param id="0" name="Name">&quot;readText&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;Ual consegui quebrar este cranio&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="626330342341909" type="System">
+                                            <param id="0" name="Seconds">3</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="313255894428116" type="Function">
+                                            <param id="0" name="Name">&quot;readText&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;Olha tem algo dentro..&quot; &amp; newline &amp; &quot;Um bilhete...&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="471379044516432" type="System">
+                                            <param id="0" name="Seconds">3</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="184950815169838" type="Function">
+                                            <param id="0" name="Name">&quot;hideDialog&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="418359196540969" type="System">
+                                            <param id="0" name="Seconds">1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="125156061463561" type="System">
+                                            <param id="0" name="Variable">blackDropActive</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="381165847898189" type="whitePaper">
+                                            <param id="0" name="X">lampada_default.X</param>
+                                            <param id="1" name="Y">lampada_default.Y + 100</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="530492901077944" type="whitePaperText">
+                                            <param id="0" name="Object">whitePaper</param>
+                                            <param id="1" name="Image point (optional)">1</param>
+                                        </action>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="107608149986831" type="whitePaperText">
+                                            <param id="0" name="Pin to">whitePaper</param>
+                                            <param id="1" name="Mode">1</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="792225441269942" type="whitePaperText">
+                                            <param id="0" name="Text">&quot;Senha do Bau R: &quot; &amp; bau_b_password_roxo</param>
+                                        </action>
+                                        <action id="-27" name="Set effect enabled" sid="571796883844356" type="whitePaperText">
+                                            <param id="0" name="Mode">0</param>
+                                            <param id="1" name="Effect">&quot;BlurHorizontal&quot;</param>
+                                        </action>
+                                        <action id="-27" name="Set effect enabled" sid="127411756441358" type="whitePaperText">
+                                            <param id="0" name="Mode">0</param>
+                                            <param id="1" name="Effect">&quot;BlurVertical&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="609531024187986">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="648903263546413" type="IventoryObj">
+                                            <param id="0" name="Object">armariofechado</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="655321386557891" type="IventoryObj">
+                                            <param id="0" name="Instance variable">item_nome</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Chave A&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="692463582403307" type="Function">
+                                            <param id="0" name="Name">&quot;iventario&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;remover&quot;{###}IventoryObj.item_nome</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="521954964950162" type="Function">
+                                            <param id="0" name="Name">&quot;showDialog&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="936351596577785" type="System">
+                                            <param id="0" name="Seconds">3</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="528155538310681" type="Function">
+                                            <param id="0" name="Name">&quot;readText&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;Uffa parece que esta chave funcionou direitinho aqui!&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="119480585538148" type="System">
+                                            <param id="0" name="Seconds">2</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="795452915926437" type="Function">
+                                            <param id="0" name="Name">&quot;hideDialog&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="476041737607573" type="armariofechado">
+                                            <param id="0" name="Instance variable">canClick</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="449939273001847" type="System">
+                                            <param id="0" name="Seconds">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="809701176483175" type="Function">
+                                            <param id="0" name="Name">&quot;inGameMessage&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;Usou a chave.&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="321861747022637">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="630597129951015" type="IventoryObj">
+                                            <param id="0" name="Object">porta</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="788895498194462" type="IventoryObj">
+                                            <param id="0" name="Instance variable">item_nome</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Chave Mestra&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="640863950291243" type="Function">
+                                            <param id="0" name="Name">&quot;iventario&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;remover&quot;{###}IventoryObj.item_nome</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="297077034156689" type="Function">
+                                            <param id="0" name="Name">&quot;inGameMessage&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;Usou a chave.&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="112319519158925" type="Function">
+                                            <param id="0" name="Name">&quot;showDialog&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="258700719115985" type="System">
+                                            <param id="0" name="Seconds">2</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="833575340277856" type="Function">
+                                            <param id="0" name="Name">&quot;readText&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;Consegui abrir a porta!!! estou livre!!&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="448177734024838" type="System">
+                                            <param id="0" name="Seconds">2</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="464368419375273" type="Function">
+                                            <param id="0" name="Name">&quot;readText&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;O que me espera do lado de fora?? X_X&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="501444989288140" type="System">
+                                            <param id="0" name="Seconds">2</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="403184590278623" type="Function">
+                                            <param id="0" name="Name">&quot;hideDialog&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="587523781917662" type="System">
+                                            <param id="0" name="Seconds">2</param>
+                                        </action>
+                                        <action id="-2" name="Go to layout" sid="850365016540267" type="System">
+                                            <param id="0" name="Layout">WinScreen</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="772655298487119">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="866965808283024" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="782468206664968">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="610378053975451" type="System">
+                                                    <param id="0" name="First value">IventoryObj.X + IventoryObj.Y</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Second value">IventoryObj.pos_x + IventoryObj.pos_y</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-16" name="Wait" sid="413071054667998" type="System">
+                                                    <param id="0" name="Seconds">0.5</param>
+                                                </action>
+                                                <action id="-3" name="Set position" sid="554787983682717" type="IventoryObj">
+                                                    <param id="0" name="X">IventoryObj.pos_x</param>
+                                                    <param id="1" name="Y">100</param>
+                                                </action>
+                                                <action behavior="Pin" id="0" name="Pin to object" sid="326843191743892" type="IventoryObj">
+                                                    <param id="0" name="Pin to">slote</param>
+                                                    <param id="1" name="Mode">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="410239673621150">
+                                            <conditions />
+                                            <actions />
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <variable constant="0" name="itemId" sid="125622085138344" static="0" type="number">-1</variable>
                 <variable constant="0" name="stopPropagation" sid="970075062218995" static="0" type="number">0</variable>
                 <event-group description="" sid="885397791124035" title="Slote">
@@ -366,6 +727,59 @@
                                         </event-block>
                                     </sub-events>
                                 </event-block>
+                                <event-block sid="443085727284598">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="319296220737532" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;remover&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="289903443998059">
+                                            <conditions>
+                                                <condition id="1" name="For each key" sid="424514941606550" type="itensBag" />
+                                                <condition id="-14" name="Compare variable" sid="143071949198622" type="System">
+                                                    <param id="0" name="Variable">stopPropagation</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="997001023945765">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="373691183326816" type="System">
+                                                            <param id="0" name="First value">itensBag.CurrentValue</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">Function.Param(1)</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="1" name="Set key" sid="566327967378298" type="itensBag">
+                                                            <param id="0" name="Key">itensBag.CurrentKey</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="826505960984120" type="System">
+                                                            <param id="0" name="Variable">stopPropagation</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="965139466456209">
+                                            <conditions />
+                                            <actions>
+                                                <action id="0" name="Call function" sid="316158979789035" type="Function">
+                                                    <param id="0" name="Name">&quot;iventario&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;atualizar&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
                                 <event-block sid="777350022959177">
                                     <conditions>
                                         <condition id="1" name="Compare parameter" sid="958219254837780" type="Function">
@@ -374,7 +788,11 @@
                                             <param id="2" name="Value">&quot;atualizar&quot;</param>
                                         </condition>
                                     </conditions>
-                                    <actions />
+                                    <actions>
+                                        <action id="8" name="Sort" sid="695414910852629" type="arrItensBanco">
+                                            <param id="0" name="Axis">1</param>
+                                        </action>
+                                    </actions>
                                     <sub-events>
                                         <event-block sid="509237636065078">
                                             <conditions>
@@ -622,7 +1040,7 @@
                                         </action>
                                         <action id="5" name="Push" sid="635019160811750" type="arrItensBanco">
                                             <param id="0" name="Where">0</param>
-                                            <param id="1" name="Value">17</param>
+                                            <param id="1" name="Value">16</param>
                                             <param id="2" name="Axis">0</param>
                                         </action>
                                         <action id="5" name="Push" sid="618259467523530" type="arrItensBanco">
@@ -674,7 +1092,7 @@
                                         </action>
                                         <action id="5" name="Push" sid="956977226039578" type="arrItensBanco">
                                             <param id="0" name="Where">0</param>
-                                            <param id="1" name="Value">&quot;Chave&quot;</param>
+                                            <param id="1" name="Value">&quot;Chave Mestra&quot;</param>
                                             <param id="2" name="Axis">0</param>
                                         </action>
                                         <action id="5" name="Push" sid="492893784980666" type="arrItensBanco">
@@ -705,7 +1123,7 @@
                                         </action>
                                         <action id="5" name="Push" sid="960831886083426" type="arrItensBanco">
                                             <param id="0" name="Where">0</param>
-                                            <param id="1" name="Value">&quot;Chave Mestra&quot;</param>
+                                            <param id="1" name="Value">&quot;Chave A&quot;</param>
                                             <param id="2" name="Axis">0</param>
                                         </action>
                                         <action id="5" name="Push" sid="239781110520785" type="arrItensBanco">
@@ -772,101 +1190,6 @@
                 </event-group>
                 <event-group description="" sid="409874329063277" title="Open/Close">
                     <sub-events>
-                        <event-group description="" sid="490329092210211" title="MouseActions">
-                            <sub-events>
-                                <event-block disabled="1" sid="113302531103994">
-                                    <conditions>
-                                        <condition id="7" name="Cursor is over object" sid="838475846621440" type="Mouse">
-                                            <param id="0" name="Object">IventoryObj</param>
-                                        </condition>
-                                        <condition id="-14" name="Compare variable" sid="419304183915760" type="System">
-                                            <param id="0" name="Variable">iventOpening</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Pin" id="1" name="Unpin" sid="244314367844988" type="IventoryObj" />
-                                    </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="899221785005268">
-                                    <conditions>
-                                        <condition id="7" inverted="1" name="Cursor is over object" sid="272859620133409" type="Mouse">
-                                            <param id="0" name="Object">IventoryObj</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Pin" id="0" name="Pin to object" sid="141492559781503" type="IventoryObj">
-                                            <param id="0" name="Pin to">slote</param>
-                                            <param id="1" name="Mode">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="717465306679432">
-                                    <conditions>
-                                        <condition id="-6" name="Every X seconds" sid="166243877786292" type="System">
-                                            <param id="0" name="Interval (seconds)">0.5</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block disabled="1" sid="216719388170649">
-                                            <conditions>
-                                                <condition id="1" inverted="1" name="Is overlapping another object" sid="593554668915188" type="IventoryObj">
-                                                    <param id="0" name="Object">slote</param>
-                                                </condition>
-                                                <condition behavior="DragDrop" id="0" inverted="1" name="Is dragging" sid="993222612434954" type="IventoryObj" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="809294697536199" type="Function">
-                                                    <param id="0" name="Name">&quot;iventario&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;atualizar&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                                <event-block sid="108105269288992">
-                                    <conditions>
-                                        <condition behavior="DragDrop" id="0" name="Is dragging" sid="641525096572229" type="IventoryObj" />
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Pin" id="1" name="Unpin" sid="113877940885394" type="IventoryObj" />
-                                    </actions>
-                                </event-block>
-                                <event-block sid="648562342833560">
-                                    <conditions>
-                                        <condition behavior="DragDrop" id="2" name="On drop" sid="849998599899505" type="IventoryObj" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-16" name="Wait" sid="413071054667998" type="System">
-                                            <param id="0" name="Seconds">0.5</param>
-                                        </action>
-                                    </actions>
-                                    <sub-events>
-                                        <event-block sid="782468206664968">
-                                            <conditions>
-                                                <condition id="-8" name="Compare two values" sid="610378053975451" type="System">
-                                                    <param id="0" name="First value">IventoryObj.X + IventoryObj.Y</param>
-                                                    <param id="1" name="Comparison">1</param>
-                                                    <param id="2" name="Second value">IventoryObj.pos_x + IventoryObj.pos_y</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-3" name="Set position" sid="554787983682717" type="IventoryObj">
-                                                    <param id="0" name="X">IventoryObj.pos_x</param>
-                                                    <param id="1" name="Y">100</param>
-                                                </action>
-                                                <action behavior="Pin" id="0" name="Pin to object" sid="326843191743892" type="IventoryObj">
-                                                    <param id="0" name="Pin to">slote</param>
-                                                    <param id="1" name="Mode">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                            </sub-events>
-                        </event-group>
                         <event-block sid="469875925340481">
                             <conditions>
                                 <condition id="0" name="On function" sid="964744431550241" type="Function">

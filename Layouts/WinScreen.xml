@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>GameOver</name>
-    <sid>164822543748586</sid>
-    <event-sheet>GameOver</event-sheet>
+    <name>WinScreen</name>
+    <sid>396672327352481</sid>
+    <event-sheet>WinGame</event-sheet>
     <size>
         <width>1000</width>
         <height>600</height>
@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="seila" sid="583351847092970">
+        <layer name="seila" sid="904161523036598">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -31,7 +31,7 @@
             <instances />
             <effects />
         </layer>
-        <layer name="bacground" sid="607453730998039">
+        <layer name="bacground" sid="338630981423644">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -47,7 +47,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="bgGameover" uid="170">
+                <instance type="winGameBg" uid="217">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -70,7 +70,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="seila" sid="294817460113160">
+        <layer name="seila" sid="654359199288463">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -88,7 +88,7 @@
             <instances />
             <effects />
         </layer>
-        <layer name="form" sid="286475771843880">
+        <layer name="form" sid="413589358740570">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -104,29 +104,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="spr_gameover_sangue" uid="173">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>568</x>
-                        <y>297</y>
-                        <z>0</z>
-                        <width>824</width>
-                        <height>600</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0.300000012</opacity>
-                    </world>
-                </instance>
-                <instance type="debugMessage" uid="174">
+                <instance type="debugMessage" uid="218">
                     <properties>
                         <text></text>
                         <initial-visibility>Visible</initial-visibility>
@@ -153,7 +131,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="loadingGif" uid="189">
+                <instance type="loadingGif" uid="220">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -175,7 +153,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="gameover_0001s_0007_Rectangle" uid="172">
+                <instance type="gameover_0001s_0007_Rectangle" uid="221">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -197,7 +175,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SCORETXT" uid="188">
+                <instance type="SCORETXT" uid="222">
                     <properties>
                         <text>SCORE</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -227,7 +205,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="logo" sid="858792123473912">
+        <layer name="logo" sid="190710592992715">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -243,51 +221,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="gameover_0000_gameover2" uid="171">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>500.5</x>
-                        <y>50</y>
-                        <z>0</z>
-                        <width>313</width>
-                        <height>62</height>
-                        <depth>0</depth>
-                        <hotspotX>0.501597464</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="gameover_0001_Quepenavocêmorreu" uid="176">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>495</x>
-                        <y>112</y>
-                        <z>0</z>
-                        <width>239</width>
-                        <height>15</height>
-                        <depth>0</depth>
-                        <hotspotX>0.502092063</hotspotX>
-                        <hotspotY>0.533333361</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="txtScore" uid="121">
+                <instance type="txtScore" uid="225">
                     <properties>
                         <text></text>
                         <initial-visibility>Visible</initial-visibility>
@@ -314,7 +248,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txtScore" uid="177">
+                <instance type="txtScore" uid="226">
                     <properties>
                         <text></text>
                         <initial-visibility>Visible</initial-visibility>
@@ -341,7 +275,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txtScore" uid="179">
+                <instance type="txtScore" uid="227">
                     <properties>
                         <text></text>
                         <initial-visibility>Visible</initial-visibility>
@@ -368,7 +302,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txtScore" uid="180">
+                <instance type="txtScore" uid="228">
                     <properties>
                         <text></text>
                         <initial-visibility>Visible</initial-visibility>
@@ -395,7 +329,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txtScore" uid="181">
+                <instance type="txtScore" uid="229">
                     <properties>
                         <text></text>
                         <initial-visibility>Visible</initial-visibility>
@@ -422,7 +356,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txtScore" uid="182">
+                <instance type="txtScore" uid="230">
                     <properties>
                         <text></text>
                         <initial-visibility>Visible</initial-visibility>
@@ -449,7 +383,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txtScore" uid="183">
+                <instance type="txtScore" uid="231">
                     <properties>
                         <text></text>
                         <initial-visibility>Visible</initial-visibility>
@@ -476,7 +410,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txtScore" uid="184">
+                <instance type="txtScore" uid="232">
                     <properties>
                         <text></text>
                         <initial-visibility>Visible</initial-visibility>
@@ -503,7 +437,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txtScore" uid="185">
+                <instance type="txtScore" uid="233">
                     <properties>
                         <text></text>
                         <initial-visibility>Visible</initial-visibility>
@@ -530,7 +464,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txtScore" uid="186">
+                <instance type="txtScore" uid="234">
                     <properties>
                         <text></text>
                         <initial-visibility>Visible</initial-visibility>
@@ -557,7 +491,51 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="btnMenu" uid="236">
+                <instance type="winGameLogo" uid="216">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>500.5</x>
+                        <y>50</y>
+                        <z>0</z>
+                        <width>115</width>
+                        <height>40</height>
+                        <depth>0</depth>
+                        <hotspotX>0.504347801</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Sprite3" uid="219">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>500.5</x>
+                        <y>100</y>
+                        <z>0</z>
+                        <width>233</width>
+                        <height>46</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502145946</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="btnMenu" uid="223">
                     <properties>
                         <type>Button</type>
                         <text>Menu Principal</text>
@@ -571,8 +549,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>843</x>
-                        <y>524</y>
+                        <x>782</x>
+                        <y>513</y>
                         <z>0</z>
                         <width>145</width>
                         <height>50</height>
@@ -584,7 +562,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="bg" sid="772749902568523">
+        <layer name="bg" sid="296367274789940">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -602,7 +580,7 @@
             <instances />
             <effects />
         </layer>
-        <layer name="gui" sid="928977198490028">
+        <layer name="gui" sid="788035406680694">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -620,7 +598,7 @@
             <instances />
             <effects />
         </layer>
-        <layer name="modal" sid="313894639522112">
+        <layer name="modal" sid="693394665714698">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -639,14 +617,6 @@
             <effects />
         </layer>
     </layers>
-    <nonworld-instances>
-        <instance type="scoreArr" uid="187">
-            <properties>
-                <width>10</width>
-                <height>1</height>
-                <depth>1</depth>
-            </properties>
-        </instance>
-    </nonworld-instances>
+    <nonworld-instances />
     <effects />
 </c2layout>

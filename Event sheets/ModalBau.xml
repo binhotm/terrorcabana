@@ -11,9 +11,6 @@
                     </conditions>
                     <actions>
                         <action id="2" name="Stop" sid="816740969983272" type="bau_skin_modal" />
-                        <action id="0" name="Import file" sid="640888012142771" type="Import">
-                            <param id="0" name="Import file">&quot;editbox.css&quot;</param>
-                        </action>
                         <action id="-9" name="Destroy" sid="375889746896152" type="BauModal" />
                         <action id="-3" name="Set position" sid="640514388849268" type="tb_p1">
                             <param id="0" name="X">100</param>
@@ -34,14 +31,8 @@
                     </actions>
                 </event-block>
                 <event-block sid="182418106290893">
-                    <conditions>
-                        <condition id="-1" name="Every tick" sid="705593466257314" type="System" />
-                    </conditions>
-                    <actions>
-                        <action disabled="1" id="0" name="Set text" sid="821792119504064" type="dbText">
-                            <param id="0" name="Text">WindowWidth &amp; &quot; - &quot; &amp; WindowHeight</param>
-                        </action>
-                    </actions>
+                    <conditions />
+                    <actions />
                 </event-block>
             </sub-events>
         </event-group>
@@ -85,6 +76,11 @@
                     <sub-events>
                         <event-block sid="909884333145727">
                             <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="993537294710715" type="close_bau_modal">
+                                    <param id="0" name="Instance variable">BAU_ID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                                 <condition id="-8" name="Compare two values" sid="489205207302668" type="System">
                                     <param id="0" name="First value">bau_b_password</param>
                                     <param id="1" name="Comparison">0</param>
@@ -97,7 +93,7 @@
                                     <param id="1" name="Y">bau_locker.Y - 50</param>
                                 </action>
                                 <action id="0" name="Set text" sid="827800612850536" type="dbText">
-                                    <param id="0" name="Text">&quot;SENHA CORRETA!!!!! &quot;</param>
+                                    <param id="0" name="Text">&quot;SENHA CORRETA!&quot;</param>
                                 </action>
                                 <action id="-24" name="Move to top" sid="651171441606659" type="dbText" />
                                 <action id="4" name="Set font color" sid="722726006411509" type="dbText">
@@ -114,7 +110,7 @@
                                     <param id="1" name="Parameter {n}">close_bau_modal.BAU_ID</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="931230090506520" type="dbText">
-                                    <param id="0" name="X">10</param>
+                                    <param id="0" name="X">-100</param>
                                     <param id="1" name="Y">-100</param>
                                 </action>
                                 <action id="-13" name="Set boolean" sid="290327382909483" type="bau">
@@ -126,7 +122,7 @@
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="-16" name="Wait" sid="115129584397115" type="System">
-                                    <param id="0" name="Seconds">1</param>
+                                    <param id="0" name="Seconds">3</param>
                                 </action>
                                 <action id="0" name="Call function" sid="301670459084010" type="Function">
                                     <param id="0" name="Name">&quot;readText&quot;</param>
@@ -163,29 +159,118 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="246470780890139">
+                        <event-block sid="767849912118240">
                             <conditions>
-                                <condition id="-22" name="Else" sid="516206487241238" type="System" />
+                                <condition id="-22" name="Else" sid="414006058485272" type="System" />
                             </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="355299929357766" type="dbText">
-                                    <param id="0" name="X">bau_locker.X</param>
-                                    <param id="1" name="Y">bau_locker.Y - 50</param>
-                                </action>
-                                <action id="0" name="Set text" sid="229141120173010" type="dbText">
-                                    <param id="0" name="Text">&quot;SENHA INCORRETA&quot;</param>
-                                </action>
-                                <action id="-24" name="Move to top" sid="247096197233649" type="dbText" />
-                                <action id="4" name="Set font color" sid="467560104312219" type="dbText">
-                                    <param id="0" name="Color">rgb(255, 0, 0)</param>
-                                </action>
-                                <action id="0" name="Play" sid="152806718717358" type="backgroundSound">
-                                    <param id="0" name="Audio file">error_bau</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;erro_bau&quot;</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="147827250033729">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="391929170472160" type="close_bau_modal">
+                                            <param id="0" name="Instance variable">BAU_ID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="431819566291549" type="System">
+                                            <param id="0" name="First value">bau_b_password_roxo</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">tb_p1.Text &amp; tb_p2.Text &amp; tb_p3.Text</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="397019407388840" type="dbText">
+                                            <param id="0" name="X">bau_locker.X</param>
+                                            <param id="1" name="Y">bau_locker.Y - 50</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="104728468724796" type="dbText">
+                                            <param id="0" name="Text">&quot;SENHA CORRETA!&quot;</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="733291217078534" type="dbText" />
+                                        <action id="4" name="Set font color" sid="978624535768367" type="dbText">
+                                            <param id="0" name="Color">rgb(0, 255, 0)</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="640037934211546" type="backgroundSound">
+                                            <param id="0" name="Audio file">open chest</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;bau_success&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="327251886229888" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="397691540044908" type="Function">
+                                            <param id="0" name="Name">&quot;fecharBau&quot;</param>
+                                            <param id="1" name="Parameter {n}">close_bau_modal.BAU_ID</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="398075763273532" type="dbText">
+                                            <param id="0" name="X">10</param>
+                                            <param id="1" name="Y">-100</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="454437919778206" type="bau_roxo">
+                                            <param id="0" name="Instance variable">isOpened</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="978698840083678" type="System">
+                                            <param id="0" name="Variable">blackDropActive</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="559976721240737" type="Function">
+                                            <param id="0" name="Name">&quot;showDialog&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="220771641085917" type="System">
+                                            <param id="0" name="Seconds">2</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="327746009124064" type="Function">
+                                            <param id="0" name="Name">&quot;readText&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;Hummm encontrei outra chave!&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="120267353120280" type="System">
+                                            <param id="0" name="Seconds">2</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="164326514951447" type="Function">
+                                            <param id="0" name="Name">&quot;hideDialog&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="113669280130580" type="System">
+                                            <param id="0" name="Variable">blackDropActive</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="690846172874172" type="chavePorta">
+                                            <param id="0" name="X">lampada_default.X</param>
+                                            <param id="1" name="Y">lampada_default.Y + 100</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="937226887442043" type="chavePorta">
+                                            <param id="0" name="Layer">7</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="246470780890139">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="516206487241238" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="355299929357766" type="dbText">
+                                            <param id="0" name="X">bau_locker.X</param>
+                                            <param id="1" name="Y">bau_locker.Y - 50</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="229141120173010" type="dbText">
+                                            <param id="0" name="Text">&quot;SENHA INCORRETA&quot;</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="247096197233649" type="dbText" />
+                                        <action id="4" name="Set font color" sid="467560104312219" type="dbText">
+                                            <param id="0" name="Color">rgb(255, 0, 0)</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="152806718717358" type="backgroundSound">
+                                            <param id="0" name="Audio file">error_bau</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;erro_bau&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -205,8 +290,9 @@
                             <param id="0" name="Variable">bauId</param>
                             <param id="1" name="Value">Function.Param(0)</param>
                         </action>
-                        <action id="0" name="Set text" sid="121131471350245" type="Text">
-                            <param id="0" name="Text"> bau_b_password</param>
+                        <action id="-9" name="Set value" sid="877032851305704" type="System">
+                            <param id="0" name="Variable">blackDropActive</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -219,10 +305,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="877032851305704" type="System">
-                                    <param id="0" name="Variable">blackDropActive</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
                                 <action id="-3" name="Create object" sid="536100813185947" type="System">
                                     <param id="0" name="Object to create">bau_bg_modal</param>
                                     <param id="1" name="Layer">&quot;modal&quot;</param>
@@ -279,12 +361,12 @@
                                     <param id="0" name="Object">slote_senha_modal</param>
                                     <param id="1" name="Image point (optional)">1</param>
                                 </action>
-                                <action id="0" name="Spawn another object" sid="699515702918808" type="bau_skin_modal">
+                                <action id="0" name="Spawn another object" sid="680628073506694" type="bau_skin_modal">
                                     <param id="0" name="Object">slote_senha_modal</param>
                                     <param id="1" name="Layer">bau_skin_modal.LayerName</param>
                                     <param id="2" name="Image point">5</param>
                                 </action>
-                                <action id="-4" name="Set position to another object" sid="484008624797878" type="tb_p4">
+                                <action id="-4" name="Set position to another object" sid="274020857287179" type="tb_p4">
                                     <param id="0" name="Object">slote_senha_modal</param>
                                     <param id="1" name="Image point (optional)">1</param>
                                 </action>
@@ -308,10 +390,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="208726714518269" type="System">
-                                    <param id="0" name="Variable">blackDropActive</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
                                 <action id="-3" name="Create object" sid="132835870657227" type="System">
                                     <param id="0" name="Object to create">bau_bg_modal</param>
                                     <param id="1" name="Layer">&quot;modal&quot;</param>
@@ -345,6 +423,75 @@
                                     <param id="0" name="Instance variable">BAU_ID</param>
                                     <param id="1" name="Value">Function.Param(0)</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="915351015143959" type="System">
+                                    <param id="0" name="Variable">blackDropActive</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="523155404402844" type="System">
+                                    <param id="0" name="Object to create">bau_bg_modal</param>
+                                    <param id="1" name="Layer">&quot;modal&quot;</param>
+                                    <param id="2" name="X">500</param>
+                                    <param id="3" name="Y">300</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="569458093915288" type="bau_bg_modal">
+                                    <param id="0" name="Instance variable">BAU_ID</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="851306611729556" type="bau_bg_modal">
+                                    <param id="0" name="Object">bau_skin_modal</param>
+                                    <param id="1" name="Layer">bau_bg_modal.LayerName</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="831903675190110" type="bau_skin_modal">
+                                    <param id="0" name="Frame number">Function.Param(0)</param>
+                                </action>
+                                <action id="2" name="Stop" sid="169629070608548" type="bau_skin_modal" />
+                                <action id="0" name="Spawn another object" sid="774352949648242" type="bau_skin_modal">
+                                    <param id="0" name="Object">bau_locker</param>
+                                    <param id="1" name="Layer">bau_skin_modal.LayerName</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="437090745004086" type="bau_skin_modal">
+                                    <param id="0" name="Object">bau_spr_password</param>
+                                    <param id="1" name="Layer">bau_skin_modal.LayerName</param>
+                                    <param id="2" name="Image point">6</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="763741366811625" type="bau_skin_modal">
+                                    <param id="0" name="Object">slote_senha_modal</param>
+                                    <param id="1" name="Layer">bau_skin_modal.LayerName</param>
+                                    <param id="2" name="Image point">2</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="850607969820321" type="tb_p1">
+                                    <param id="0" name="Object">slote_senha_modal</param>
+                                    <param id="1" name="Image point (optional)">1</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="611530675432206" type="bau_skin_modal">
+                                    <param id="0" name="Object">slote_senha_modal</param>
+                                    <param id="1" name="Layer">bau_skin_modal.LayerName</param>
+                                    <param id="2" name="Image point">3</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="704557235452637" type="tb_p2">
+                                    <param id="0" name="Object">slote_senha_modal</param>
+                                    <param id="1" name="Image point (optional)">1</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="325172949772494" type="bau_skin_modal">
+                                    <param id="0" name="Object">slote_senha_modal</param>
+                                    <param id="1" name="Layer">bau_skin_modal.LayerName</param>
+                                    <param id="2" name="Image point">4</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="894075179143200" type="tb_p3">
+                                    <param id="0" name="Object">slote_senha_modal</param>
+                                    <param id="1" name="Image point (optional)">1</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="186252690319054" type="bau_bg_modal">
+                                    <param id="0" name="Object">close_bau_modal</param>
+                                    <param id="1" name="Layer">bau_bg_modal.LayerName</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="128908898276230" type="close_bau_modal">
+                                    <param id="0" name="Instance variable">BAU_ID</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -355,7 +502,13 @@
                             <param id="0" name="Name">&quot;fecharBau&quot;</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="421183575442807" type="System">
+                            <param id="0" name="Variable">blackDropActive</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="593975318094562" type="BauModal" />
+                    </actions>
                     <sub-events>
                         <event-block sid="253498491896100">
                             <conditions>
@@ -366,11 +519,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Destroy" sid="593975318094562" type="BauModal" />
-                                <action id="-9" name="Set value" sid="421183575442807" type="System">
-                                    <param id="0" name="Variable">blackDropActive</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
                                 <action id="-3" name="Set position" sid="913618847985394" type="tb_p1">
                                     <param id="0" name="X">100</param>
                                     <param id="1" name="Y">-100</param>
@@ -389,30 +537,35 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="594841344113822">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="637173171582439" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="771331153259043" type="tb_p1">
+                                    <param id="0" name="X">100</param>
+                                    <param id="1" name="Y">-100</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="341977248585446" type="tb_p2">
+                                    <param id="0" name="X">200</param>
+                                    <param id="1" name="Y">-100</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="606238458452404" type="tb_p3">
+                                    <param id="0" name="X">300</param>
+                                    <param id="1" name="Y">-100</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="646146422686425" title="BauEvent">
             <sub-events>
-                <event-block sid="806804894717978">
-                    <conditions>
-                        <condition id="6" name="On object clicked" sid="352110050917102" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">0</param>
-                            <param id="2" name="Object clicked">bau</param>
-                        </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="504446779526187" type="bau">
-                            <param id="0" name="Instance variable">isOpened</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="332555242752833" type="Function">
-                            <param id="0" name="Name">&quot;abrirBau&quot;</param>
-                            <param id="1" name="Parameter {n}">0</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="287752995731797">
                     <conditions>
                         <condition id="6" name="On object clicked" sid="644289932936256" type="Mouse">

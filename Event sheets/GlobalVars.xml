@@ -3,15 +3,17 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GlobalVars</name>
     <events>
+        <variable constant="0" name="bau_b_password_cinza" sid="218922115052320" static="0" type="text">666</variable>
         <comment>http://18.231.171.246/api/ ONLINE API</comment>
         <variable constant="0" name="API_URL" sid="939232262954697" static="0" type="text">http://api.terrornacabana.com.br/</variable>
         <variable constant="0" name="blackDropActive" sid="311507672066454" static="0" type="number">0</variable>
         <variable constant="0" name="marteloOpen" sid="801920400116997" static="0" type="number">0</variable>
+        <variable comment="SENHA DO BAU ROXO CENA 1" constant="0" name="bau_b_password_roxo" sid="169682165204212" static="0" type="text">666</variable>
         <variable comment="Senha do Bau preto da CENA 2" constant="0" name="bau_b_password" sid="878529049580333" static="0" type="text"></variable>
         <variable constant="0" name="historyStart" sid="203001886422655" static="0" type="number">1</variable>
         <variable comment="Tempo decorrido do jogador em segundos" constant="0" name="playtime" sid="174712599256815" static="0" type="number">0</variable>
         <variable comment="Id do loguin do usuario" constant="0" name="userId" sid="658896110670014" static="0" type="number">-1</variable>
-        <variable comment="Da inicio ao jogo" constant="0" name="gameStart" sid="950952482998270" static="0" type="number">1</variable>
+        <variable comment="Da inicio ao jogo" constant="0" name="gameStart" sid="950952482998270" static="0" type="number">0</variable>
         <event-group description="" sid="609543453779105" title="Tempo de Jogo">
             <sub-events>
                 <event-block sid="392348283393334">
@@ -73,16 +75,16 @@
                         <condition id="-2" name="On start of layout" sid="600172627189976" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="909316963607410" type="Function">
-                            <param id="0" name="Name">&quot;gerarSenhasBau&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
                         <action id="0" name="Import file" sid="474745985639072" type="Import">
                             <param id="0" name="Import file">&quot;editbox.css&quot;</param>
                         </action>
                         <action id="5" name="Set web font" sid="905953929906796" type="debugMessage">
                             <param id="0" name="Family name">&quot;vcr_osd_monoregular&quot;</param>
                             <param id="1" name="CSS URL">&quot;gamefont.css&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="643561256416202" type="System">
+                            <param id="0" name="Variable">blackDropActive</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -153,6 +155,10 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block sid="644468988090328">
+                                    <conditions />
+                                    <actions />
+                                </event-block>
                             </sub-events>
                         </event-block>
                         <event-block sid="223029062067567">
@@ -161,6 +167,10 @@
                                 <action id="-9" name="Set value" sid="883537109448418" type="System">
                                     <param id="0" name="Variable">bau_b_password</param>
                                     <param id="1" name="Value">arrBauPassword.At(Floor(random(0,5)))</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="859483006979133" type="System">
+                                    <param id="0" name="Variable">bau_b_password_roxo</param>
+                                    <param id="1" name="Value">Floor(random(100,999))</param>
                                 </action>
                             </actions>
                         </event-block>

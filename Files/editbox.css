@@ -10,9 +10,21 @@
 }
 
 
-#btnCad:hover{
+#btnMenu:hover{
 	border: 1px solid;
 }
+
+#btnMenu{
+	background-color: #a10327;
+	color:#fff;
+	border: 0px;
+}
+
+
+#btnCadastrar:hover{
+ border: 1px solid;
+}
+
 
 #btnCad{
 	background-color: #a10327;

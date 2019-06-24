@@ -10,11 +10,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="1">Cadastro</layout>
-        <layout order="4">Login</layout>
-        <event-sheet order="0">Cadastro</event-sheet>
-        <event-sheet order="2">GlobalVars</event-sheet>
-        <event-sheet order="3">Login</event-sheet>
+        <layout order="1">CENARIO1</layout>
+        <event-sheet active="1" order="0">IventorySystem</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -23,7 +20,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Configuration Settings" />
     </properties>
     <families-expanded root="1">
-        <family expanded="0" name="GameObjects" />
+        <family expanded="1" name="GameObjects" />
         <family expanded="0" name="backgroundStart" />
         <family expanded="1" name="IventoryObj" />
         <family expanded="0" name="BlocoPapel" />
@@ -31,21 +28,21 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
-        <folder expanded="1" path="object-folder/CENARIOS/" />
-        <folder expanded="1" path="object-folder/MISC/" />
+        <folder expanded="0" path="object-folder/CENARIOS/" />
+        <folder expanded="0" path="object-folder/MISC/" />
         <folder expanded="0" path="object-folder/CHARACTER/" />
         <folder expanded="0" path="object-folder/HISTORY/" />
-        <folder expanded="1" path="object-folder/StartScreen/" />
+        <folder expanded="0" path="object-folder/StartScreen/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="layout-folder/GAME/" />
         <folder expanded="0" path="layout-folder/Testes/" />
         <folder expanded="1" path="layout-folder/GameScreens/" />
         <folder expanded="1" path="event-folder/" />
-        <folder expanded="0" path="event-folder/CENARIOS/" />
+        <folder expanded="1" path="event-folder/CENARIOS/" />
         <folder expanded="1" path="event-folder/Engine/" />
         <folder expanded="0" path="event-folder/Testes/" />
         <folder expanded="1" path="file-folder/" />
-        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="0" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/armariofechado/" />
@@ -129,5 +126,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/gameover_0001_Quepenavocêmorreu/" />
         <folder expanded="1" path="animation-folder/loadingGif/" />
         <folder expanded="1" path="animation-folder/pano_item/" />
+        <folder expanded="1" path="animation-folder/chaveArmario/" />
+        <folder expanded="1" path="animation-folder/whitePaper/" />
+        <folder expanded="1" path="animation-folder/chavePorta/" />
+        <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/winGameLogo/" />
+        <folder expanded="1" path="animation-folder/Sprite3/" />
     </folders-expanded>
 </c2uistate>
