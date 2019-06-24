@@ -193,6 +193,10 @@
                                             <param id="0" name="Name">&quot;iventario&quot;</param>
                                             <param id="1" name="Parameter {n}">&quot;remover&quot;{###}IventoryObj.item_nome</param>
                                         </action>
+                                        <action id="0" name="Call function" sid="336311628392289" type="Function">
+                                            <param id="0" name="Name">&quot;readText&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;&quot;</param>
+                                        </action>
                                         <action id="0" name="Call function" sid="717133611081734" type="Function">
                                             <param id="0" name="Name">&quot;showDialog&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
@@ -269,6 +273,10 @@
                                         <action id="0" name="Call function" sid="419257370896269" type="Function">
                                             <param id="0" name="Name">&quot;iventario&quot;</param>
                                             <param id="1" name="Parameter {n}">&quot;remover&quot;{###}IventoryObj.item_nome</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="728421397420881" type="Function">
+                                            <param id="0" name="Name">&quot;readText&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;&quot;</param>
                                         </action>
                                         <action id="0" name="Call function" sid="735469788444554" type="Function">
                                             <param id="0" name="Name">&quot;showDialog&quot;</param>
@@ -351,6 +359,10 @@
                                             <param id="0" name="Name">&quot;showDialog&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
                                         </action>
+                                        <action id="0" name="Call function" sid="809701176483175" type="Function">
+                                            <param id="0" name="Name">&quot;inGameMessage&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;Usou a chave.&quot;</param>
+                                        </action>
                                         <action id="-16" name="Wait" sid="936351596577785" type="System">
                                             <param id="0" name="Seconds">3</param>
                                         </action>
@@ -359,7 +371,7 @@
                                             <param id="1" name="Parameter {n}">&quot;Ufa parece que esta chave funcionou direitinho aqui!&quot;</param>
                                         </action>
                                         <action id="-16" name="Wait" sid="119480585538148" type="System">
-                                            <param id="0" name="Seconds">2</param>
+                                            <param id="0" name="Seconds">3</param>
                                         </action>
                                         <action id="0" name="Call function" sid="795452915926437" type="Function">
                                             <param id="0" name="Name">&quot;hideDialog&quot;</param>
@@ -371,10 +383,6 @@
                                         </action>
                                         <action id="-16" name="Wait" sid="449939273001847" type="System">
                                             <param id="0" name="Seconds">1</param>
-                                        </action>
-                                        <action id="0" name="Call function" sid="809701176483175" type="Function">
-                                            <param id="0" name="Name">&quot;inGameMessage&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot;Usou a chave.&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>

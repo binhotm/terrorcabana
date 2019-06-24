@@ -30,6 +30,21 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="348939126884045">
+                            <conditions />
+                            <actions>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="585720145441517" type="notepadDatas">
+                                    <param id="0" name="Pin to">bloco_datas</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="379754923651452" type="notepadNomes">
+                                    <param id="0" name="Pin to">bloco_nomes</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action id="-24" name="Move to top" sid="719656356835036" type="notepadDatas" />
+                                <action id="-24" name="Move to top" sid="798654823756619" type="notepadNomes" />
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>

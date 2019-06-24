@@ -20,6 +20,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet order="7">GameEngine</event-sheet>
         <event-sheet order="8">GlobalVars</event-sheet>
         <event-sheet active="1" order="9">IventorySystem</event-sheet>
+        <event-sheet order="10">CENARIO2</event-sheet>
+        <event-sheet order="11">CENARIO1</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />

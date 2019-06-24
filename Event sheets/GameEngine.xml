@@ -447,11 +447,15 @@
                                                             <param id="1" name="Parameter {n}">&quot;Hummm encontrei uma chave embaixo da garrafa!&quot;</param>
                                                         </action>
                                                         <action id="-16" name="Wait" sid="284463062894942" type="System">
-                                                            <param id="0" name="Seconds">3</param>
+                                                            <param id="0" name="Seconds">4</param>
                                                         </action>
                                                         <action id="0" name="Call function" sid="718917117550585" type="Function">
                                                             <param id="0" name="Name">&quot;hideDialog&quot;</param>
                                                             <param id="1" name="Parameter {n}"></param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="740532589499750" type="Function">
+                                                            <param id="0" name="Name">&quot;readText&quot;</param>
+                                                            <param id="1" name="Parameter {n}">&quot;&quot;</param>
                                                         </action>
                                                         <action id="-9" name="Set value" sid="756720799444558" type="System">
                                                             <param id="0" name="Variable">blackDropActive</param>

@@ -183,83 +183,83 @@
                 </event-group>
                 <event-group description="" sid="950195466241282" title="Acido Chave">
                     <sub-events>
+                        <event-block sid="127678583592814">
+                            <conditions>
+                                <condition id="7" name="Cursor is over object" sid="913279173535641" type="Mouse">
+                                    <param id="0" name="Object">chaveArmario</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="140159989131761" type="dbTextItem">
+                                    <param id="0" name="Object">chaveArmario</param>
+                                    <param id="1" name="Image point (optional)">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="428805736317569" type="dbTextItem">
+                                    <param id="0" name="Text">&quot;Chave A&quot;</param>
+                                </action>
+                                <action id="-27" name="Set effect enabled" sid="401276478391294" type="chaveArmario">
+                                    <param id="0" name="Mode">1</param>
+                                    <param id="1" name="Effect">&quot;Outline&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="743187406513955">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Cursor is over object" sid="314761533969242" type="Mouse">
+                                    <param id="0" name="Object">chaveArmario</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="281366257996127" type="System">
+                                    <param id="0" name="Variable">blackDropActive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="843287773649454" type="chaveArmario">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="514971289286288" type="dbTextItem">
+                                    <param id="0" name="X">100</param>
+                                    <param id="1" name="Y">-100</param>
+                                </action>
+                                <action id="-27" name="Set effect enabled" sid="907227827683375" type="chaveArmario">
+                                    <param id="0" name="Mode">0</param>
+                                    <param id="1" name="Effect">&quot;Outline&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="437136432642910">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="595494696211969" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">chaveArmario</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="592357146590410" type="dbTextItem">
+                                    <param id="0" name="X">100</param>
+                                    <param id="1" name="Y">-100</param>
+                                </action>
+                                <action id="0" name="Call function" sid="704861264907153" type="Function">
+                                    <param id="0" name="Name">&quot;iventario&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;pegar&quot;{###}&quot;Chave A&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="923581077358144" type="Function">
+                                    <param id="0" name="Name">&quot;inGameMessage&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Peguei a chave&quot;</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="215865375266707" type="chaveArmario" />
+                                <action id="-9" name="Set value" sid="629850240387451" type="System">
+                                    <param id="0" name="Variable">blackDropActive</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <comment>AO COLOCAR A CADEIRA PROXIMA AO ARMARIO PODE SE USAR OU PEGAR O ACIDO</comment>
                     </sub-events>
                 </event-group>
-                <event-block sid="127678583592814">
-                    <conditions>
-                        <condition id="7" name="Cursor is over object" sid="913279173535641" type="Mouse">
-                            <param id="0" name="Object">chaveArmario</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-4" name="Set position to another object" sid="140159989131761" type="dbTextItem">
-                            <param id="0" name="Object">chaveArmario</param>
-                            <param id="1" name="Image point (optional)">1</param>
-                        </action>
-                        <action id="0" name="Set text" sid="428805736317569" type="dbTextItem">
-                            <param id="0" name="Text">&quot;Chave A&quot;</param>
-                        </action>
-                        <action id="-27" name="Set effect enabled" sid="401276478391294" type="chaveArmario">
-                            <param id="0" name="Mode">1</param>
-                            <param id="1" name="Effect">&quot;Outline&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="743187406513955">
-                    <conditions>
-                        <condition id="7" inverted="1" name="Cursor is over object" sid="314761533969242" type="Mouse">
-                            <param id="0" name="Object">chaveArmario</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="281366257996127" type="System">
-                            <param id="0" name="Variable">blackDropActive</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                        <condition id="-2" name="Compare Y" sid="843287773649454" type="chaveArmario">
-                            <param id="0" name="Comparison">4</param>
-                            <param id="1" name="Y co-ordinate">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Set position" sid="514971289286288" type="dbTextItem">
-                            <param id="0" name="X">100</param>
-                            <param id="1" name="Y">-100</param>
-                        </action>
-                        <action id="-27" name="Set effect enabled" sid="907227827683375" type="chaveArmario">
-                            <param id="0" name="Mode">0</param>
-                            <param id="1" name="Effect">&quot;Outline&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="437136432642910">
-                    <conditions>
-                        <condition id="6" name="On object clicked" sid="595494696211969" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">0</param>
-                            <param id="2" name="Object clicked">chaveArmario</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Set position" sid="592357146590410" type="dbTextItem">
-                            <param id="0" name="X">100</param>
-                            <param id="1" name="Y">-100</param>
-                        </action>
-                        <action id="0" name="Call function" sid="704861264907153" type="Function">
-                            <param id="0" name="Name">&quot;iventario&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;pegar&quot;{###}&quot;Chave A&quot;</param>
-                        </action>
-                        <action id="0" name="Call function" sid="923581077358144" type="Function">
-                            <param id="0" name="Name">&quot;inGameMessage&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;Peguei a chave&quot;</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="215865375266707" type="chaveArmario" />
-                        <action id="-9" name="Set value" sid="629850240387451" type="System">
-                            <param id="0" name="Variable">blackDropActive</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-group description="" sid="879383034021557" title="Banco">
                     <sub-events>
                         <event-block sid="159659153169046">
