@@ -158,58 +158,6 @@
             <sub-events>
                 <event-group description="" sid="490329092210211" title="MouseActions">
                     <sub-events>
-                        <event-block disabled="1" sid="113302531103994">
-                            <conditions>
-                                <condition id="7" name="Cursor is over object" sid="838475846621440" type="Mouse">
-                                    <param id="0" name="Object">IventoryObj</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="419304183915760" type="System">
-                                    <param id="0" name="Variable">iventOpening</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Pin" id="1" name="Unpin" sid="244314367844988" type="IventoryObj" />
-                            </actions>
-                        </event-block>
-                        <event-block disabled="1" sid="899221785005268">
-                            <conditions>
-                                <condition id="7" inverted="1" name="Cursor is over object" sid="272859620133409" type="Mouse">
-                                    <param id="0" name="Object">IventoryObj</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="141492559781503" type="IventoryObj">
-                                    <param id="0" name="Pin to">slote</param>
-                                    <param id="1" name="Mode">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block disabled="1" sid="717465306679432">
-                            <conditions>
-                                <condition id="-6" name="Every X seconds" sid="166243877786292" type="System">
-                                    <param id="0" name="Interval (seconds)">0.5</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block disabled="1" sid="216719388170649">
-                                    <conditions>
-                                        <condition id="1" inverted="1" name="Is overlapping another object" sid="593554668915188" type="IventoryObj">
-                                            <param id="0" name="Object">slote</param>
-                                        </condition>
-                                        <condition behavior="DragDrop" id="0" inverted="1" name="Is dragging" sid="993222612434954" type="IventoryObj" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="809294697536199" type="Function">
-                                            <param id="0" name="Name">&quot;iventario&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot;atualizar&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
                         <event-block sid="108105269288992">
                             <conditions>
                                 <condition behavior="DragDrop" id="0" name="Is dragging" sid="641525096572229" type="IventoryObj" />
@@ -391,6 +339,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="-9" name="Set value" sid="294921220299251" type="System">
+                                            <param id="0" name="Variable">blackDropActive</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
                                         <action id="0" name="Call function" sid="692463582403307" type="Function">
                                             <param id="0" name="Name">&quot;iventario&quot;</param>
                                             <param id="1" name="Parameter {n}">&quot;remover&quot;{###}IventoryObj.item_nome</param>
