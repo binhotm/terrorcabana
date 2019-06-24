@@ -201,7 +201,7 @@
                     <properties>
                         <text>SCORE</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Atlantic Cruise,-48,400,0</font>
+                        <font>VCR OSD Mono,-48,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
