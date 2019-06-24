@@ -187,7 +187,7 @@
                                         <action id="-9" name="Destroy" sid="760106998089979" type="caveira_item" />
                                         <action id="0" name="Call function" sid="450645692888040" type="Function">
                                             <param id="0" name="Name">&quot;inGameMessage&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot;Usou o Garrafa com acido.&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;Usou o Garrafa com ácido.&quot;</param>
                                         </action>
                                         <action id="0" name="Call function" sid="863662689108842" type="Function">
                                             <param id="0" name="Name">&quot;iventario&quot;</param>
@@ -209,14 +209,14 @@
                                         </action>
                                         <action id="0" name="Call function" sid="253061339049204" type="Function">
                                             <param id="0" name="Name">&quot;readText&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot;Esta derretendo a caveira..&quot; &amp; newline &amp; &quot;Hoo não..  tinha um bilhete dentro..&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;Está derretendo a caveira..&quot; &amp; newline &amp; &quot;Ooh não..  tinha um bilhete dentro..&quot;</param>
                                         </action>
                                         <action id="-16" name="Wait" sid="713497317218962" type="System">
                                             <param id="0" name="Seconds">4</param>
                                         </action>
                                         <action id="0" name="Call function" sid="103625782606824" type="Function">
                                             <param id="0" name="Name">&quot;readText&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot;Não consigo mais ler oque tem aqui =(...&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;Não consigo mais ler o que tem aqui =(...&quot;</param>
                                         </action>
                                         <action id="-16" name="Wait" sid="304982557778943" type="System">
                                             <param id="0" name="Seconds">3</param>
@@ -279,7 +279,7 @@
                                         </action>
                                         <action id="0" name="Call function" sid="730530764583144" type="Function">
                                             <param id="0" name="Name">&quot;readText&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot;Ual consegui quebrar este cranio&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;Uau consegui quebrar este crânio&quot;</param>
                                         </action>
                                         <action id="-16" name="Wait" sid="626330342341909" type="System">
                                             <param id="0" name="Seconds">3</param>
@@ -356,7 +356,7 @@
                                         </action>
                                         <action id="0" name="Call function" sid="528155538310681" type="Function">
                                             <param id="0" name="Name">&quot;readText&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot;Uffa parece que esta chave funcionou direitinho aqui!&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;Ufa parece que esta chave funcionou direitinho aqui!&quot;</param>
                                         </action>
                                         <action id="-16" name="Wait" sid="119480585538148" type="System">
                                             <param id="0" name="Seconds">2</param>

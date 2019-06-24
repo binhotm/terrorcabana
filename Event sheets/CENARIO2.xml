@@ -78,7 +78,7 @@
                             <actions>
                                 <action id="0" name="Call function" sid="387762516282230" type="Function">
                                     <param id="0" name="Name">&quot;inGameMessage&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;Ja abri este bau antes...&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Já abri este baú antes...&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
