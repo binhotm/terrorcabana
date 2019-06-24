@@ -175,7 +175,7 @@
                             <actions>
                                 <action id="0" name="Call function" sid="177585001936500" type="Function">
                                     <param id="0" name="Name">&quot;inGameMessage&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;Ja abri este bau antes...&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Já abri este baú antes...&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -378,7 +378,7 @@
                                 </action>
                                 <action id="0" name="Call function" sid="187631203624664" type="Function">
                                     <param id="0" name="Name">&quot;readText&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;UFAAAA consengui me soltar, preciso sair daqui!!&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;UFAAAA consegui me soltar, preciso sair daqui!!&quot;</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="614313323664629" type="System">
                                     <param id="0" name="Seconds">3</param>
@@ -503,7 +503,7 @@
                             <actions>
                                 <action id="0" name="Call function" sid="871945486709538" type="Function">
                                     <param id="0" name="Name">&quot;inGameMessage&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;Esta trancado... Arhg!!!&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Está trancado... Argh!!!&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
