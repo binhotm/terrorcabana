@@ -321,7 +321,7 @@
                     <properties>
                         <text>APERTE I PAR ABRIR O INVENTARIO</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Century Gothic,-21,400,0</font>
+                        <font>VCR OSD Mono,-21,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
