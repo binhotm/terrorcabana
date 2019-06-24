@@ -15,10 +15,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <nest>68</nest>
         <nest>50</nest>
         <nest>32</nest>
-        <nest>19</nest>
+        <nest>18</nest>
     </condition-namecolumns>
     <events>
-        <event collapsed="1" sid="677003343326314" />
         <event collapsed="1" sid="354419243742554" />
         <event collapsed="1" sid="536374685832294" />
     </events>

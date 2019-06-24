@@ -15,8 +15,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="3">CENARIO2</layout>
         <layout order="4">CENARIO3</layout>
         <layout order="5">GameOver</layout>
-        <layout active="1" order="6">WinScreen</layout>
+        <layout order="6">WinScreen</layout>
+        <layout order="7">SplashScreen</layout>
         <event-sheet order="1">ModalBau</event-sheet>
+        <event-sheet active="1" order="8">CENARIO1</event-sheet>
+        <event-sheet order="9">IventorySystem</event-sheet>
+        <event-sheet order="10">GameEngine</event-sheet>
+        <event-sheet order="11">CENARIO2</event-sheet>
+        <event-sheet order="12">CENARIO3</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
