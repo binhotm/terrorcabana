@@ -10,12 +10,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <event-sheet order="0">IventorySystem</event-sheet>
-        <event-sheet order="1">CENARIO1</event-sheet>
-        <event-sheet order="2">GlobalVars</event-sheet>
-        <event-sheet active="1" order="3">GameEngine</event-sheet>
-        <event-sheet order="4">CENARIO2</event-sheet>
-        <event-sheet order="5">ModalBau</event-sheet>
+        <layout order="0">Historia</layout>
+        <layout order="2">CENARIO1</layout>
+        <layout order="3">CENARIO2</layout>
+        <layout order="4">CENARIO3</layout>
+        <layout order="5">GameOver</layout>
+        <layout active="1" order="6">WinScreen</layout>
+        <event-sheet order="1">ModalBau</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -24,7 +25,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Configuration Settings" />
     </properties>
     <families-expanded root="1">
-        <family expanded="1" name="GameObjects" />
+        <family expanded="0" name="GameObjects" />
         <family expanded="0" name="backgroundStart" />
         <family expanded="1" name="IventoryObj" />
         <family expanded="0" name="BlocoPapel" />
@@ -33,7 +34,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
         <folder expanded="0" path="object-folder/CENARIOS/" />
-        <folder expanded="0" path="object-folder/MISC/" />
+        <folder expanded="1" path="object-folder/MISC/" />
         <folder expanded="0" path="object-folder/CHARACTER/" />
         <folder expanded="0" path="object-folder/HISTORY/" />
         <folder expanded="0" path="object-folder/StartScreen/" />
