@@ -503,7 +503,7 @@
                             <actions>
                                 <action id="0" name="Call function" sid="871945486709538" type="Function">
                                     <param id="0" name="Name">&quot;inGameMessage&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;Está trancado... Argh!!!&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Esta trancado... Argh!!!&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
